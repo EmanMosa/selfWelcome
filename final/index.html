@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<meta charset="utf-8">
+
+<title>Self Welcome</title>
+<script>
+      function getData(lang) {
+          console.log("here test" + lang)
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+              if (xhttp.readyState == 4 && xhttp.status == 200) {
+                  var myObj = JSON.parse(xhttp.response);
+                  if (lang == 'EN') {
+                      var obj = myObj.EN;
+                      localStorage.setItem("langObj", JSON.stringify(obj));
+                      window.document.location = './page2.html'
+                      document.getElementById("demo").innerHTML = obj.code;
+
+                      console.log(obj.UPS);
+                  } else if (lang == 'AR') {
+                      var obj = myObj.AR;
+                      localStorage.setItem("langObj", JSON.stringify(obj));
+                      window.document.location = './page2.html'
+                      document.getElementById("demo").innerHTML = obj.code;
+
+                      console.log(obj.UPS);
+                  } else if (lang == 'HE') {
+                      var obj = myObj.HE;
+                      localStorage.setItem("langObj", JSON.stringify(obj));
+                      window.document.location = './page2.html'
+                      document.getElementById("demo").innerHTML = obj.code;
+
+                      console.log(obj.UPS);
+                  } else if (lang == 'RU') {
+                      var obj = myObj.RU;
+                      localStorage.setItem("langObj", JSON.stringify(obj));
+                      window.document.location = './page2.html'
+                      document.getElementById("demo").innerHTML = obj.code;
+
+                      console.log(obj.UPS);
+                  }
+
+
+              }
+          };
+          xhttp.open("GET", "lang.json", true);
+          xhttp.send();
+
+      }
+  </script>
+
+</head>
+<body class= "page1">
+  <img class="center-hor logo" src="img/logo.png"/>
+
+  <section>
+    <div class="menu">
+      <p class="menu-item" id="HE" onClick="getData(this.id)" >עברית</p>
+      <p class="menu-item" id="AR" onClick="getData(this.id)"> عربيه</p>
+      <p class="menu-item" id="EN" onClick="getData(this.id)">English</p>
+      <p class="menu-item" id="RU" onClick="getData(this.id)">русский</p>
+    </div>
+    </section>
+</body>
+</html>

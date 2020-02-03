@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <title>Self reception</title>
+
+    <script>
+        function getData(lang) {
+            console.log("here test" + lang)
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    var myObj = JSON.parse(xhttp.response);
+                    if (lang == 'EN') {
+                        var obj = myObj.EN;
+                        localStorage.setItem("langObj", JSON.stringify(obj));
+                        window.document.location = './page2.html'
+                        document.getElementById("demo").innerHTML = obj.code;
+
+                        console.log(obj.UPS);
+                    } else if (lang == 'AR') {
+                        var obj = myObj.AR;
+                        localStorage.setItem("langObj", JSON.stringify(obj));
+                        window.document.location = './page2.html'
+                        document.getElementById("demo").innerHTML = obj.code;
+
+                        console.log(obj.UPS);
+                    } else if (lang == 'HE') {
+                        var obj = myObj.HE;
+                        localStorage.setItem("langObj", JSON.stringify(obj));
+                        window.document.location = './page2.html'
+                        document.getElementById("demo").innerHTML = obj.code;
+
+                        console.log(obj.UPS);
+                    } else if (lang == 'RU') {
+                        var obj = myObj.RU;
+                        localStorage.setItem("langObj", JSON.stringify(obj));
+                        window.document.location = './page2.html'
+                        document.getElementById("demo").innerHTML = obj.code;
+
+                        console.log(obj.UPS);
+                    }
+
+
+                }
+            };
+            xhttp.open("GET", "lang.json", true);
+            xhttp.send();
+
+        }
+    </script>
+
+    <style>
+        body {
+            margin-top: 200px;
+            width: auto;
+            height: 50%;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .HEbutton {
+            top: 315px;
+            left: 160px;
+            height: 50%;
+            text-align: center;
+            font: Regular 24px/23px Assistant;
+            letter-spacing: 0;
+            color: #FFFFFF;
+            opacity: 1;
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+        }
+        
+        .ARbutton {
+            top: 368px;
+            left: 162px;
+            height: 50%;
+            text-align: center;
+            font: Regular 24px/23px Assistant;
+            letter-spacing: 0;
+            color: #FFFFFF;
+            opacity: 1;
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+        }
+        
+        .ENbutton {
+            top: 420px;
+            left: 152px;
+            height: 50%;
+            text-align: center;
+            font: Regular 24px/23px Assistant;
+            letter-spacing: 0;
+            color: #FFFFFF;
+            opacity: 1;
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+        }
+        
+        .RUbutton {
+            top: 472px;
+            left: 144px;
+            height: 50%;
+            text-align: center;
+            font: Regular 24px/23px Assistant;
+            letter-spacing: 0;
+            color: #FFFFFF;
+            opacity: 1;
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+        }
+        
+        @media only screen and (max-width: 576px) {
+            body {
+                background-color: lightblue;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:teal; ">
+
+    <div class="text-center">
+        <button type="button" class="HEbutton" id="HE" onClick="getData(this.id)"> עברית </button>
+        <br>
+        <br>
+
+        <button type="button" class="ARbutton" id="AR" onClick="getData(this.id)"> عربيه</button>
+        <br>
+        <br>
+
+        <button type="button" class="ENbutton" id="EN" onClick="getData(this.id)"> English</button>
+        <br>
+        <br>
+
+        <button type="button" class="RUbutton" id="RU" onClick="getData(this.id)"> русский</button>
+
+
+    </div>
+
+</body>
+
+</html>

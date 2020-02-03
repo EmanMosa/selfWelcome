@@ -1,0 +1,2286 @@
+{
+    "HE": {
+        "code": "HE",
+        "UPS": "הפסקת חשמל - מבטל פעולות, מכבה",
+        "start": "כדי להתחיל לחצו כאן",
+        "prev": "חזור",
+        "next": "המשך",
+        "clean": "נקה",
+        "cancel": "ביטול",
+        "close": "סגור",
+        "loading": "אנא המתן..",
+        "loadingScan": "סורק אנא המתן",
+        "thankyouMsg": "תודה על הזמנתך",
+        "welcomeMsg": "שלום",
+        "placeholder": {
+            "fname": "שם פרטי",
+            "lname": "שם משפחה",
+            "email": "example@test.co.il",
+            "visaCard": "אשראי",
+            "visaCard1": "4 ספרות אחרונות",
+            "phone": "טלפון נייד",
+            "emailName": "דואר אלקטרוני"
+
+        },
+        "date": {
+            "months": ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"],
+            "days": ["יום א'", "יום ב'", "יום ג'", "יום ד'", "יום ה'", "יום ו'", "יום שבת"],
+            "daysPage33": [" א'", " ב'", " ג'", " ד'", " ה'", " ו'", " ש'"],
+            "CharacterDate1": "ה-",
+            "CharacterDate2": "מ-",
+            "CharacterDate3": " עד"
+        },
+        "page2": {
+            "opt1": "מלון",
+            "opt2": "תשלום עבור חניה"
+        },
+        "page3": {
+            "opt1": "כניסה לחדר שהוזמן מראש (Check-in)",
+            "opt2": "כניסה (Check-in) ללא הזמנה מראש",
+            "opt3": "הזמנת חדר לילה",
+            "opt4": "עזיבה (check-out)",
+            "opt5": "פעולות נוספות/פתרון בעיות",
+            "opt6": "הזמנת חדר Day Use"
+
+        },
+        "page31": {
+            "title": "איתור הזמנה",
+            "opt1": "אתר לפי מספר הזמנה",
+            "opt2": "אתר לפי שם מזמין",
+            "opt3": "אתר לפי כרטיס אשראי",
+            "opt4": "אתר לפי דואר אלקטרוני",
+            "note1": "לא הצלחנו למצוא את הזמנתך בשם זה.",
+            "note2": "אתר הזמנה שלך באחת הדרכים הבאות"
+        },
+        "page311": {
+            "title": "אנא הזינו מספר הזמנה",
+            "note11": "מספר ההזמנה מופיע",
+            "note12": "בטופס ההזמנה מצד שמאל",
+            "note13": "למעלה"
+        },
+        "page312": {
+            "titlae": "אנא הזינו שם פרטי ומשפחה של המזמין",
+            "note11": "אנא רשום את שמך",
+            "note12": "כפי שמופיע בהזמנה",
+            "clean": "ניקוי שם ושם משפחה",
+            "ok": "חזור למסך הבית"
+        },
+        "page313": {
+            "title": "אנא הזינו פרטי כרטיס אשראי שנמסר בהזמנה",
+            "subtitle": "העבר כרטיס אשראי או הקלד 4 ספרות אחרונות",
+            "note11": "את כרטיס האשראי",
+            "note12": "יש להעביר בקורא כרטיסי האשראי",
+            "note13": "מצד ימין של העמדה"
+        },
+        "page314": {
+            "title": "כתובת דואר אלקטרוני",
+            "note11": "כתובת הדואר האלקטרוני",
+            "note12": "כפי שמופיע בהזמנה"
+        },
+        "page33": {
+            "title": " תאריך ההזמנה",
+            "dateText1": "תאריך כניסה",
+            "dateText2": "תאריך יציאה",
+            "checkboxText": "מנוחת יום",
+            "CharacterDate": "ב",
+            "nightsCount": "כמות  הלילות שנבחרו"
+        },
+        "page32": {
+            "title": "תקופת האירוח",
+            "dateText1": "תאריך כניסה :",
+            "dateText2": "תאריך יציאה :",
+            "checkboxText": "מנוחת יום",
+            "todyText": "היום"
+        },
+        "page321": {
+            "title": "בחירת חדרים",
+            "colName1": " מספר אורחים לחדר",
+            "colName2": "סוג חדר",
+            "colName32": "(לכל השהות)",
+            "colName31": "עלות ",
+            "colName41": "עלות לתייר",
+            "colName42": "(ללא מע\"מ)",
+            "chooseRoom": "בחר",
+            "btnText2": "הוסף עוד חדר",
+            "op3": "יותר",
+            "OK": "אישור",
+            "cancelRoom": "ביטול",
+            "gu3": "3 אורחים ",
+            "gu4": "4 אורחים",
+            "gu5": "5 אורחים",
+            "guests": "אורחים",
+            "selectRooms": "בחר"
+        },
+        "page3211": {
+            "title": "בחירת חדרים",
+            "chooseRoom": "בחר",
+            "priceText": "מחיר",
+            "currencySign": "&#8362;",
+            "nights": "לילות",
+            "inRoom": "בחדר:",
+            "noRoom": "לא נמצא חדר מתאים לבחירתך",
+            "noData": "אין מידע לחדר זה"
+        },
+        "page3212": {
+            "titlePhone": "הקלד מספר טלפון נייד",
+            "titleEmail": "הקלד כתובת דואר אלקטרוני",
+
+            "dogTextRight1": "הטלפון ישמש אותנו כדי",
+            "dogTextRight2": "לשלוח לכם את פרטי החדר ",
+            "dogTextRight3": "ותזכורות בלבד",
+            "dogTextLeft1": "הדוא\"ל ישמש אותנו כדי",
+            "dogTextLeft2": "לשלוח לכם חשבונית",
+            "clean": "ניקוי מספר טלפון",
+            "cleanMail": "ניקוי כתובת המייל",
+            "dogTextLeft3": "את פרטי החדר ותזכורות בלבד"
+        },
+        "page4": {
+            "title": "מסגרת ביטחון",
+            "subtitleFirst": "כרטיס האשראי",
+            "subtitleBold": "לא מחויב כעת",
+            "subtitleSecond": ", אלא משמש לביטחון בלבד",
+            "subtitle1": "אנא הכנס את כרטיס האשראי והוצא אותו מיד ",
+            "subtitle2": "מסגרת ביטחון של [SUM] תוגדר בכרטיס האשראי שלך כעת",
+            "subtitle3": "הכרטיס נקלט",
+            "subtitle4": "בודק כרטיס  אנא המתן"
+        },
+        "page51": {
+            "title": " תשלום בכרטיס אשראי ",
+            "subtitle": " יש להכניס את כרטיס האשראי לחריץ המואר. ",
+            "opt1": "חייב כרטיס שמספרו מסתיים ב"
+        },
+        "page6": {
+            "title": " חשבונית / קבלה",
+            "opt1": "שלח לי את החשבונית לדואר האלקטרוני",
+            "opt2": "הדפס קבלה כעת"
+        },
+        "page7": {
+            "title": "אנא קח/י את המפתחות כעת",
+            "number": "מספר",
+            "anotherCard": "קבלת כרטיס נוסף",
+            "CardWait": "מכין כרטיס..אנא המתן",
+            "CardSuccess": "אנא הוצא את כרטיס החדר מהמכונה",
+            "CardSuccessQ": "האם אתה צריך כרטיס נוסף ?",
+
+
+            "CardFailed": "לא הצליח לצרוב כרטיס"
+        },
+        "page7Code": {
+            "title": "הקוד הסודי לחדר "
+        },
+
+        "page71": {
+            "title": "מספר החדר הינו",
+            "floortext": "קומה",
+            "subtitle1": "נשלחה הודעת דואר אלקטרוני ו-SMS למכשירך עם",
+            "subtitle2": " פרטי החדר.",
+            "subtitle3": "",
+            "subtitle4": "",
+            "btnText1": "להמשך וקבלת מפתחות לחדר הבא",
+            "btnText2": "לסיום וחזרה למסך הפתיחה",
+            "title1": "הזמנתך נרשמה",
+            "subtitle11": "מספר ההזמנה הוא ",
+            "subtitle12": "פרטי ההזמנה נשלחו למייל ו/או לטלפון הנייד.",
+            "subtitle13": "ניתן לבטל את ההזמנה ללא תשלום עד 24 שעות לפני מועד הכניסה.",
+            "subtitle14": " ביטול לאחר מועד זה יחוייב ב50% מעלות ההזמנה.",
+            "clean": "החדר הנבחר עדיין לא קיבל שירות חדרים, הוא יהיה נקי ומוכן עד 15:00"
+        },
+        "page3111": {
+            "title": "אישור הזמנה",
+            "titlea": "אישור הזמנה",
+
+            "confirm": "אישור",
+
+            "colName1": "מספר אורחים לחדר",
+            "colName2": "סוג חדר",
+            "colName3": "כניסה",
+            "colName4": "יציאה",
+            "btnText1": "שינוי הזמנה",
+            "btnText2": "לא ההזמנה שלי",
+            "person1": "חדר בודד",
+            "person2": "חדר לשניים",
+            "person3": "חדר לשלושה",
+            "person4": "חדר ל 4",
+            "person5": "חדר ל 5",
+            "EarlyEntry1": "שעת הקבלה הרגילה היא ",
+            "EarlyEntry2": "מכיוון שהקדמת, תחויב בנוסף ",
+            "EarlyEntry3": "המחיר הסופי יהיה ",
+            "EarlyEntry4": " לא כולל מעמ"
+        },
+        "page3111a": {
+            "title": "הזמנות",
+            "colName3": "כניסה",
+            "colName4": "יציאה",
+            "btnText1": "שינוי הזמנה",
+            "btnText2": "לא ההזמנה שלי",
+            "detail1": "מספר הזמנה: ",
+            "detail2": "תאריך הזמנה: "
+        },
+        "page34": {
+            "title": "עזיבה (Check-out)",
+            "subtitle": "הכנס את מפתח החדר לחריץ המיועד",
+            "subtitleNoDispenser": "הכנס את מפתח החדר לחריץ השמאלי",
+            "btnText": " אם אין ברשותך אף מפתח לחץ כאן"
+        },
+        "page35": {
+            "opt1": "הארכת שהות",
+            "opt2": "קיצור שהות",
+            "opt3": "קבלת מפתח נוסף",
+            "opt4": "אובדן מפתח",
+            "opt4B": "אובדן קוד כניסה"
+        },
+        "page41": {
+            "title": "סריקת תעודה מזהה",
+            "titleTakeYourCard": "קח את התעודה",
+            "subtitle1": "חוקי מדינת ישראל מחייבים הזדהות באמצעות תעודה בעת כניסה למלון",
+            "subtitle3": "אנא הנח את התעודה (דרכון, רישיון נהיגה, תעודת זהות ישראלית) בסורק ",
+            "startscan": "לחץ לסריקה",
+            "opt1": "דרכון",
+            "opt2": "תעודת זהות / רישיון נהיגה",
+            "opt3": "כניסה בלי תעודה מזהה",
+            "subtitle2": "יש להניח תעודת זהות או רשיון נהיגה על משטח הסריקה.",
+            "citizen": "אני אזרח ישראלי",
+            "nocitizen": "אני תייר",
+            "Fname": "שם פרטי",
+            "Lname": "שם משפחה",
+            "result": "בדוק כי הפרטים המופיעים למטה כתובים נכון (אין שגיאות כתיב)",
+            "next": "שמי מאוית וכתוב נכון",
+            "again": "נסה שוב"
+        },
+        "popUp": {
+            "title": "אישור",
+            "Q": " האם שמך מוצג נכון ?",
+            "citizenText": "התעודה נסרקה .",
+            "noCitizenText": "התעודה נסרקה.",
+            "EnterISLText": "האישור נסרק.",
+            "takeYourCard": "קח התעודה שלך מהסורק",
+            "process": "מעבד נתונים .. אנא המתן",
+            "againBtn": "נסה שנית",
+            "returnHome": "חזרה לדף הראשי",
+            "nextBtn": "המשך"
+        },
+        "page42": {
+            "title": "אישור כניסה לישראל",
+            "subtitle1": " על מנת לקבל פטור ממע'מ יש להציג את אישור הכניסה לישראל.",
+            "subtitle2": "אנא הניחו את האישור על משטח הסריקה.",
+            "subtitle3": "אין בידי אישור זה ולכן אשלם מחיר הכולל מע'מ"
+        },
+        "page5": {
+            "title": "תשלום",
+            "subtitle1": "הסכום לתשלום:",
+            "subtitle2": "שולם:",
+            "SubtitleText01": "כרטיס האשראי המסתיים בספרות",
+            "SubtitleText02": "יחויב ב",
+            "SubtitleText01missing": "כרטיס האשראי",
+            "SubtitleText02missing": "יחויב ב",
+            "sameCardbtn": "חייב כרטיס שמספרו מסתיים ב",
+            "sameCardbtnMissing": "חייב כרטיס זה",
+            "InsertanotherCard": "בחר בכרטיס אחר",
+            "subtitle3": "חייב את כרטיס האשראי ב- ",
+            "subtitle4": " חייב כרטיס אשראי אחר בסכום מלא או חלקי",
+            "subtitle5": "לתשלום מלא או חלקי במזומן",
+            "subtitle6": "נא להכניס שטרות ו/או מטבעות לחריצים המיועדים",
+            "details": "X לילות X ללילה",
+            "PaymentBtn": "לתשלום"
+        },
+        "page341": {
+            "title": "עזיבה (Check-out)",
+            "subtitle1": "המפתח לחדר",
+            "subtitle2": "נקלט בהצלחה.",
+            "subtitle3": "הכנס כעת את המפתח השני שברשותך.",
+            "btnText": " אם המפתח אינו ברשותך לחץ כאן"
+        },
+        "page342": {
+            "title": " עזיבה (Check-out)",
+            "subtitle1": " תהליך העזיבה הסתיים בהצלחה.",
+            "subtitle2": "צוות {{HotelName}} מאחל לך יום נעים. ",
+            "subtitle3": "אנא השאר את הכרטיסים על המדף ליד המסך",
+            "subtitlepayForkey": "חשבונך יחוייב בעלות המפתחות בסך של ",
+            "btnText": " לסיום וחזרה למסך הפתיחה"
+        },
+        "page343": {
+            "title": " עזיבה (Check-out)",
+            "subtitle": "האם את/ה יודע/ת את מספר החדר?",
+            "opt1": "כן",
+            "opt2": "לא"
+        },
+        "page344": {
+            "title": " עזיבה (Check-out)",
+            "subtitle": "מספר החדר:",
+            "subtitle1": "מלא לפחות שדה אחד להזדהות"
+        },
+        "page345": {
+            "title": "עזיבה (Check-out)",
+            "subtitle": "אנא ציינ/י את שם מבצע ההזמנה (כפי שרשום בהזמנה):"
+        },
+        "page346": {
+            "title": "עזיבה (Check-out)",
+            "subtitle1": "מלאו את הפרטים",
+            "subtitle2": "העבר את כרטיס האשראי שניתן בעת ההזמנה או הקלד את ארבע הספרות האחרונות:"
+        },
+        "visaCard": {
+            "FirstText": "אנו מכבדים את",
+            "SecondText": "הכרטיסים הבאים:"
+        },
+        "NotFoundPage": {
+            "title": "דף זה עדיין לא מוגדר"
+        },
+
+        "LostKeys": {
+            "title": "אובדן מפתח",
+            "subtitle2": "מלא לפחות 2 שדות להזדהות וקבלת המפתח",
+            "subtitle": "אנא הכניס מספר חדר כדי ליצר מפתח חדש"
+        },
+        "errorMsgs": {
+            "m00": "ריק",
+            "m01": "אנא לחץ על הכפתורים או שדות הטקסט",
+            "m04": "יש להכניס מידע בתיבת הטקסט",
+            "page3": {
+                "m31": "לא ניתן להיכנס לחדר או להזמין חדר לפני השעה"
+            },
+            "page35": {},
+            "page41": {
+                "m51": "יש להניח תעודת זהות / רישיון נהיגה/ דרכון על משטח הסריקה",
+                "m52": "המסמך אותו שמת אינו קריא. אנא שים לב כי המסמך מונח במרכז המשטח.",
+                "m53": "קח התעודה מהסורק ותלחץ על המשך.",
+                "m54": "הסריקה נכשלה, מנסה זיהוי לפי שם",
+                "m531": "יש חוסר התאמה בין סוג הלקוח לתעודה.",
+                "m532": "האם אתה תייר? ",
+                "m533": "האם אתה אזרח?"
+            },
+            "popUp41": {
+                "m61": " התעודה נסרקה בהצלחה.",
+                "m62": "לא נמצא הזמנה בשם זה. אנא נסה שוב בכרטיס אחר"
+
+            },
+            "page42": {
+                "m91": "יש להניח אישור או לסמן בתיבת הסימון",
+                "m111": "אנא לחץ המשך על מנת להמשיך",
+                "m2": "חויבת במע\"מ בשל אי התאמה בין שם המזמין, התעודה המזהה והשם המופיע על טופס 2B – אנא פנה למשרד בבוקר אם אתם זכאים"
+            },
+            "popUp42": {
+                "m101": "המסמך אותו שמת אינו קריא. אנא שים לב כי המסמך מונח במרכז המשטח.",
+                "m102": "התעודה נסרקה בהצלחה"
+            },
+
+            "page311": {
+                "m131": "יש להזין מספר גדול מ 8 ספרות כפי שמופיע בהזמנה מצד ימין למעלה ",
+                "m132": "לא נמצא הזמנה למספר זה"
+            },
+            "page3111": {
+                "m01": "החדר אינו מוכן עדיין. אנא נסה מאוחר יותר"
+            },
+            "page314": {
+                "m151": "יש להזין כתובת דואר אלקטרוני במבנה ....",
+                "m152": "לא נמצא הזמנה לכתובת דואר אלקטרוני זה"
+
+            },
+            "page313": {
+                "m171": "יש להזין 4 ספרות אחרונות של הכרטיס",
+                "m172": "אנא העבר כרטיס שוב או הקלד 4 ספרות אחרונות, המידע לא נקלט כהלכה",
+                "m181": "לא נמצאה הזמנה שבוצעה בכרטיס זה. אנא ודאו שהזנתם את פרטי הכרטיס איתו בוצעה ההזמנה"
+            },
+            "page312": {
+                "m201": "יש להזין ערכים בשני השדות  ",
+                "m202": "הוזנו תווים שאינם חוקיים. אנא כתוב את השם ושם המשפחה כפי שמופיעים בתעודת הזהות / הדרכון",
+                "m211": "לא נמצא לקוח בשם זה. אנא כתוב את השם כפי שהוא מופיע בהזמנה",
+                "m212": "לא נמצא לקוח בשם זה. אנא פנה לצוות המלון לסיוע "
+            },
+            "page33": {
+                "m241": " יש להקליד תאריך כניסה ויציאה במבנה DD/MM/YY או לבחור מלוח השנה ",
+                "m242": " תאריך היציאה חייב להיות שווה או מאוחר לתאריך הכניסה",
+                "m243": " יש להקליד את שני התאריכים (גם כניסה וגם יציאה)",
+                "m244": "אין חדרים פנויים למנוחת יום",
+                "m245": "השעה המאוחרת ביותר שניתן לקחת חדר למנוחת יום",
+                "m246": "שעת כניסה מאוחרת מדי",
+                "m247": "מחפש חדר פנוי למנוחת יום",
+                "m248": "לא תוכל להזמין חדר למנוחת יום"
+
+
+            },
+            "page32": {
+                "m271": "יש להקליד תאריך כניסה ויציאה במבנה DD/MM/YY או לבחור מלוח השנה "
+            },
+            "page3212": {
+                "m381": "הוזנו תווים לא חוקיים. אנא רשום...",
+                "m383": "יש להכניס כתובת דואר אלקטרוני במבנה ...",
+                "m384": "יש להכניס מספר טלפון במבנה הבא...",
+                "m385": "יש למלא שם משפחה, שם פרטי, דואר אלקטרוני ואחד ממספרי הטלפון"
+
+            },
+            "page4": {
+                "m411": " יש להעביר כרטיס אשראי",
+                "m412": "כרטיס האשראי לא נקלט. אנא תעביר  שוב",
+                "m413": "..בודק חיבור",
+                "m414": "סכום: ₪ 100",
+                "m415": "בעל הכרטיס העביר את הכרטיס בקורא הכרטיס המגנטי",
+                "m416": "בודק את ההרשאות של הכרטיס",
+                "m417": "בעל הכרטיס העביר את הכרטיס, אבל עליו להשתמש בשבב",
+                "m418": "בעל הכרטיס הכניס את הכרטיס לקורא הכרטיס החכם",
+                "m419": "העסקה בוטלה. על בעל הכרטיס להסיר את כרטיס הביקור שלו.",
+                "m420": "נסה שוב או השתמש בכרטיס אחר",
+                "m421": "נסה שוב <br> הכנס כרטיס והוצא אותו מידיית"
+
+
+            },
+            "page5": {
+                "m500": "מבצע חיוב אנא המתן",
+                "m501": "החיוב בוצע בהצלחה",
+                "m502text2": "ולהתקשר לצוות המלון ",
+                "m502text11": "אתה יכול לנסות שוב",
+                "m502text12": "או",
+                "m502text13": "חזור לדף הראשי"
+
+            },
+            "page51": {
+                "m511": " יש להעביר כרטיס אשראי ",
+                "m512": " כרטיס האשראי לא נקלט. אנא העבר שוב ",
+                "m513": " יש להכניס סכום בשקלים ",
+                "m514": " יש להכניס סכום עד X שקלים  ",
+                "m515": " יש להכניס סכום או לסמן שברצונך לשלם את מלוא הסכום",
+                "m516": " יש לבחור סכום מלא או למלא סכום חלקי"
+
+            },
+            "page6": {
+                "m551": "יש לסמן לפחות אחת מהאפשרויות"
+            },
+            "page34": {
+                "m611": "Enter room key or press next"
+            },
+            "page341": {
+                "m621": "Enter room key or press next"
+            },
+            "page343": {
+                "m651": "יש לבחור כן או לא"
+            },
+            "page344": {
+                "m651": "יש לכתוב מספר חדר"
+            },
+            "page345": {
+                "m681": "יש להזין ערכים בשני השדות (גם שם פרטי וגם משפחה)",
+                "m682": "הוזנו תווים שאינם חוקיים. אנא כתוב את השם ושם המשפחה כפי שמופיעים בתעודת הזהות / הדרכון",
+                "m691": "לא נמצא לקוח בשם זה. אנא כתוב את השם כפי שהוא מופיע בהזמנה",
+                "m701": "יש להזין 4 ספרות אחרונות של הכרטיס",
+                "m702": "אנא העבר כרטיס שוב או הקלד 4 ספרות אחרונות, המידע לא נקלט כהלכה",
+                "m711": "לא נמצאה הזמנה שבוצעה בכרטיס זה. אנא ודאו שהזנתם את פרטי הכרטיס איתו בוצעה ההזמנה"
+            },
+            "LostKeys": {
+                "m001": "מספר החדר לא קיים במלון",
+                "m002": "לא נמצא הזמנה עבור מספר החדר הזה",
+                "m003": "אחד הפרטים אינו קיים בהזמנה",
+                "m004": "מלא לפחות 2 שדות ",
+                "m005": "מלא שדה אחד לפחות"
+
+
+            }
+        }
+
+
+
+    },
+    "EN": {
+        "code": "EN",
+        "UPS": "Power Outage - cancelling current operations and shutting down...",
+        "start": "To start click here",
+        "prev": "Return",
+        "next": "Next",
+        "close": "Close",
+        "cancel": "Cancel",
+        "clean": "Clear",
+        "loading": "Please wait",
+        "loadingScan": "Scanning, please wait",
+        "thankyouMsg": "Thank you for making a reservation with us!",
+        "welcomeMsg": "Hello",
+        "placeholder": {
+            "fname": "First Name",
+            "lname": "Surname",
+            "phone": "phone",
+            "email": "example@test.co.il",
+            "visaCard": ""
+        },
+        "date": {
+            "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "days": ["SUN.", "MON.", "TUS.", "WED.", "THU.", "FRI.", "SAT."],
+            "daysPage33": ["SUN", "MON", "TUS", "WED", "THU", "FRI", "SAT"],
+            "CharacterDate1": "",
+            "CharacterDate2": "at ",
+            "CharacterDate3": " until "
+        },
+        "page2": {
+            "opt1": "Hotel",
+            "opt2": "Parking Fees"
+        },
+        "page3": {
+            "opt1": "Check-In for Reserved Rooms",
+            "opt2": "Check -In for a Non- Reserved Rooms",
+            "opt3": "Reserve a night Room",
+            "opt4": "Check-Out",
+            "opt5": "Troubleshooting/ More",
+            "opt6": "Reserve a room for Day Use "
+
+        },
+        "page31": {
+            "title": "Find Reservation ",
+            "opt1": "Confirmation Number",
+            "opt2": " Name",
+            "opt3": "Credit Card",
+            "opt4": "Email",
+            "note1": "We couldn't find your reservation with this name.",
+            "note2": "Locate your reservation by:"
+        },
+        "page311": {
+            "title": "Confirmation Number",
+            "note11": "Your confirmation number ",
+            "note12": "is on the top left hand side ",
+            "note13": "of your reservation."
+
+        },
+        "page312": {
+            "title": "Please enter your first and last name",
+            "note11": "Please type your name ",
+            "note12": "as it appears on your reservation.",
+            "clean": "Clear first and last name",
+            "ok": "Back to Home screen"
+        },
+        "page313": {
+            "title": "Please type the credit card number used for the reservation.",
+            "subtitle": "Swipe your credit card or type the last four digits.",
+            "note11": "Please swipe your credit ",
+            "note12": "card in the credit card ",
+            "note13": "reader on the right."
+        },
+        "page314": {
+            "title": "Email",
+            "note11": "Please type the email address ",
+            "note12": "used for the reservation."
+        },
+        "page33": {
+            "title": "Reservation Dates",
+            "dateText1": "Check-In",
+            "dateText2": "Check-Out",
+            "checkboxText": "Day Use",
+            "CharacterDate": "",
+            "nightsCount": "Number of selected nights:&nbsp"
+
+        },
+        "page32": {
+            "title": "Reservation Dates",
+            "dateText1": "Check-In",
+            "dateText2": "Check-Out",
+            "checkboxText": "Day Use",
+            "todyText": "Today"
+
+        },
+        "page321": {
+            "title": "Choose Your Room",
+            "colName1": "Number of Guests",
+            "colName2": "Room Type",
+            "colName32": "(for your entire stay)",
+            "colName31": "Total Cost",
+            "colName41": "Cost for Tourists ",
+            "colName42": "(no VAT)",
+            "chooseRoom": "Pick a room",
+            "btnText2": "Add a Room",
+            "op3": "More",
+            "OK": "OK",
+            "cancelRoom": "Cancel",
+            "gu3": "3 Guests ",
+            "gu4": "4 Guests",
+            "gu5": "5 Guests",
+            "guests": "Guests",
+            "selectRooms": "Choose"
+        },
+
+        "page3211": {
+            "title": "Choose Your Room",
+            "chooseRoom": "Choose",
+            "priceText": "Price",
+            "currencySign": "NIS",
+            "nights": "nights",
+            "noRoom": "No Rooms available for your selection",
+            "inRoom": "Room Details:",
+            "noData": "No Data"
+        },
+        "page3212": {
+            "title": "Please fill in the required information:",
+            "titlePhone": "Please fill your phone number",
+            "titleEmail": "Please fill your Email address",
+            "dogTextRight1": "We will use your phone number ",
+            "dogTextRight2": "solely to inform and remind you ",
+            "dogTextRight3": "regarding your reservation.",
+            "dogTextLeft1": "We will use your email address ",
+            "dogTextLeft2": "solely for emailing your invoice and information ",
+            "clean": "Clean phone number",
+            "cleanMail": "Clean Email address",
+            "dogTextLeft3": "regarding your reservation."
+        },
+        "page4": {
+            "title": "Collateral",
+            "subtitleFirst": "Your credit card is swiped ",
+            "subtitleBold": " for collateral purposes",
+            "subtitleSecond": "and is not charged now.",
+            "subtitle1": "Please insert your card and take it out immediately",
+            "subtitle2": "A collateral [SUM] will be put on your credit card now"
+        },
+        "page51": {
+            "title": "Pay with a credit card.",
+            "subtitle": "Please insert your credit card into the lighted slot.",
+            "opt1": "Charge this card for the amount of:"
+        },
+        "page6": {
+            "title": "Invoice/ Receipt",
+            "opt1": "Email invoice",
+            "opt2": "Print receipt now."
+        },
+        "page7": {
+            "title": "Please take your keys now.",
+            "number": "NO.",
+            "anotherCard": "Get another card",
+            "CardWait": "Preparing card..Please wait",
+            "CardSuccess": "please take card from dispenser",
+            "CardSuccessQ": "Do you need additional card ?",
+
+            "CardFailed": "Failed to prepare card"
+        },
+        "page7Code": {
+            "title": "The door PIN code for the room "
+        },
+        "page71": {
+            "title": "Your Room Number is:",
+            "floortext": "Floor",
+            "subtitle1": "Your room information was sent ",
+            "subtitle2": "to you via email and text message.",
+            "subtitle3": "",
+            "subtitle4": "",
+            "btnText1": "Continue and receive your keys for your next room.",
+            "btnText2": "Complete and return to our Homepage.",
+            "title1": "Your reservation was registered.",
+            "subtitle11": "Your confirmation Number  is:",
+            "subtitle12": "Your reservation information was sent to your email and/or phone.",
+            "subtitle13": "You may cancel your reservation up to 24 hours prior to your chack-In with no cost.",
+            "subtitle14": "If you cancel your reservation past this date you will be charged 50% of your reservation cost.",
+            "clean": "Your room is not yet clean, it will be available for you as soon as possible"
+
+        },
+        "page3111": {
+            "title": "Reservation Confirmation",
+            "confirm": "Confirm",
+
+            "colName1": "Number of Guests",
+            "colName2": "Room Type",
+            "colName3": "Check-In",
+            "colName4": "Check-Out",
+            "btnText1": "Change your Reservation",
+            "btnText2": "Not my Reservation",
+            "person1": "One",
+            "person2": "Two",
+            "person3": "Three",
+            "person4": "Four ",
+            "person5": "Five",
+            "EarlyEntry1": "Standard Check in time is ",
+            "EarlyEntry2": "Since you are early, you will be charged an extra ",
+            "EarlyEntry3": "Total price would be ",
+            "EarlyEntry4": " Before tax"
+
+        },
+        "page3111a": {
+            "title": "Reservations",
+            "colName3": "Check-In",
+            "colName4": "Check-Out",
+            "btnText1": "Change your Reservation",
+            "btnText2": "Not my Reservation",
+            "detail1": "Reservation number: ",
+            "detail2": "Reservation date: "
+        },
+        "page34": {
+            "title": "Check-Out",
+            "subtitle": "Please insert the room key into the slot.",
+            "subtitleNoDispenser": "Please insert the key into the left slot",
+            "btnText": "If you don't have any key, press here."
+        },
+        "page35": {
+            "opt1": "Extend your Stay",
+            "opt2": "Shorten your Stay",
+            "opt3": "Extra Key",
+            "opt4": "Lost a Key"
+        },
+        "page41": {
+            "title": "Identification",
+            "titleTakeYourCard": "Take the ID Card",
+            "subtitle1": "According to Israeli Law, guests must present a valid ID when checking in.",
+            "subtitle3": "Please place your ID (Passport, Israeli driver's license, Israeli ID) in the scanner picture facing glass",
+            "startscan": "press to scan",
+            "opt1": "Passport",
+            "opt2": "ID card / driver's license",
+            "opt3": "Check in without an ID card",
+            "subtitle2": "Please put your valid ID on the scanner.",
+            "citizen": "I am an Israeli citizen",
+            "nocitizen": "I am a tourist",
+            "Fname": "First Name",
+            "Lname": "Last Name",
+            "result": "Make sure the credentials below are properly spelled and written",
+            "next": "My name is spelled correctly",
+            "again": "Scan again"
+        },
+        "popUp": {
+            "title": "Confirmation",
+            "Q": " Is your name displayed correctly ?",
+            "citizenText": "Your ID has been scanned.",
+            "noCitizenText": "Your ID has been  scanned.",
+            "EnterISLText": "Your entry visa has been scanned.",
+            "takeYourCard": "Take Your Card from the scanner",
+            "process": "processing Data.. please wait",
+            "returnHome": "Back to main page",
+            "againBtn": "Try again",
+            "nextBtn": "Next"
+        },
+        "page42": {
+            "title": "Entry Visa to Israel",
+            "subtitle1": "To obtain your VAT exempt, please present your entry visa to Israel.",
+            "subtitle2": "Please put the entry visa on the scanner.",
+            "subtitle3": "I do not possess  an entry visa and therefore I'll pay the full price, including VAT."
+        },
+        "page5": {
+            "title": "Payment",
+            "SubtitleText01": "Credit card ends with ",
+            "SubtitleText02": "will be charged ",
+            "sameCardbtn": "Payment with card ending",
+            "InsertanotherCard": "Payment with a different card",
+            "SubtitleText01missing": "This Credit card",
+            "SubtitleText02missing": "will be charges",
+            "sameCardbtnMissing": "Payment with same card",
+            "subtitle1": "Total",
+            "subtitle2": "Amount Paid",
+            "subtitle3": "Please charge the credit card ",
+            "subtitle4": "Total",
+            "subtitle5": "Pay partial or full amount in cash.",
+            "subtitle6": "Please insert bills or coins in the slots. ",
+            "details": "night x nights x",
+            "PaymentBtn": "For payment"
+        },
+        "page341": {
+            "title": "Check-Out",
+            "subtitle1": "Your room key ",
+            "subtitle2": "was received successfully. ",
+            "subtitle3": "Please insert your other key now.",
+            "btnText": "If you don't have the key, press here."
+        },
+        "page342": {
+            "title": "Check-Out",
+            "subtitle1": "Your Check-out is complete!",
+            "subtitle2": "Our staff at {{HotelName}} wishes you a nice day!",
+            "subtitle3": "Please leave the cards on the shelf near the screen",
+            "subtitlepayForkey": "Your account will be charge for the keys, at the amount of:",
+            "btnText": "Complete and return to our Homepage"
+        },
+        "page343": {
+            "title": "Check-Out",
+            "subtitle": "Do you know your room number?",
+            "opt1": "Yes",
+            "opt2": "No"
+        },
+        "page344": {
+            "title": "Check-Out",
+            "subtitle": "Room Number:",
+            "subtitle1": "Fill in at least 1 field for identification"
+        },
+        "page345": {
+            "title": "Check-Out",
+            "subtitle": "Please type your name as it appears on the reservation."
+        },
+        "page346": {
+            "title": "Check-Out",
+            "subtitle1": "Fill in the required information:",
+            "subtitle2": "Please swipe the credit card number you used for the reservation, or type the last four digits."
+
+        },
+        "visaCard": {
+            "FirstText": "We accept the ",
+            "SecondText": "following credit cards:"
+        },
+        "NotFoundPage": {
+            "title": "page is not defined"
+        },
+        "LostKeys": {
+            "title": "Lost key",
+            "subtitle2": "Fill in at least 2 fields to identify yourself and accept the key",
+            "subtitle": "Please enter your room number to generate a new key"
+        },
+        "errorMsgs": {
+            "m00": "Empty",
+            "m01": "Please click on the buttons or the text fields",
+            "m04": "Please input text in the text fields",
+            "page3": {
+                "m31": "Room entry or reservation is not available before"
+            },
+            "page35": {},
+            "page41": {
+                "m51": "Place your ID or Driver's license on the scanner",
+                "m52": "Your document can't be read. Make sure it's in the center of the scanner picture facing glass",
+                "m53": "Please take your card and then press next",
+                "m54": "Scan failed, continue to identification by name",
+                "m531": "There's a mismatch between the client type and the scanned document.",
+
+                "m532": " Are you a tourist?",
+                "m533": " Are you an Israeli citizen?"
+            },
+            "popUp41": {
+                "m61": "Document successfully scanned",
+                "m62": "No order was found for this name. Please try again using another document"
+
+            },
+            "page42": {
+                "m91": "Place you permission or mark the checkbox",
+                "m111": "Press next to continue",
+                "m2": "Due to difference between the reservation name, Identity document and B2 form you were charged with VAT. Please approach the office in the morning if you should be VAT exempted"
+            },
+            "popUp42": {
+                "m101": "Your document can't be read. Make sure it's in the center of the scanner",
+                "m102": "Document successfully scanned"
+            },
+
+            "page311": {
+                "m131": "Enter a number with more than 8 digits, as shown in your top right of your reservation",
+                "m132": "No order was found with this number"
+            },
+            "page3111": {
+                "m01": "The room is not ready yet. Please try later"
+
+            },
+            "page314": {
+                "m151": "Wrong Email format",
+                "m152": "No order was found with this Email address"
+
+            },
+            "page313": {
+                "m171": "Enter 4 last digits of your card",
+                "m172": "Please swipe your card again or enter 4 last digits",
+                "m181": "No order was found for this ticket. Make sure you're using the same card you booked with"
+            },
+            "page312": {
+                "m201": "Enter you name in both fields, First Name and Last Name",
+                "m202": "Invalid characters. Please enter your name as written in your ID ",
+                "m211": "No customer was found with this name. Please use the name from the booking",
+                "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
+            },
+            "page33": {
+                "m241": "Date must be in format DD/MM/YY or selected from the calendar",
+                "m242": "Check out date must be as or later than check in date",
+                "m243": "Both dates (check in, check out) are needed",
+                "m244": "There are no rooms available for a day use",
+                "m245": "The most late hour you can take a room for a day use",
+                "m246": "check-in time too late for a day use",
+                "m247": "Looking for an available room for a day use",
+                "m248": "You Can't book a room for a day use "
+            },
+            "page32": {
+                "m271": "Date must be in format DD/MM/YY or selected from the calendar"
+            },
+            "page3212": {
+                "m381": "Invalid characters were inputed",
+                "m383": "Wrong Email format",
+                "m384": "Enter a phone number in the following format ...",
+                "m385": "Please enter First Name, Last Name, Email and one of the Phone numbers"
+
+            },
+            "page4": {
+                "m401": "Invalid Credit/Debit Card serial",
+                "m402": "Invalid Card Type",
+                "m403": "There was a problem with your credit card",
+                "m414": "Amount: 100 NIS",
+                "m415": "Card swipped succesfuly",
+                "m416": "Checking card",
+                "m420": "Please try again or use another card",
+                "m421": "Please insert your card again, then take it out immediately"
+
+            },
+            "page5": {
+                "m500": "Charging Credit Card .. Please wait",
+                "m501": "Charged successfully",
+                "m502text11": "You can try again",
+                "m502text12": "OR",
+                "m502text13": "Go Back to the main page",
+                "m502text2": "and call hotel staff on"
+            },
+            "page51": {
+                "m511": "Please swipe your credit card ",
+                "m512": " Credit card wasn't read. Please swipe again ",
+                "m513": " Please enter ammount in NIS",
+                "m514": "Please enter up to X NIS",
+                "m515": "Please enter a sum or check that you want to enter the entire sum",
+                "m516": "Please select Entire or Partial sum"
+
+            },
+            "page6": {
+                "m551": "Select at least one of the options"
+            },
+            "page34": {
+                "m611": "Enter room key or press next"
+            },
+            "page341": {
+                "m621": "Enter room key or press next"
+            },
+            "page343": {
+                "m651": "Select yes or no"
+            },
+            "page344": {
+                "m651": "Enter room number"
+            },
+            "page345": {
+                "m681": "Enter you name in both fields, First Name and Last Name",
+                "m682": "Invalid characters. Please enter your name as written in your ID ",
+                "m691": "No customer was found with this name. Please use the name from the booking",
+                "m701": "Enter 4 last digits of your card",
+                "m702": "Please swipe your card again or enter 4 last digits",
+                "m711": "No order was found for this ticket. Make sure you're using the same card you booked with"
+            },
+            "LostKeys": {
+                "m001": "Room number does not exist in the hotel",
+                "m002": "No reservation found for this room number",
+                "m003": "One of the details does not exist in the reservation",
+                "m004": "Fill in at least 2 fields",
+                "m005": "Fill in at least 1 field"
+
+
+            }
+        }
+
+
+    },
+    "AR": {
+        "code": "AR",
+        "UPS": " انقطاع التيار الكهربائي - إلغاء العمليات الحالية ,جاري ايقاف التشغيل",
+        "start": "للبدء اضغط هنا",
+        "prev": "عودة",
+        "next": "التالي",
+        "cancel": "الغاء",
+        "close": "اغلاق",
+        "clean": "حذف",
+        "loading": "يرجى الانتظار",
+        "loadingScan": "جاري المسح .. الرجاء الانتظار",
+        "thankyouMsg": "شكراً للحجز معنا!",
+        "welcomeMsg": "مرحبا",
+        "placeholder": {
+            "fname": "الاسم الاول",
+            "lname": "الاسم الاخير",
+            "email": "example@test.co.il",
+            "visaCard": ""
+        },
+        "date": {
+            "months": ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+            "days": ["الاحد.", "الاثنين.", "الثلاثاء.", "الاربعاء.", "الخميس.", "الجمعة.", "السبت."],
+            "daysPage33": ["الاحد", "الاثنين", "الثلاثاء", "الاربعاء", "الخميس", "الجمعة", "السبت"],
+            "CharacterDate1": "",
+            "CharacterDate2": "من ",
+            "CharacterDate3": " حتى "
+        },
+        "page2": {
+            "opt1": "فندق",
+            "opt2": "رسوم الوقوف"
+        },
+        "page3": {
+            "opt1": "تسجيل الوصول للغرف المحجوزة",
+            "opt2": "تسجيل الوصول للغرف غير المحجوزة",
+            "opt3": "حجز غرفة ليلة",
+            "opt4": "تسجيل المغادرة",
+            "opt5": "اكتشاف الأعطال/ المزيد",
+            "opt6": "حجز غرفة لـ Day Use"
+        },
+        "page31": {
+            "title": "اعثر على حجز ",
+            "opt1": "اعثر على الحجز برقم التأكيد",
+            "opt2": "اعثر على الحجز بالاسم",
+            "opt3": "اعثر على حجز بالبطاقة الائتمانية",
+            "opt4": "اعثر على حجز بالبريد الالكتروني"
+        },
+        "page311": {
+            "title": "رقم التأكيد",
+            "note11": "رقم التأكيد ",
+            "note12": "هو في أعلى ",
+            "note13": "يسار الحجز."
+
+        },
+        "page312": {
+            "title": "ادخل اسمك واسم العائلة ",
+            "note11": "فضلاً اكتب اسمك ",
+            "note12": "كما يظهر في الحجز.",
+            "clean": "Clear first and last name",
+            "ok": "Back to Home screen"
+        },
+        "page313": {
+            "title": "يرجى كتابة رقم بطاقة الائتمان المستخدمة للحجز.",
+            "subtitle": "مرر بطاقة الائتمان أو اكتب الأرقام الأربعة الأخيرة.",
+            "note11": "فضلاً مرر بطاقة ",
+            "note12": "الائتمان في قارئ ",
+            "note13": "البطاقات الائتمانية على اليمين."
+        },
+        "page314": {
+            "title": "البريد الإلكتروني",
+            "note11": "يرجى كتابة عنوان البريد ",
+            "note12": "الإلكتروني المستخدم للحجز."
+        },
+        "page33": {
+            "title": "تواريخ الحجز",
+            "dateText1": "تاريخ الوصول",
+            "dateText2": "تاريخ المغادرة",
+            "checkboxText": "استخدام يومي",
+            "CharacterDate": "",
+            "nightsCount": "عدد الليالي التي تم اختيارها"
+
+
+        },
+        "page32": {
+            "title": "تواريخ الحجز",
+            "dateText1": "تاريخ الوصول",
+            "dateText2": "تاريخ المغادرة",
+            "checkboxText": "استخدام يومي",
+            "todyText": "اليوم"
+
+        },
+        "page321": {
+            "title": "اختر غرفتك",
+            "colName1": " عدد النزلاء في الغرفة",
+            "colName2": "نوع الغرفة",
+            "colName32": "(لإقامتك كلها)",
+            "colName31": "إجمال التكلفة",
+            "colName41": "التكلفة للسياح ",
+            "colName42": "(بدون ضريبة القيمة المضافة)",
+            "chooseRoom": "اختر غرفة",
+            "btnText2": "أضف غرفة",
+            "op3": "اكثر",
+            "OK": "التأكيد",
+            "cancelRoom": "الغاء",
+            "gu3": "3 نزلاء ",
+            "gu4": "4 نزلاء",
+            "gu5": "5 نزلاء",
+            "guests": "نزلاء",
+            "selectRooms": "اختار"
+        },
+        "page3211": {
+            "title": "اختر غرفتك",
+            "chooseRoom": "حدد اختيارك",
+            "priceText": "السعر",
+            "currencySign": "ش.ج",
+            "nights": "ليالي",
+            "noRoom": "لا توجد غرف متاحة لاختيارك ،حاول تقسيم طلبك بين غرفتين أو أكثر",
+            "inRoom": "في الغرفة",
+            "noData": "لا توجد معلومات"
+
+        },
+        "page3212": {
+            "title": "يرجى تعبئة البيانات المطلوبة:",
+            "titlePhone": "ادخل رقم هاتفك المحمول",
+            "titleEmail": "ادخل بريدك الالكتروني",
+            "dogTextRight1": "سوف نستخدم ",
+            "dogTextRight2": "رقم هاتفك فقط لإعلامك ",
+            "dogTextRight3": "وتذكيرك بحجزك.",
+            "dogTextLeft1": "سنستخدم عنوان بريدك ",
+            "dogTextLeft2": "الإلكتروني فقط لإرسال الفاتورة والمعلومات ",
+            "clean": "Clean phone number",
+            "cleanMail": "Clean Email address",
+            "dogTextLeft3": "المتعلقة بحجزك عبر البريد الإلكتروني."
+        },
+        "page4": {
+            "title": "حماية Security",
+            "subtitleFirst": "يتم تمرير بطاقتك ",
+            "subtitleBold": "الائتمانية لأسباب أمنية فقط ",
+            "subtitleSecond": "ولن يتم تحصيل الرسوم منك الآن.",
+            "subtitle2": "فضلاً مرر بطاقة الائتمان ثم اخرج البطاقة مباشرة "
+        },
+        "page51": {
+            "title": "الدفع بواسطة بطاقة الائتمان.",
+            "subtitle": "يرجى إدخال بطاقة الائتمان في الفتحة المضاءة.",
+            "opt1": "اسحب من هذه البطاقة مبلغ:"
+        },
+        "page6": {
+            "title": "الفاتورة/ الإيصال",
+            "opt1": "أرسل فاتورتي بالبريد الإلكتروني",
+            "opt2": "اطبع الايصال الآن."
+        },
+        "page7": {
+            "title": "فضلاً خذ مفاتيحك الآن.",
+            "number": "الرقم",
+            "CardWait": "جاري تحضير البطاقة.. الرجاء الانتظار",
+            "CardSuccess": "يرجى أخذ البطاقة",
+            "CardSuccessQ": "هل تحتاج إلى بطاقة إضافية ?",
+            "CardFailed": "فشل في تحضير البطاقة "
+        },
+        "page7Code": {
+            "title": "الرقم السري للغرفة هو "
+        },
+        "page71": {
+            "title": "رقم غرفتك هو:",
+            "floortext": "الطابق",
+            "subtitle1": "لقد أُرسلت لك بيانات غرفتك ",
+            "subtitle2": "عبر البريد الإلكتروني والرسائل النصية.",
+            "subtitle3": " ",
+            "subtitle4": "",
+            "btnText1": "واصل واستلم مفاتيح غرفتك التالية.",
+            "btnText2": "أكمل وعُد إلى الصفحة الرئيسية.",
+            "title1": "تم تسجل حجزك.",
+            "subtitle11": "رقم التأكيد هو:",
+            "subtitle12": "لقد أُرسلت لك بيانات الحجز عبر بريدك الإلكتروني و/أو هاتفك.",
+            "subtitle13": "يمكنك إلغاء الحجز قبل 24 ساعة من تسجيل الوصول دون أي تكلفة.",
+            "subtitle14": "إذا ألغيت حجزك بعد هذا التاريخ، سيتم خصم 50٪ من تكلفة الحجز.",
+            "clean": "Your room is not yet clean, it will be available for you as soon as possible"
+
+        },
+        "page3111": {
+            "title": "تأكيد الحجز",
+            "confirm": "تأكيد",
+            "colName1": " عدد النزلاء في الغرفة",
+            "colName2": "نوع الغرفة",
+            "colName3": "تسجيل الوصول",
+            "colName4": "تسجيل المغادرة",
+            "btnText1": "غيّر حجزك",
+            "btnText2": "ليس حجزي",
+            "person1": "غرفة فردية",
+            "person2": "غرفة مزدوجة",
+            "person3": "غرفة لثلاثة",
+            "person4": "غرفة لاربعة ",
+            "person5": "غرفة لخمسة",
+            "EarlyEntry1": "Standard Check in time is ",
+            "EarlyEntry2": "Since you are early, you will be charged an extra ",
+            "EarlyEntry3": "Total price would be ",
+            "EarlyEntry4": " Before tax"
+        },
+        "page3111a": {
+            "title": "Reservations",
+            "colName3": "Check-In",
+            "colName4": "Check-Out",
+            "btnText1": "Change your Reservation",
+            "btnText2": "Not my Reservation",
+            "detail1": "Reservation number: ",
+            "detail2": "Reservation date: "
+        },
+        "page34": {
+            "title": "تسجيل المغادرة",
+            "subtitle": "يرجى إدخال مفتاح الغرفة في الفتحة.",
+            "subtitleNoDispenser": "Please insert the key into the left slot",
+            "btnText": "إذا لم يكن لديك أي مفتاح، اضغط هنا."
+        },
+        "page35": {
+            "opt1": "تمديد إقامتك",
+            "opt2": "تقصير إقامتك",
+            "opt3": "مفتاح إضافي",
+            "opt4": "فقدان مفتاح"
+        },
+        "page41": {
+            "title": "كشف الهوية",
+            "titleTakeYourCard": "خذ بطاقة الهوية",
+            "subtitle1": "وفقاً للقانون الإسرائيلي، يجب على النزلاء تقديم بطاقة هوية سارية المفعول عند تسجيل الدخول للفندق.",
+            "subtitle3": "يرجى وضع بطاقة الهوية (جواز السفر،رخصة القيادة،بطاقة الهوية) في الماسح الضوئي وتحديد نوع الشهادة التي قمت بوضعها!",
+            "startscan": "اضغط لمسح البطاقة",
+            "opt1": "جواز سفر",
+            "opt2": "بطاقة الهوية / رخصة القيادة",
+            "opt3": "دخول بدون بطاقة هوية",
+            "subtitle2": "يرجى وضع هويتك السارية على الماسحة الضوئية.",
+            "citizen": "أنا مواطن إسرائيلي",
+            "nocitizen": "أنا سائح",
+            "Fname": "First Name",
+            "Lname": "Last Name",
+            "result": "Make sure the credentials below are properly spelled and written",
+            "next": "My name is spelled correctly",
+            "again": "Scan again"
+        },
+        "popUp": {
+            "title": "تأكيد",
+            "Q": " هل اسمك المسجل هنا صحيح ?",
+            "citizenText": "لقد تم مسح هويتك السارية مسحاً ضوئياً.",
+            "noCitizenText": "لقد تم مسح جواز سفرك مسحاً ضوئياً.",
+            "EnterISLText": "لقد تم مسح تأشيرة دخولك مسحاً ضوئياً.",
+            "takeYourCard": "قم باخذ بطاقتك من الماسح الضوئي",
+            "process": "يتم استخراج البيانات , الرجاء الانتظار",
+            "returnHome": "العودة الى الصفحة الرئيسية",
+            "againBtn": "حاول مرة أخرى",
+            "nextBtn": "التالي"
+        },
+        "page42": {
+            "title": "تأشيرة الدخول إلى إسرائيل",
+            "subtitle1": "للحصول على اعفاء من ضريبة القيمة المضافة، فضلاً قدّم تأشيرة دخولك إلى إسرائيل.",
+            "subtitle2": "يرجى وضع تأشيرة الدخول على الماسح الضوئي.",
+            "subtitle3": "أنا لا أمتلك تأشيرة دخول، وبالتالي سوف أدفع السعر بالكامل، بما في ذلك ضريبة القيمة المضافة."
+        },
+        "page5": {
+            "title": "الدفع",
+            "SubtitleText01": "بطاقة الائتمان التي تنتهي بـ",
+            "SubtitleText02": "سيتم محاسبتها بمبلغ ",
+            "sameCardbtn": "دفع ببطاقة ",
+            "InsertanotherCard": "دفع ببطاقة اخرى",
+            "SubtitleText01missing": "This Credit card",
+            "SubtitleText02missing": "will be charges",
+            "sameCardbtnMissing": "Payment with same card",
+            "subtitle1": "الإجمالي",
+            "subtitle2": "المبلغ المدفوع",
+            "subtitle3": "يرجى تحصيل الرسوم من بطاقة الائتمان المقدمة عند الحجز ...",
+            "subtitle4": "الإجمالي",
+            "subtitle5": "ادفع مبلغاً جزئياً أو المبلغ بالكامل نقداً.",
+            "subtitle6": "يرجى وضع الفواتير أو النقود في الفتحات. ",
+            "details": "X ليالي X ليلة",
+            "PaymentBtn": "للدفع"
+
+        },
+        "page341": {
+            "title": "تسجيل المغادرة",
+            "subtitle1": "تم استلام ",
+            "subtitle2": "مفتاح الغرفة بنجاح. ",
+            "subtitle3": "يرجى إدخال المفتاح الآخر الآن.",
+            "btnText": "إذا لم يكن لديك المفتاح، اضغط هنا."
+        },
+        "page342": {
+            "title": "تسجيل المغادرة",
+            "subtitle1": "لقد اكتمل تسجيل مغادرتك!",
+            "subtitle2": "يتمنى لك موظفو فندق {{HotelName}} يوماً جميلاً!",
+            "subtitlepayForkey": "سيتم تحصيل رسوم من حسابك للمفاتيح، بمبلغ:",
+            "btnText": "أكمل وعد إلى الصفحة الرئيسية"
+        },
+        "page343": {
+            "title": "تسجيل المغادرة",
+            "subtitle": "هل تعرف رقم غرفتك؟",
+            "opt1": "نعم",
+            "opt2": "لا"
+        },
+        "page344": {
+            "title": "تسجيل المغادرة",
+            "subtitle": "رقم الغرفة:",
+            "subtitle1": "املئ احدى المعطيات الادناه"
+        },
+        "page345": {
+            "title": "تسجيل المغادرة",
+            "subtitle": "يرجى كتابة اسمك كما يظهر في الحجز."
+        },
+        "page346": {
+            "title": "تسجيل المغادرة",
+            "subtitle1": "املأ المعلومات المطلوبة:",
+            "subtitle2": "يرجى تمرير رقم بطاقة الائتمان التي استخدمتها للحجز، أو كتابة آخر أربعة أرقام."
+
+        },
+        "visaCard": {
+            "FirstText": "نحن نقبل ",
+            "SecondText": "بطاقات الائتمان التالية:"
+
+        },
+        "NotFoundPage": {
+            "title": "هذه الصفحه غير معرفه"
+
+        },
+        "LostKeys": {
+            "title": "Lost key",
+            "subtitle2": "املأ حقلين على الأقل للتعرف عليهما لاستلام المفتاح",
+            "subtitle": "يرجى إدخال رقم الغرفة لإنشاء مفتاح جديد"
+        },
+        "errorMsgs": {
+            "m00": "فارغ",
+            "m01": "يرجى النقر على الأزرار أو حقول النص",
+            "m04": "يرجى ادخال المعلومات في مربع النص",
+            "page3": {
+                "m31": "لا يمكن الدخول إلى الغرفة او حجز غرفة قبل الساعة"
+            },
+            "page35": {},
+            "page41": {
+                "m51": "ضع بطاقة هويتك أو رخصة القيادة أو جواز السفر على الماسحة الضوئية",
+                "m52": "لا يمكن قراءة المستند. تأكد من أنه في وسط الماسحة الضوئية",
+                "m53": " قم بأخذ البطاقة من الماسح الضوئي ومن ثم اضغظ التالي ",
+
+                "m531": "هناك عدم تطابق بين نوع العميل والمستند الممسوح ضوئياً. هل أنت سائح؟",
+                "m532": "هل أنت سائح؟",
+                "m533": " هل أنت مواطن إسرائيلي؟"
+            },
+            "popUp41": {
+                "m61": "تم مسح المستند ضوئياً بنجاح",
+                "m62": "لم يتم العثور على أي حجز لهذا الاسم. يرجى المحاولة مرة أخرى باستخدام بطاقة أخرى"
+            },
+            "page42": {
+                "m91": "يمكنك وضع الإذن أو وضع علامة في مربع الاختيار",
+                "m111": "اضغط على التالي للمواصلة",
+                "m2": "Due to difference between the reservation name, Identity document and B2 form you were charged with VAT. Please approach the office in the morning if you should be VAT exempted"
+
+            },
+            "popUp42": {
+                "m101": "لا يمكن قراءة المستند. تأكد من أنه في وسط الماسحة الضوئية",
+                "m102": "تم مسح المستند ضوئياً بنجاح"
+            },
+
+            "page311": {
+                "m131": "أدخل الرقم الموضح في أعلى يسار الحجز",
+                "m132": "لم يتم العثور على أي طلب بهذا الرقم"
+            },
+            "page3111": {
+                "m01": "الغرفة ليست جاهزة بعد. يرجى المحاولة لاحقا"
+
+            },
+            "page314": {
+                "m151": "تنسيق البريد الإلكتروني غير صحيح",
+                "m152": "لم يتم العثور على أي حجز باستخدام عنوان البريد الإلكتروني هذا"
+
+            },
+            "page313": {
+                "m171": "أدخل 4 أرقام الأخيرة لبطاقتك",
+                "m172": "يرجى تمرير رقم بطاقة الائتمان التي استخدمتها للحجز، أو كتابة آخر أربعة أرقام.",
+                "m181": "لم يتم العثور على أي طلب لهذه البطاقة. تأكد من أنك تستخدم نفس البطاقة التي  تم الحجز بواسطتها"
+            },
+            "page312": {
+                "m201": "أدخل اسمك في كلا الحقلين، الاسم الأول واسم العائلة",
+                "m202": "أحرف غير صالحة. الرجاء إدخال اسمك كما هو مكتوب في بطاقة الهوية/جواز السفر",
+                "m211": "لم يتم العثور على أي عميل بهذا الاسم. يرجى استخدام الاسم الذي في الحجز",
+                "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
+            },
+            "page33": {
+                "m241": " حدد من التقويم تاريخ الدخول والخروج",
+                "m242": "يجب أن يكون تاريخ  المغادرة بعد  تاريخ الوصول ",
+                "m243": " اكتب كلا التاريخين (سواء تسجيل الدخول أو الخروج)",
+                "m244": "There are no rooms available for a day use",
+                "m245": "The most late hour you can take a room for a day use",
+                "m246": "check-in time too late for a day use",
+                "m247": "Looking for an available room for a day use",
+                "m248": "You Can't book a room for a day use "
+            },
+            "page32": {
+                "m271": "יש להקליד תאריך כניסה ויציאה במבנה DD/MM/YY או לבחור מלוח השנה "
+            },
+            "page3212": {
+                "m381": "تم إدخال أحرف غير صالحة. حاول مرة اخرى ...",
+                "m383": "أدخل  ألبريد الإلكتروني بالتنسيق التالي",
+                "m384": "أدخل رقم هاتف بالتنسيق التالي ...",
+                "m385": " يرجى ملئ التفاصيل التالية: اسم العائلة والاسم الأول وعنوان البريد الإلكتروني ورقم الهاتف"
+
+            },
+            "page4": {
+                "m401": "بطاقة ائتمان / بطاقة خصم غير صالحة",
+                "m402": "نوع البطاقة غير صالح",
+                "m403": "حدثت مشكلة في بطاقتك الائتمانية",
+                "m414": "مبلغ : 100 ₪ من فضلك ادخل البطاقة",
+                "m415": "قام حامل البطاقة بنقل البطاقة إلى قارئ البطاقة الممغنطة",
+                "m416": "التحقق من أذونات البطاقة",
+                "m420": "الرجاء اعادة المحاولة او استخدم بطاقة ائتمان اخر",
+                "m421": "ادخل بطاقة الائتمان مره اخرى , ثم قم باخذ البطاقة مباشرة"
+
+
+
+            },
+            "page5": {
+                "m500": "جاري الدفع بواسطة بطاقة الائتمان",
+                "m501": "تم الدفع بنجاح",
+                "m502text11": "حاول مرة اخرى ",
+                "m502text12": "أو",
+                "m502text13": "الرجوع الى الصفحة الرئيسية ",
+                "m502text2": "ثم اتصل لطاقم الفندق على "
+            },
+            "page51": {
+                "m511": "فضلاً مرّر بطاقة الائتمان ",
+                "m512": "لم تتم قراءة بطاقة الائتمان. يرجى تمريرها مرة أخرى",
+                "m513": "يرجى إدخال المبلغ بالشيكل",
+                "m514": " يجب إدخال مبلغ حتى X شواقل  ",
+                "m515": " יש להכניס סכום או לסמן שברצונך לשלם את מלוא הסכום",
+                "m516": " יש לבחור סכום מלא או למלא סכום חלקי"
+            },
+            "page6": {
+                "m551": "حدد أحد الخيارات على الأقل"
+            },
+            "page34": {
+                "m611": "أدخل مفتاح الغرفة أو اضغط على التالي"
+            },
+            "page341": {
+                "m621": "أدخل مفتاح الغرفة أو اضغط على التالي"
+            },
+            "page343": {
+                "m651": "حدد نعم أو لا"
+            },
+            "page344": {
+                "m651": "أدخل رقم الغرفة"
+            },
+            "page345": {
+                "m681": "أدخل اسمك في كلا الحقلين، الاسم الأول واسم العائلة",
+                "m682": "أحرف غير صالحة. الرجاء إدخال اسمك كما هو مكتوب في بطاقة الهوية/جواز السفر",
+                "m691": "لم يتم العثور على أي عميل بهذا الاسم. يرجى استخدام الاسم الذي في الحجز",
+                "m701": "أدخل 4 أرقام الأخيرة لبطاقة الائتمان ",
+                "m702": "يرجى تمرير البطاقة مرة أخرى أو إدخال 4 أرقام الأخيرة",
+                "m711": "لم يتم العثور على أي طلب لهذه التذكرة. تأكد من أنك تستخدم نفس البطاقة التي حجزت بها"
+            },
+            "LostKeys": {
+                "m001": "رقم الغرفة غير موجود في الفندق",
+                "m002": "لم يتم العثور على حجز لرقم الغرفة",
+                "m003": "One of the details does not exist in the reservation",
+                "m004": "Fill in at least 2 fields",
+                "m005": "Fill in at least 1 field"
+
+
+
+            }
+        }
+
+    },
+    "RU": {
+        "code": "RU",
+        "UPS": "Упало напряжение - ваши последние команды на компьютере удалены.",
+        "start": "Чтобы начать, нажмите здесь",
+        "prev": "Назад",
+        "next": "Далее",
+        "clean": "Очистить",
+        "close": "близко",
+        "cancel": "отменить",
+        "loading": "Пожалуйста, подождите",
+        "loadingScan": "сканирование .. пожалуйста, подождите",
+        "thankyouMsg": "Спасибо за бронирование номера у нас!",
+        "welcomeMsg": "привет",
+        "placeholder": {
+            "fname": "Имя",
+            "lname": "Фамилия",
+            "email": "example@test.co.il",
+            "visaCard": "Кредитная карта",
+            "visaCard1": "",
+            "phone": "Мобильный телефон",
+            "emailName": "Адрес электронной почты"
+
+        },
+        "date": {
+            "months": ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"],
+            "days": ["SUN.", "MON.", "TUS.", "WED.", "THU.", "FRI.", "SAT."],
+            "CharacterDate1": "",
+            "CharacterDate2": "В",
+            "CharacterDate3": " Еще "
+        },
+        "page2": {
+            "opt1": "Гостиница",
+            "opt2": "Плата за стоянку"
+        },
+        "page3": {
+            "opt1": "Заселение в забронированные номера",
+            "opt2": "Заселение в незабронированные номера",
+            "opt3": "Забронировать номер",
+            "opt4": "Выселение из гостиницы",
+            "opt5": "Устранение неисправностей / Дополнительно",
+            "opt6": "Забронировать номер Day Use"
+        },
+        "page31": {
+            "title": "Поиск забронированного номера",
+            "opt1": "Поиск забронированного номера по номеру подтверждения",
+            "opt2": "Имя",
+            "opt3": "Кредитная карта",
+            "opt4": "электронная почта",
+            "note1": "Мы не смогли найти заказ на это имя.",
+            "note2": "Укажите ваш заказ до…"
+        },
+        "page311": {
+            "title": "Номер подтверждения",
+            "note11": "Номер подтверждения ",
+            "note12": "указывается в верхнем левом ",
+            "note13": "углу страницы бронирования"
+        },
+        "page312": {
+            "title": "Пожалуйста, введите ваше имя и фамилию",
+            "note11": "Введите фамилию, указанную ",
+            "note12": "на странице бронирования.",
+            "clean": "Clear first and last name",
+            "ok": "Back to Home screen"
+        },
+        "page313": {
+            "title": "Введите номер кредитной карты, использовавшейся при бронировании.",
+            "subtitle": "Проведите кредитной картой или введите последние четыре цифры номера карты.",
+            "note11": "Проведите кредитной картой ",
+            "note12": "в устройстве для считывания ",
+            "note13": "кредитных карт справа."
+        },
+        "page314": {
+            "title": "Адрес электронной почты",
+            "note11": "Введите адрес электронной почты, ",
+            "note12": "использовавшийся при бронировании"
+        },
+        "page33": {
+            "title": "Сроки бронирования",
+            "dateText1": "Заселение",
+            "dateText2": "Выселение",
+            "checkboxText": "Дневное использование",
+            "CharacterDate": "",
+            "nightsCount": "Колличество ночей, которое вы выбрали"
+        },
+        "page32": {
+            "title": "Сроки бронирования",
+            "dateText1": "Заселение",
+            "dateText2": "Выселение",
+            "checkboxText": "Дневное использование",
+            "todyText": "Сегодня"
+        },
+        "page321": {
+            "title": "Выбрать номер",
+            "colName1": "Количество постояльцев",
+            "colName2": "Тип номера",
+            "colName32": "(на все время пребывания)",
+            "colName31": "Общая стоимость",
+            "colName41": "Стоимость для туристов ",
+            "colName42": "(без НДС)",
+            "chooseRoom": "Выберите номер",
+            "btnText2": "Добавьте номер",
+            "op3": "более",
+            "OK": "подтверждение",
+            "cancelRoom": "отмена",
+            "gu3": "3 Гости ",
+            "gu4": "4 Гости",
+            "gu5": "5 Гости",
+            "guests": "Гости",
+            "selectRooms": "выбрать"
+        },
+        "page3211": {
+            "title": "Выберите номер",
+            "chooseRoom": "Сделайте выбор",
+            "priceText": "Цена",
+            "currencySign": "Новые шекели",
+            "nights": "ночью",
+            "inRoom": "Личный номер",
+            "noRoom": "Нет свободных номеров для выбора",
+            "noData": "Нет данных"
+        },
+        "page3212": {
+            "title": "Введите требуемую информацию:",
+            "titlePhone": "Please fill your phone number",
+            "titleEmail": "Please fill your Email address",
+            "dogTextRight1": "Мы будем использовать ваш номер ",
+            "dogTextRight2": "телефона только для информирования ",
+            "dogTextRight3": "и напоминания о бронировании.",
+            "dogTextLeft1": "Мы будем использовать ваш адрес ",
+            "dogTextLeft2": "электронной почты только для отправки ",
+            "clean": "Clean phone number",
+            "cleanMail": "Clean Email address",
+            "dogTextLeft3": "счета и информации о бронировании."
+        },
+        "page4": {
+            "title": " Пожалуйста введите вашу карточку и тут же выньте",
+            "subtitleFirst": "Проводить кредитной картой необходимо ",
+            "subtitleBold": "только из соображений безопасности ",
+            "subtitleSecond": "и оплата сразу не взимается.",
+            "subtitle2": "Пожалуйста, проведите свою кредитную карту",
+            "subtitle3": "Кредитная карта получена",
+            "subtitle4": "Пожалуйста, подождите проверки карты"
+        },
+        "page51": {
+            "title": "Оплатить кредитной картой.",
+            "subtitle": "Вставьте кредитную карту в подсвеченную щель.",
+            "opt1": "Сумма, списываемая с этой карты:"
+        },
+        "page6": {
+            "title": "Счет / Квитанция",
+            "opt1": "Отправить счет по электронной почте.",
+            "opt2": "Распечатать счет."
+        },
+        "page7": {
+            "title": "Возьмите ключи.",
+            "number": "Номер",
+            "anotherCard": "Возьмите доролнительную карточку.",
+            "CardWait": "Введите катрочку. Подождите….",
+            "CardSuccess": "пожалуйста, возьмите карту из диспенсера",
+            "CardSuccessQ": "Вам нужна дополнительная карта ?",
+            "CardFailed": "Ошибка при изготовлении карточки"
+        },
+        "page7Code": {
+            "title": "הקוד הסודי לחדר "
+        },
+
+        "page71": {
+            "title": "Номер комнаты в гостинице:",
+            "floortext": "Этаж",
+            "subtitle1": "Информация о вашем номере отправлена вам ",
+            "subtitle2": "по электронной почте и с помощью текстового сообщения.",
+            "subtitle3": "",
+            "subtitle4": "",
+            "btnText1": "Продолжить и получить ключи от следующего номера.",
+            "btnText2": "Завершить и вернуться на главную страницу.",
+            "title1": "Бронирование зарегистрировано.",
+            "subtitle11": "Номер подтверждения:",
+            "subtitle12": "Информация о бронировании отправлена вам по электронной почте и/или на телефон.",
+            "subtitle13": "Бронирование можно бесплатно отменить не менее, чем за 24 часа до заселения.",
+            "subtitle14": "Если вы отмените бронирование позднее, с вас будет взиматься 50% стоимости бронирования.",
+            "clean": "Ваш номер еще не готов. Он будет готов завтра по возможности"
+        },
+        "page3111": {
+            "title": "Подтверждение бронирования",
+            "confirm": "Разрешение",
+            "colName1": "Количество постояльцев",
+            "colName2": "Тип номера",
+            "colName3": "Заселение",
+            "colName4": "Выселение",
+            "btnText1": "Изменить бронирование",
+            "btnText2": "Не мое бронирование",
+            "person1": "Один",
+            "person2": "Двое",
+            "person3": "Трое",
+            "person4": "Четверо",
+            "person5": "Пятеро",
+            "EarlyEntry1": "Standard Check in time is ",
+            "EarlyEntry2": "Since you are early, you will be charged an extra ",
+            "EarlyEntry3": "Total price would be ",
+            "EarlyEntry4": " Before tax"
+
+        },
+        "page3111a": {
+            "title": "Reservations",
+            "colName3": "Check-In",
+            "colName4": "Check-Out",
+            "btnText1": "Change your Reservation",
+            "btnText2": "Not my Reservation",
+            "detail1": "Reservation number: ",
+            "detail2": "Reservation date: "
+        },
+        "page34": {
+            "title": "Выселение",
+            "subtitle": "Вставьте ключ от номера в щель.",
+            "subtitleNoDispenser": "Please insert the key into the left slot",
+            "btnText": "Если у вас нет ключа, нажмите здесь."
+        },
+        "page35": {
+            "opt1": "Продлить пребывание",
+            "opt2": "Сократить пребывание",
+            "opt3": "Дополнительный ключ",
+            "opt4": "Потеря ключа"
+        },
+        "page41": {
+            "title": "Идентификация",
+            "titleTakeYourCard": "Возьмите ваш паспорт",
+            "subtitle1": "По израильскому законодательству, постояльцы должны предъявлять удостоверение личности при заселении.",
+            "subtitle3": "Поджалуйста положите ваш документ в сканнер и укажите вид документа (паспорт, водительские права…)",
+            "startscan": "нажмите для сканирования",
+            "opt1": "Паспорт /  водительские права",
+            "opt2": "Паспорт",
+            "opt3": "Заезд без удостоверения личности",
+            "subtitle2": "Поджалуйста положите ваш документ в сканнер",
+            "citizen": "я гражданин Израиля",
+            "nocitizen": "я турист",
+            "Fname": "First Name",
+            "Lname": "Last Name",
+            "result": "Make sure the credentials below are properly spelled and written",
+            "next": "My name is spelled correctly",
+            "again": "Scan again"
+        },
+        "popUp": {
+            "title": "Подтверждение",
+            "Q": " Is your name displayed correctly ?",
+            "citizenText": "Удостоверение личности отсканировано.",
+            "noCitizenText": "Паспорт отсканирован.",
+            "EnterISLText": "Въездная виза отсканирована.",
+            "takeYourCard": "Пожалуйста выньте документы из сканера",
+            "process": "Проверка данных. Пожалуйста подождите",
+            "returnHome": "Вернуться на главную страницу",
+
+            "againBtn": "Повторите попытку",
+            "nextBtn": "Далее"
+        },
+        "page42": {
+            "title": "Въездная виза в Израиль",
+            "subtitle1": "Для получения освобождения от НДС предъявите въездную визу в Израиль.",
+            "subtitle2": "Положите въездную визу на сканер.",
+            "subtitle3": "У меня нет въездной визы, поэтому я буду платить полную стоимость, в том числе НДС."
+        },
+        "page5": {
+            "title": "Оплата",
+            "SubtitleText01": "Кредитная карта заканчивается",
+            "SubtitleText02": "будет взиматься  ",
+            "sameCardbtn": "Оплата картой",
+            "InsertanotherCard": "Оплата другой картой",
+            "SubtitleText01missing": "This Credit card",
+            "SubtitleText02missing": "will be charges",
+            "sameCardbtnMissing": "Payment with same card",
+            "subtitle1": "Итого",
+            "subtitle2": "Сумма к оплате",
+            "subtitle3": "Оплатить кредитной картой, указанной при бронировании на…",
+            "subtitle4": "Итого",
+            "subtitle5": "Оплатить часть или всю сумму наличными.",
+            "subtitle6": "Вставьте купюры или монеты в щели.",
+            "details": "ночь X ночей X",
+            "PaymentBtn": "Для оплаты"
+        },
+        "page341": {
+            "title": "Выселение",
+            "subtitle1": "Ключ от ",
+            "subtitle2": "номера получен.",
+            "subtitle3": "Вставьте другой ключ.",
+            "btnText": "Если у вас нет ключа, нажмите здесь."
+        },
+        "page342": {
+            "title": "Выселение",
+            "subtitle1": "Выселение завершено!",
+            "subtitle2": "Персонал {{HotelName}} желает вам хорошего дня!",
+            "subtitle3": "Please leave the cards on the shelf near the screen",
+            "subtitlepayForkey": "Оплата за ключи, которая будет снята с вашего счета:",
+            "btnText": "Завершить и вернуться на главную страницу"
+        },
+        "page343": {
+            "title": "Выселение",
+            "subtitle": "Вы знаете номер вашей комнаты в гостинице?",
+            "opt1": "Да",
+            "opt2": "Нет"
+        },
+        "page344": {
+            "title": "Выселение",
+            "subtitle": "Номер комнаты в гостинице:",
+            "subtitle1": "Заполните как минимум 1 поле для идентификации"
+        },
+        "page345": {
+            "title": "Выселение",
+            "subtitle": "Введите фамилию, указанную на странице бронирования."
+        },
+        "page346": {
+            "title": "Выселение",
+            "subtitle1": "Введите необходимую информацию:",
+            "subtitle2": "Проведите кредитной картой, использовавшейся при бронировании, или введите последние четыре цифры номера кредитной карты."
+
+        },
+        "visaCard": {
+            "FirstText": "Мы принимаем следующие ",
+            "SecondText": "кредитные карты:"
+
+        },
+        "NotFoundPage": {
+            "title": "Эта страница не определена"
+        },
+
+        "LostKeys": {
+            "title": "потерянный ключ",
+            "subtitle2": "Заполните не менее 2 полей для получения индификации и соответственно ключа",
+            "subtitle": "Пожалуйста напишите цифры ващего номера для изготовления нового ключа"
+        },
+        "errorMsgs": {
+            "m00": "Свободно",
+            "m01": "Пожалуйста нажмите на кнопки или заполните текстовое поле",
+            "m04": "Пожалуйста заполните текстовое поле",
+            "page3": {
+                "m31": "Вход в номер или бронирование не доступны до"
+            },
+            "page35": {},
+            "page41": {
+                "m51": "Поджалуйста положите ваш паспорт или водительское удостоверение в сканнер",
+                "m52": "",
+                "m53": "Пожалуйста возьмите ваш документ и нажмите 'продолжение'",
+
+                "m531": "Несоответствие между данными клиента и сканированным документом",
+                "m532": "Вы - турист?",
+                "m533": "Вы - гражданин Израиля?"
+            },
+            "popUp41": {
+                "m61": " Ваши документы успешно отсканированны",
+                "m62": "Нет заказа на это имя. Попробуйте еще раз с другим документом"
+
+            },
+            "page42": {
+                "m91": "Приложите разрешение и нажмите на флажок",
+                "m111": "Нажимите на продолжение",
+                "m2": "Due to difference between the reservation name, Identity document and B2 form you were charged with VAT. Please approach the office in the morning if you should be VAT exempted"
+
+            },
+            "popUp42": {
+                "m101": "Ваш документ не читабелен. Пожалуйста убедитесь что вы положили документ в центр сканера",
+                "m102": "Ваши документы успешно отсканированны"
+            },
+
+            "page311": {
+                "m131": "Занесите номер более 8 цифр так, как это написано",
+                "m132": "Нет заказа на этот номер"
+            },
+            "page3111": {
+                "m01": "Комната еще не готова. Пожалуйста, попробуйте позже"
+
+            },
+            "page314": {
+                "m151": "Исправьте ошибочный адрес электронной почты",
+                "m152": "Нет заказа на этот адрес электронной почты"
+
+            },
+            "page313": {
+                "m171": "Введите 4 последние цифры вышей карточки",
+                "m172": "Пожалуйста проведите карточкой еще раз или напишите 4 последние цифры карточки",
+                "m181": "Нет заказа на этого владельца карточки. Проверьте, что вы используете ту же карточку, которую использовали при бронировании"
+            },
+            "page312": {
+                "m201": "Заполните ваше имя в две строчки - имя и фамилию.",
+                "m202": "Ошибка. Пожалуйста напишите ваше имя точно так как написано в документе",
+                "m211": "Нет заказа на это имя. Пожалуйста используйте имя, указанное при бронировании",
+                "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
+            },
+            "page33": {
+                "m241": " Дата должна быть указана в этом виде DD/MM/YY -  или выбрать дату в календаре",
+                "m242": " Дата отбытия должна быть больше даты прибытия",
+                "m243": " Две даты - прибытия и отбытия должны быть указаны",
+                "m244": "There are no rooms available for a day use",
+                "m245": "The most late hour you can take a room for a day use",
+                "m246": "check-in time too late for a day use",
+                "m247": "Looking for an available room for a day use",
+                "m248": "You Can't book a room for a day use "
+            },
+            "page32": {
+                "m271": "Дата должна быть указана в этом виде DD/MM/YY -  или выбрать дату в календаре"
+            },
+            "page3212": {
+                "m381": "Ошибка исправлена",
+                "m383": "יש להכניס כתובת דואר אלקטרוני במבנה ...",
+                "m384": "Ошибка в адресе электронной почты",
+                "m385": "Пожалуйста заполните имя, фамилию, адрес электронной почты и один из номеров телефона"
+
+            },
+            "page4": {
+                "m401": "Invalid Credit/Debit Card serial",
+                "m402": "Ошибка в номере кредитной карточки",
+                "m403": "Есть проблема с кредитной карточкой",
+                "m413": "Проверьте карточку",
+                "m414": "Сумма: 100 NIS, пожалуйста введите вашу карточку.",
+                "m415": "Считывание карточки успешно завершено",
+                "m416": "Проверьте карточку",
+                "m420": "Пожалуйста попробуйте еще раз или используйте другую карточку",
+                "m421": "Пожалуйста, вставьте свою карту снова, а затем сразу же извлеките ее"
+
+
+            },
+            "page5": {
+                "m500": "Осуществляется оплата по карточке, пожалуйста подождите",
+                "m501": "Оплата завершена успешно",
+                "m502text11": "Вы можете попробовать еще раз",
+                "m502text12": "или же",
+                "m502text13": "Вернуться на главную страницу",
+                "m502text2": "и вызвать персонал отеля на"
+            },
+            "page51": {
+                "m511": "Пожалуйста прведите кредитной карточкой",
+                "m512": " Карточка не считывается. Попробуйте провести кредитной картой еще раз",
+                "m513": " Пожалуйста укажите сумму в новых шекелях",
+                "m514": "Пожалуйста внесите до X шекелей ",
+                "m515": "Пожалуйста укажите часть суммы, которую вы хотите оплатить или все сумму полностью",
+                "m516": " Пожалуйста введите полную сумму или ее часть."
+
+            },
+            "page6": {
+                "m551": "Выберите один из вариантов"
+            },
+            "page34": {
+                "m611": "Введите ключ от номера или нажимте на 'продолжение'"
+            },
+            "page341": {
+                "m621": "Введите ключ от номера или нажимте на 'продолжение'"
+            },
+            "page343": {
+                "m651": "Выберите «Да» или «Нет»"
+            },
+            "page344": {
+                "m651": "Внесите цифры вашего номера"
+            },
+            "page345": {
+                "m681": "Введите ваше имя в обоих полях: «Имя» и «Фамилия»",
+                "m682": "Ошибка. Пожалуйста напишите ваше имя точно так как написано в документе",
+                "m691": "Нет заказа на это имя. Пожалуйста используйте имя, указанное при бронировании",
+                "m701": "Введите 4 последние цифры вышей карточки.",
+                "m702": "Пожалуйста проведите карточкой еще раз или напишите 4 последние цифры карточки",
+                "m711": "Нет заказа на этого владельца карточки. Проверьте, что вы используете ту же карточку, которую использовали при бронировании"
+            },
+            "LostKeys": {
+                "m001": "Нет такого номера в гостинице",
+                "m002": "Нет заказа на этот номер",
+                "m003": "Одна из деталей не существует в бронировании",
+                "m004": "Заполните как минимум 2 поля",
+                "m005": "Fill in at least 1 field"
+
+
+            }
+        }
+    },
+    "SPA": {
+        "code": "ES",
+        "UPS": "Power Outage - cancelling current operations and shutting down...",
+        "start": "Para comenzar, haga clic aquí",
+        "prev": "Regresar",
+        "next": "Siguiente",
+        "clean": "Borrar",
+        "close": "Close",
+        "loading": "Por favor, espere",
+        "loadingScan": "scanning .. please wait",
+        "thankyouMsg": "Gracias por reservar con nosotros",
+        "welcomeMsg": "Hola",
+        "placeholder": {
+            "fname": "Nombre",
+            "lname": "Apellido",
+            "email": "example@test.co.il",
+            "visaCard": "",
+            "phone": "phone",
+            "emailName": "Email"
+        },
+        "date": {
+            "months": ["Enero ", "Febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+            "days": ["SUN.", "MON.", "TUS.", "WED.", "THU.", "FRI.", "SAT."],
+            "daysPage33": ["SUN", "MON", "TUS", "WED", "THU", "FRI", "SAT"],
+            "CharacterDate1": "",
+            "CharacterDate2": "at ",
+            "CharacterDate3": " until "
+        },
+        "page2": {
+            "opt1": "Hotel",
+            "opt2": "Tarifas de estacionamiento"
+        },
+        "page3": {
+            "opt1": "Check-in para habitaciones reservadas",
+            "opt2": "Check-in para habitaciones no reservadas",
+            "opt3": "Reservar una habitación",
+            "opt4": "Check-out (salida)",
+            "opt5": "Solución de problemas/Más"
+        },
+        "page31": {
+            "title": "Encontrar la resreva",
+            "opt1": "Encontrar reserva por número de confirmación",
+            "opt2": "Encontrar reserva por nombre",
+            "opt3": "Encontrar reserva por tarjeta de crédito",
+            "opt4": "Encontrar reserva por correo electrónico"
+        },
+        "page311": {
+            "title": "Número de confirmación",
+            "note11": "Su número de confirmación",
+            "note12": "está en la parte superior izquierda",
+            "note13": "de su reservación"
+
+        },
+        "page312": {
+            "title": "Su nombre",
+            "note11": "Favor de teclear su nombre",
+            "note12": "tal y como aparece en su reservación",
+            "clean": "Clear first and last name",
+            "ok": "Back to Home screen"
+        },
+        "page313": {
+            "title": "favor de teclear el número de la tarjeta de crédito usada en su reservación",
+            "subtitle": "pase su tarjeta de crédito o teclee los últimos cuatro (4) dígitos",
+            "note11": "Por favor pase su tarjeta",
+            "note12": "de crédito en el lector de ",
+            "note13": "tarjetas de crédito a la derecha"
+        },
+        "page314": {
+            "title": "Correo elctrónico",
+            "note11": "Favor de teclear la dirección de correo elctrónico",
+            "note12": "usada para la reservación"
+        },
+        "page33": {
+            "title": "Datos de la reserva",
+            "dateText1": "Registrarse",
+            "dateText2": "Salida",
+            "checkboxText": "Uso diario",
+            "CharacterDate": ""
+        },
+        "page32": {
+            "title": "Datos de la reserva",
+            "dateText1": "Check-in/Registrarse",
+            "dateText2": "Check-Out/ Salida",
+            "checkboxText": "Uso diario",
+            "todyText": "Hoy"
+        },
+        "page321": {
+            "title": "escoger su habitación",
+            "colName1": "Cantidad de huéspedes ",
+            "colName2": "Tipología de habitación",
+            "colName32": "(para su estancia completa)",
+            "colName31": "Costo total",
+            "colName41": "Costo para turistas",
+            "colName42": "sin (IVA) ",
+            "chooseRoom": "Seleccione una habitación",
+            "btnText2": "Agregue una habitación",
+            "op3": "more",
+            "OK": "Ok",
+            "cancelRoom": "Cancel",
+            "gu3": "3  ",
+            "gu4": "4 ",
+            "gu5": "5 ",
+            "guests": "guests",
+            "selectRooms": "choose"
+        },
+        "page3211": {
+            "title": "Seleccione su habitación",
+            "chooseRoom": "haga su eleccción",
+            "priceText": "Precio",
+            "currencySign": "$",
+            "nights": "nights",
+            "noRoom": "No Rooms available for your selection",
+            "inRoom": "room:",
+            "noData": "No data for this room"
+        },
+        "page3212": {
+            "title": "Por favor complete la información requerida:",
+            "dogTextRight1": "Utilizaremos su número de teléfono",
+            "dogTextRight2": "únicamente para informarle y recordarle ",
+            "dogTextRight3": "sobre su reserva",
+            "dogTextLeft1": "Utilizaremos su dirección de correo electrónico",
+            "dogTextLeft2": "únicamente para enviar su factura e información",
+            "clean": "Clean phone number",
+            "cleanMail": "Clean Email address",
+            "dogTextLeft3": "con respecto a su reservación."
+        },
+        "page4": {
+            "title": "Por favor, pase su tarjeta de crédito",
+            "subtitleFirst": "Su tarjeta de crédito se pasa",
+            "subtitleBold": "solo por razones de seguridad",
+            "subtitleSecond": "y no se cobra en este momento.",
+            "subtitle2": "Pase su tarjeta de crédito incluso si está pagando en efectivo"
+        },
+        "page51": {
+            "title": "Pague con una tarjeta de crédito",
+            "subtitle": "Por favor inserte su tarjeta de crédito en la ranura iluminada.",
+            "opt1": "Cargue esta tarjeta por la cantidad de:"
+        },
+        "page6": {
+            "title": "Factura/recibo",
+            "opt1": "Enviar mi factura por correo electrónico",
+            "opt2": "Imprimir mi factura ahora"
+        },
+        "page7": {
+            "title": "Por favor tome sus llaves ahora.",
+            "number": "Número",
+            "CardWait": "Preparing card..Please wait",
+            "CardSuccess": "Card ready, take the card",
+            "CardFailed": "Failed to prepare card"
+        },
+        "page71": {
+            "title": "Su número de habitación es: ",
+            "floortext": "Piso",
+            "subtitle1": "La información de su habitación se le envió",
+            "subtitle2": "por correo electrónico y mensaje de texto.",
+            "subtitle3": "",
+            "subtitle4": "",
+            "btnText1": "Continúa y recibe tus llaves para tu próxima habitación.",
+            "btnText2": "Complete y regrese a nuestra página de inicio.",
+            "title1": "Su reserva quedó registrada",
+            "subtitle11": "Su número de confirmación es: ",
+            "subtitle12": "La información de su reserva se le envió a su correo electrónico y/o teléfono",
+            "subtitle13": "Puede cancelar su reserva hasta 24 horas antes de su chack-in sin costo.",
+            "subtitle14": "Si cancela su reserva más allá de esta fecha, se le cobrará el 50% del costo de su reserva.",
+            "clean": "Your room is not yet clean, it will be available for you as soon as possible"
+
+        },
+        "page3111": {
+            "title": "Confirmación de la reserva ",
+            "colName1": "Cantidad de huéspedes ",
+            "colName2": "Tipología de habitación",
+            "colName3": "Check-in/Registrarse",
+            "colName4": "Check-Out/ Salida",
+            "btnText1": "Cambiar su reservación",
+            "btnText2": "No es mi reserva",
+            "person1": "Habitación sencilla",
+            "person2": "Habitación doble",
+            "person3": "3",
+            "person4": "4",
+            "person5": "5",
+            "EarlyEntry1": "Standard Check in time is ",
+            "EarlyEntry2": "Since you are early, you will be charged an extra ",
+            "EarlyEntry3": "Total price would be ",
+            "EarlyEntry4": " Before tax"
+        },
+        "page3111a": {
+            "title": "Reservations",
+            "colName3": "Check-In",
+            "colName4": "Check-Out",
+            "btnText1": "Change your Reservation",
+            "btnText2": "Not my Reservation",
+            "detail1": "Reservation number: ",
+            "detail2": "Reservation date: "
+        },
+        "page34": {
+            "title": "Check-Out/ Salida",
+            "subtitle": "Por favor inserte la llave de la habitación en la ranura.",
+            "subtitleNoDispenser": "Please insert the key into the left slot",
+            "btnText": "If you don't have any key, press here."
+        },
+        "page35": {
+            "opt1": "Alargar su estancia",
+            "opt2": "Reducir su estancia",
+            "opt3": "Contraseña extra/secundaria",
+            "opt4": "Perder una contraseña/Cambiar contraseña"
+        },
+        "page41": {
+            "title": "Identificación",
+            "subtitle1": "De acuerdo con la ley israelí, los huéspedes deben presentar una identificación válida al momento del check-in.",
+            "opt1": "Soy ciudadano israelí",
+            "opt2": "Soy turista",
+            "subtitle2": "Favor de poner una identificación válida en el escáner"
+        },
+        "popUp": {
+            "title": "Confirmación",
+            "citizenText": "Su identificación ha sido escaneada",
+            "noCitizenText": "Su pasaporte ha sido escaneado",
+            "EnterISLText": "Su visa de entrada ha sido escaneada",
+            "againBtn": "Por favor, intente de nuevo",
+            "nextBtn": "Siguiente"
+        },
+        "page42": {
+            "title": "Visa de entrada a Israel",
+            "subtitle1": "Para obtener su exención de IVA, presente su visa de entrada a Israel.",
+            "subtitle2": "Por favor ponga la visa de entrada en el escáner.",
+            "subtitle3": "No poseo una visa de entrada y, por lo tanto, pagaré el precio completo, incluido el IVA."
+        },
+        "page5": {
+            "title": "Pago",
+            "subtitle1": "Total",
+            "subtitle2": "Cantidad pagada",
+            "subtitle3": "Cargue la tarjeta de crédito que figura en la reserva realizada en ...",
+            "subtitle4": "Total",
+            "subtitle5": "Pague la cantidad parcial o total en efectivo.",
+            "subtitle6": "Por favor inserte billetes o monedas en las ranuras.",
+            "SubtitleText01missing": "This Credit card",
+            "SubtitleText02missing": "will be charges",
+            "sameCardbtnMissing": "Payment with same card",
+            "details": "X nights X nights"
+        },
+        "page341": {
+            "title": "Check-Out/ Salida",
+            "subtitle1": "La llave de su habitación",
+            "subtitle2": "se recibió con éxito.",
+            "subtitle3": "Por favor inserte tu otra llave ahora.",
+            "btnText": "Si no tiene la clave, presione aquí."
+        },
+        "page342": {
+            "title": "Check-Out/ Salida",
+            "subtitle1": "¡Su salida está completa!",
+            "subtitle2": "¡Nuestro personal del {{HotelName}} les desea un buen día!",
+            "subtitlepayForkey": "Será cargado a su cuenta el costo de las llaves, por el monto de:",
+            "btnText": "Complete y regrese a nuestra página de inicio"
+        },
+        "page343": {
+            "title": "Check-Out/ Salida",
+            "subtitle": "Sabe su número de habitación? ",
+            "opt1": "Sí",
+            "opt2": "No"
+        },
+        "page344": {
+            "title": "Check-Out/ Salida",
+            "subtitle": "Número de habitación: "
+        },
+        "page345": {
+            "title": "Check-Out/ Salida",
+            "subtitle": "Por favor, escriba su nombre tal como aparece en la reserva."
+        },
+        "page346": {
+            "title": "Check-Out/ Salida",
+            "subtitle1": "Fill in the required information:",
+            "subtitle2": "Por favor, coloque el número de tarjeta de crédito que usó para la reserva o escriba los últimos cuatro dígitos."
+        },
+        "visaCard": {
+            "FirstText": "Aceptamos las",
+            "SecondText": "siguientes tarjetas de crédito:"
+        },
+        "LostKeys": {
+            "title": "Lost key",
+            "subtitle2": "Заполните, по крайней мере, 2 поля, чтобы идентифицировать с получением ключа",
+            "subtitle": "Введите номер комнаты, чтобы создать новый ключ"
+        },
+        "errorMsgs": {
+            "m00": "Empty",
+            "m01": "Please click on the buttons or the text fields",
+            "m04": "Please input text in the text fields",
+            "page3": {},
+            "page35": {},
+            "page41": {
+                "m51": "Place your ID or Driver's license on the scanner",
+                "m52": "Your document can't be read. Make sure it's in the center of the scanner",
+                "m53": "Please take your card and then press next",
+                "m531": "There's a mismatch between the client type and the scanned document.",
+
+                "m532": " Are you a tourist?",
+                "m533": " Are you an Israeli citizen?"
+            },
+            "popUp41": {
+                "m61": "Document successfully scanned",
+                "m62": "No order was found for this name. Please try again using another document"
+
+            },
+            "page42": {
+                "m91": "Place you permission or mark the checkbox",
+                "m111": "Press next to continue",
+                "m2": "Due to difference between the reservation name, Identity document and B2 form you were charged with VAT. Please approach the office in the morning if you should be VAT exempted"
+
+            },
+            "popUp42": {
+                "m101": "Your document can't be read. Make sure it's in the center of the scanner",
+                "m102": "Document successfully scanned"
+            },
+
+            "page311": {
+                "m131": "Enter a number with more than 8 digits, as shown in your top right of your reservation",
+                "m132": "No order was found with this number"
+            },
+            "page3111": {
+
+            },
+            "page314": {
+                "m151": "Wrong Email format",
+                "m152": "No order was found with this Email address"
+
+            },
+            "page313": {
+                "m171": "Enter 4 last digits of your card",
+                "m172": "Please swipe your card again or enter 4 last digits",
+                "m181": "No order was found for this ticket. Make sure you're using the same card you booked with"
+            },
+            "page312": {
+                "m201": "Enter you name in both fields, First Name and Last Name",
+                "m202": "Invalid characters. Please enter your name as written in your ID ",
+                "m211": "No customer was found with this name. Please use the name from the booking",
+                "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
+            },
+            "page33": {
+                "m241": "Date must be in format DD/MM/YY or selected from the calendar",
+                "m242": "Check out date must be as or later than check in date",
+                "m243": "Both dates (check in, check out) are needed"
+            },
+            "page32": {
+                "m271": "Date must be in format DD/MM/YY or selected from the calendar"
+            },
+            "page3212": {
+                "m381": "Invalid characters were inputed",
+                "m383": "Wrong Email format",
+                "m384": "Enter a phone number in the following format ...",
+                "m385": "Please enter First Name, Last Name, Email and one of the Phone numbers"
+
+            },
+            "page4": {
+                "m401": "Invalid Credit/Debit Card serial",
+                "m402": "Invalid Card Type",
+                "m403": "There was a problem with your credit card",
+                "m414": "Amount: 100 Please insert a card",
+                "m415": "Card swipped succesfuly",
+                "m416": "Checking card",
+                "m417": "Please try again or use another card"
+            },
+            "page5": {
+
+            },
+            "page51": {
+                "m511": "Please swipe your credit card ",
+                "m512": " Credit card wasn't read. Please swipe again ",
+                "m513": " Please enter ammount in NIS",
+                "m514": "Please enter up to X NIS",
+                "m515": "Please enter a sum or check that you want to enter the entire sum",
+                "m516": "Please select Entire or Partial sum"
+
+            },
+            "page6": {
+                "m551": "Select at least one of the options"
+            },
+            "page34": {
+                "m611": "Enter room key or press next"
+            },
+            "page341": {
+                "m621": "Enter room key or press next"
+            },
+            "page343": {
+                "m651": "Select yes or no"
+            },
+            "page344": {
+                "m651": "Enter room number"
+            },
+            "page345": {
+                "m681": "Enter you name in both fields, First Name and Last Name",
+                "m682": "Invalid characters. Please enter your name as written in your ID ",
+                "m691": "No customer was found with this name. Please use the name from the booking",
+                "m701": "Enter 4 last digits of your card",
+                "m702": "Please swipe your card again or enter 4 last digits",
+                "m711": "No order was found for this ticket. Make sure you're using the same card you booked with"
+            },
+            "LostKeys": {
+                "m001": "Номер номера не существует в отеле",
+                "m002": "Бронирование не найдено для этой комнаты",
+                "m003": "One of the details does not exist in the reservation"
+
+            }
+
+
+        }
+    }
+}
