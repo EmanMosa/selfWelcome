@@ -29,12 +29,12 @@
 
                 </div>
                 <div class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
-                    <input type="text" name="input1" class="accordion-item__label" placeholder="הקלד מספר הזמנה">
-
+                    <input id="0" type="text" class="accordion-item__label" placeholder="הקלד מספר הזמנה">
+                    <label for="0" class="form__label">    הקלד מספר הזמנה </label>
                 </div>
                 <div class="accordion-item" data-actab-group="0" data-actab-id="1">
-                    <input type="text" name="input2" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה">
-
+                    <input id="1" type="text" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה">
+                    <label for="1" class="form__label">שם משפחה ופרטי כפי שהוקלד בהזמנה</label>
                 </div>
             </div>
 
@@ -62,6 +62,7 @@
                         tab.classList.add("accordion-active");
                     } else {
                         tab.classList.remove("accordion-active");
+
                     }
                 }
             });
@@ -85,6 +86,7 @@
 
         tabs.forEach(function(tab) {
             tab.addEventListener("click", toggleShow);
+
         });
     </script>
 </body>
