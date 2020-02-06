@@ -22,11 +22,12 @@ function clickCounter() {
 function hideme(){
 if (localStorage.clickcount>=3)
 {
-document.getElementsByClassName('page-button')[0].style.visibility="hidden"
 document.getElementsByClassName('page-button')[1].style.visibility="visible"
+
+document.getElementsByClassName('page-button')[0].onclick="";
+
 localStorage.clear();
 }else{ 
-document.getElementsByClassName('page-button')[0].style.visibility="visible"
 document.getElementsByClassName('page-button')[1].style.visibility="hidden"}}
 
 </script>
