@@ -18,27 +18,19 @@
     <img class="center-hor logo-page" src="img/logo.png" />
     <section>
         <div class="page-content">
-            <div style="top: 263px;
-        left: 39px;
-        width: 300px;
-        height: 143px;
-        ">
-                <div class="accordion-tabs">
-                    <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0">מספר הזמנה</button>
-                    <button class="accordion-tab" data-actab-group="0" data-actab-id="1"> שם מלא</button>
+            <div class="accordion-tabs">
+                <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0">מספר הזמנה</button>
+                <button class="accordion-tab" data-actab-group="0" data-actab-id="1"> שם מלא</button>
 
-                </div>
-                <div class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
-                    <input id="0" type="text" class="accordion-item__label" placeholder="הקלד מספר הזמנה">
-                    <label for="0" class="form__label">    הקלד מספר הזמנה </label>
-                </div>
-                <div class="accordion-item" data-actab-group="0" data-actab-id="1">
-                    <input id="1" type="text" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה">
-                    <label for="1" class="form__label">שם משפחה ופרטי כפי שהוקלד בהזמנה</label>
-                </div>
+            </div>
+            <div class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
+                <input type="text" name="fname" class="accordion-item__label" placeholder="הקלת מספר הזמנה">
+            </div>
+            <div class="accordion-item" data-actab-group="0" data-actab-id="1">
+                <input type="text" name="fname2" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה">
+
             </div>
 
-            <!-- <button></button> -->
 
 
 
@@ -62,7 +54,6 @@
                         tab.classList.add("accordion-active");
                     } else {
                         tab.classList.remove("accordion-active");
-
                     }
                 }
             });
@@ -86,7 +77,6 @@
 
         tabs.forEach(function(tab) {
             tab.addEventListener("click", toggleShow);
-
         });
     </script>
 </body>

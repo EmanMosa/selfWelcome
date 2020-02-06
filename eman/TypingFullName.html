@@ -23,32 +23,35 @@
         width: 300px;
         height: 143px;
         ">
-                <div class="accordion-tabs">
-                    <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0">מספר הזמנה</button>
-                    <button class="accordion-tab" data-actab-group="0" data-actab-id="1"> שם מלא</button>
 
-                </div>
-                <div class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
-                    <input id="0" type="text" class="accordion-item__label" placeholder="הקלד מספר הזמנה">
-                    <label for="0" class="form__label">    הקלד מספר הזמנה </label>
-                </div>
-                <div class="accordion-item" data-actab-group="0" data-actab-id="1">
-                    <input id="1" type="text" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה">
-                    <label for="1" class="form__label">שם משפחה ופרטי כפי שהוקלד בהזמנה</label>
-                </div>
+                <input id="TypingName" type="text" class="accordion-item__label" onmousedown="document.getElementById('invitationbyNumber').value=''">
+                <label for="TypingName" class="form__label">הקלדת שם משפחהושפ פרטי</label>
             </div>
+        </div>
 
-            <!-- <button></button> -->
+        <div>
+            <img class="btm_img" id="btm_img" src="img/Background.png" alt="">
 
-
+            <div class="page-button ButtonForpage6 " onclick="OnClickForButton()">אישור </div>
 
         </div>
+        </div>
+
+
     </section>
     <script>
+        function OnClickForButton() {
+
+            var value = document.getElementById('TypingName').value;
+
+        }
+    </script>
+    <!-- <script>
         const labels = document.querySelectorAll(".accordion-item__label");
         const tabs = document.querySelectorAll(".accordion-tab");
 
         function toggleShow() {
+
             const target = this;
             const item = target.classList.contains("accordion-tab") ?
                 target :
@@ -57,15 +60,22 @@
             const id = item.dataset.actabId;
 
             tabs.forEach(function(tab) {
+
                 if (tab.dataset.actabGroup === group) {
                     if (tab.dataset.actabId === id) {
+
                         tab.classList.add("accordion-active");
+
                     } else {
+
                         tab.classList.remove("accordion-active");
 
                     }
                 }
+
+
             });
+
 
             labels.forEach(function(label) {
                 const tabItem = label.parentElement;
@@ -73,14 +83,18 @@
                 if (tabItem.dataset.actabGroup === group) {
                     if (tabItem.dataset.actabId === id) {
                         tabItem.classList.add("accordion-active");
+
                     } else {
                         tabItem.classList.remove("accordion-active");
+
                     }
                 }
             });
+
         }
 
         labels.forEach(function(label) {
+
             label.addEventListener("click", toggleShow);
         });
 
@@ -88,7 +102,7 @@
             tab.addEventListener("click", toggleShow);
 
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
