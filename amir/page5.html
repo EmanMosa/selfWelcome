@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+
+    <title>Self Welcome</title>
+	
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }}}
+</script>
+<script>
+
+function hideme(){
+if (localStorage.clickcount>=3)
+{
+document.getElementsByClassName('page-button')[0].style.visibility="hidden"
+document.getElementsByClassName('page-button')[1].style.visibility="visible"
+localStorage.clear();
+}else{ 
+document.getElementsByClassName('page-button')[0].style.visibility="visible"
+document.getElementsByClassName('page-button')[1].style.visibility="hidden"}}
+
+</script>
+</head>
+
+
+<body class="page" onload =hideme()>
+    <img class="center-hor top-page" src="img/top-page.png" />
+    <img class="center-hor logo-page" src="img/logo.png" />
+    <section>
+        <div class="page-content">
+            <h1>לא נמצאה הזמנה ללקוח בשם זה</h1>
+            <img src="img\face_p4.png" alt="" class="img">
+            <div class="page-button" onclick = "clickCounter(), window.document.location = './page3.html'">צילום חוזר של תעודה מזהה</div>
+            <div class="page-button" onclick="window.document.location = './page6.html'">המשך ללא צילום תעודה מזהה</div>
+
+        </div>
+    </section>
+</body>
+
+</html>
