@@ -83,14 +83,25 @@ body {
     margin-bottom: 35px;
 }
 
+.imgid {
+    position: absolute;
+    top: 97px;
+    left: -13px;
+    width: 312px;
+    height: 220px;
+    /* background: transparent url(img/ilan.png) 0% 0% no-repeat padding-box; */
+    border: 3px solid #D1C2E4;
+    opacity: 1;
+}
+
 .page-button {
     width: 50%;
     margin-left: 25%;
     padding-top: 10px;
     margin-bottom: 16px;
     height: 50px;
-    background: #A77FCB 0% 0% no-repeat padding-box;
-    color: #5A4199;
+    background: #584099 0% 0% no-repeat padding-box;
+    color: white;
     box-shadow: 0px 10px 30px #00000008;
     opacity: 1.4;
     border-radius: 30px;
@@ -130,6 +141,10 @@ body {
     color: #5A4199;
     font-size: 1.5em;
     text-align: center;
+}
+
+.page-content.pageNumberPeople {
+    margin-top: 73px;
 }
 
 section {
@@ -333,36 +348,46 @@ section {
 /* wsem */
 
 .key {
-    margin-top: 1px;
-    margin-left: 1px;
-    width: 99px;
+    position: absolute;
+    top: 235px;
+    left: 102px;
     height: 99px;
+    opacity: 1;
 }
 
 .page-ok {
     width: 50%;
     margin-left: 25%;
-    padding-top: 10px;
-    margin-bottom: 16px;
-    height: 50px;
     background: #A77FCB 0% 0% no-repeat padding-box;
     color: #5A4199;
     box-shadow: 0px 10px 30px #00000008;
     opacity: 1.4;
     border-radius: 30px;
     font-size: 19px;
+    position: absolute;
+    top: 356px;
+    left: -7px;
+    opacity: 0.4;
+    margin-left: 0px;
+    right: 0px;
+    padding-top: 0px;
+    border-bottom-width: 0px;
+    height: 45px;
+    margin-bottom: 0px;
+    bottom: 0px;
+    left: 75px;
 }
 
 label {
     display: block;
-    font: 1rem 'Fira Sans', sans-serif;
-    position: absolute;
 }
 
 input,
 label {
     position: absolute;
     margin: .4rem 0;
+    font: inherit;
+    margin-left: 25px;
 }
 
 .start {
