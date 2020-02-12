@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Self Welcome</title>
+    <style>
+        .page-content {
+            height: 500px;
+            font-family: 'Assistant', Fallback, sans-serif;
+            text-align: center;
+            color: #5A4199;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        
+        .rounded_btn {
+            border-radius: 30px 30px;
+            border: 1px solid white;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            outline: none;
+            color: purple;
+            background-color: white;
+        }
+        
+        .Numcount {
+            font-size: 71px;
+            padding: 16px;
+            position: relative;
+            top: 15px;
+        }
+        
+        .title {
+            position: relative;
+            top: 35px;
+            left: -2px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body class="page">
+    <img class="center-hor top-page" src="img/top-page.png" />
+    <img class="center-hor logo-page" src="img/logo.png" />
+    <section>
+        <div class="page-content">
+            </br>
+            <h1>כמות אורחים וחדרים</h1>
+            <h3 style="margin-top: -25px;">מלאו הפרטים</h3>
+            <div class="PlusMinusCounter">
+                <h3 class="title">מספר אנשים</h3>
+                <input id="Pluscount" class="rounded_btn" onclick="Plus()" type="button" value="+">
+                <span id="Numcount" class="Numcount">0</span>
+                <input id="Minuscount" class="rounded_btn" onclick="Minus()" type="button" value="-">
+            </div>
+
+            <div class="PlusMinusCounter">
+                <h3 class="title">מספר חדרים</h3>
+                <input id="Pluscount" class="rounded_btn" onclick="Plus2()" type="button" value="+">
+                <span id="Numcount2" class="Numcount">0</span>
+                <input id="Minuscount" class="rounded_btn" onclick="Minus2()" type="button" value="-">
+            </div>
+            </br>
+            <div class="page-button" onclick="log()">אישור</div>
+        </div>
+
+    </section>
+    <script>
+        function log() {
+            var countEl = document.getElementById("Numcount");
+            console.log("room = ", document.getElementById("Numcount").innerText);
+            console.log("people = ", document.getElementById("Numcount2").innerText);
+
+        }
+        /////////////////////////////
+        var max = 3,
+            min = 0;
+        var count = 0;
+        var countEl = document.getElementById("Numcount");
+
+        function Plus() {
+            if (count < max) {
+                count++;
+                countEl.innerText = count;
+            } else {
+                countEl.innerText = count;
+            }
+
+
+        }
+
+        function Minus() {
+            if (count > min) {
+                count--
+                countEl.innerText = count;
+            } else {
+                countEl.innerText = count;
+            }
+        }
+
+        /////////////////////////////
+
+        var count2 = 0;
+        var countEl2 = document.getElementById("Numcount2");
+
+        function Plus2() {
+            if (count2 < max) {
+                count2++;
+                countEl2.innerText = count2;
+            } else {
+                countEl2.innerText = count2;
+            }
+
+
+        }
+
+        function Minus2() {
+            if (count2 > min) {
+                count2--
+                countEl2.innerText = count2;
+            } else {
+                countEl2.innerText = count2;
+            }
+        }
+    </script>
+</body>
+
+</html>
