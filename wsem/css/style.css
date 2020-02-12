@@ -228,9 +228,9 @@ section {
 
 label {
     display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+    font:inherit;
     position: absolute;
-
+    margin-left: 25px;
 }
 
 input,

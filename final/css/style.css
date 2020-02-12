@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Assistant', Fallback, sans-serif;
+    text-align: center;
 }
 
 .page1 {
@@ -94,6 +95,9 @@ body {
     opacity: 1;
 }
 
+
+/* eman for Button */
+
 .page-button {
     width: 50%;
     margin-left: 25%;
@@ -105,18 +109,65 @@ body {
     box-shadow: 0px 10px 30px #00000008;
     opacity: 1.4;
     border-radius: 30px;
-    font-size: 19px;
+    font-size: 20px;
 }
 
-.page-button.ButtonForpage6 {
+.page-button.pageIDScanner {
+    background-color: rgba(167, 127, 203, 0.4);
+    font: SemiBold 20px/23px Assistant;
+    letter-spacing: 0;
+    color: #584099;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.page-button.scoundButton {
+    background: rgba(108, 35, 169, 1);
+    box-shadow: 0px 10px 30px #00000008;
+    width: 194px;
+    height: 53px;
+    line-height: 20px;
+}
+
+.page-button.firstButton {
+    width: 194px;
+    height: 53px;
+    line-height: 20px;
+}
+
+.page-button.ButtonIdentifyingInformation {
     position: absolute;
     color: white;
     top: 618px;
     left: 20%;
     width: 177px;
     margin-left: 0px;
-    font: inherit;
+    background-color: rgba(224, 209, 237, 0.4);
 }
+
+.page-button.buttonReceiptCode {
+    left: -3px;
+    position: absolute;
+    top: 362px;
+    background-color: rgba(167, 127, 203, 0.4);
+    color: #584099;
+    font-weight: bold;
+}
+
+.textPageReceiptCode {
+    top: 220px;
+    left: 32px;
+    width: 313px;
+    height: 109px;
+    text-align: center;
+    font: Regular 20px/23px Assistant;
+    letter-spacing: 0;
+    color: #576169;
+    opacity: 1;
+}
+
+
+/* eman for Buttons */
 
 .shade-btm {
     width: 100%;
@@ -143,6 +194,12 @@ body {
     text-align: center;
 }
 
+.page-content.titleReceiptCode {
+    position: absolute;
+    top: -167px;
+    left: -135px;
+}
+
 .page-content.pageNumberPeople {
     margin-top: 73px;
 }
@@ -159,11 +216,9 @@ section {
 }
 
 
-/* eman */
+/* eman  page 6+7*/
 
 .accordion-tabs {
-    /* display: -webkit-box;
-    display: flex; */
     background: transparent;
     border: 2px solid #584099;
     border-radius: 36px 35px;
@@ -242,13 +297,6 @@ section {
 }
 
 .form__label {
-    /* position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #9b9b9b;
-    font: inherit; */
     box-sizing: content-box;
     position: fixed;
     top: 78%;
@@ -382,14 +430,6 @@ label {
     display: block;
 }
 
-input,
-label {
-    position: absolute;
-    margin: .4rem 0;
-    font: inherit;
-    margin-left: 25px;
-}
-
 .start {
     position: absolute;
     margin-top: 188px;
@@ -509,19 +549,11 @@ label {
 }
 
 
-/* khaled *********IDSCANNER*********** */
-/*iphone 5/SE */
-@media only screen and (min-width: 320px) and (max-width: 568px){
-  .scanInput{
-    position: absolute;
-    left: -35%;
-  }
+/* Tablet :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page1 {}
 }
-.scanInput{
-  position: absolute;
-  left: -43%;
-}
-/* khaled ********IDSCANNER************* */
 
 
 /* Large Mobile :480px. */
@@ -573,7 +605,24 @@ label {
     float: right;
     font-size: 18px;
 }
-.imgid {
-	max-width:100%;
-	height:auto;
+
+
+/* khaled *********IDSCANNER*********** */
+
+
+/*iphone 5/SE */
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    .scanInput {
+        position: absolute;
+        left: -35%;
+    }
 }
+
+.scanInput {
+    position: absolute;
+    left: -43%;
+}
+
+
+/* khaled ********IDSCANNER************* */
