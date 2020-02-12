@@ -573,3 +573,7 @@ label {
     float: right;
     font-size: 18px;
 }
+.imgid {
+	max-width:100%;
+	height:auto;
+}
