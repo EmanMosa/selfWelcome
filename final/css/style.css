@@ -290,24 +290,6 @@ section {
     display: block;
 }
 
-.form__label {
-    box-sizing: content-box;
-    position: fixed;
-    top: 78%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    border-style: hidden;
-    background-color: transparent;
-    background: transparent;
-    color: #584099;
-    height: 51px;
-    width: 500px;
-    font: inherit;
-    outline: 0;
-}
-
 .btm_img {
     position: absolute;
     top: 458px;
@@ -351,31 +333,6 @@ section {
     border-image-slice: 1;
     border-bottom: 2px solid #9b9b9b;
     width: 303px;
-}
-
-.accordion-item__label:focus~.form__label {
-    /* position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    color: #11998e;
-    font-weight: 700; */
-    box-sizing: content-box;
-    position: fixed;
-    top: 78%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    border-style: hidden;
-    background-color: transparent;
-    background: transparent;
-    color: #584099;
-    height: 51px;
-    width: 303px;
-    font: inherit;
-    font-size: 1rem;
-    /* border-bottom: 2px solid #9b9b9b; */
 }
 
 
