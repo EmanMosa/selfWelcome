@@ -85,14 +85,8 @@ body {
 }
 
 .imgid {
-    position: absolute;
-    top: 97px;
-    left: -13px;
-    width: 312px;
-    height: 220px;
-    /* background: transparent url(img/ilan.png) 0% 0% no-repeat padding-box; */
-    border: 3px solid #D1C2E4;
-    opacity: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 
