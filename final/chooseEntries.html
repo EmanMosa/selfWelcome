@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-<meta charset="utf-8">
-<title>Self Welcome</title>
-<script>
-    function changeLanguage(){
-        var lang = localStorage.getItem("langObj");
-        console.log("e " + JSON.parse(lang).code)
-        var language=JSON.parse(lang);
-        var page=language.page3;
-        console.log(page);
-        document.getElementById("opt1").innerHTML = page.opt1;
-          document.getElementById("opt2").innerHTML = page.opt2;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta charset="utf-8">
+    <title>Self Welcome</title>
+    <script>
+        function changeLanguage() {
+            var lang = localStorage.getItem("langObj");
+            console.log("e " + JSON.parse(lang).code)
+            var language = JSON.parse(lang);
+            var page = language.page3;
+            console.log(page);
+            document.getElementById("opt1").innerHTML = page.opt1;
+            document.getElementById("opt2").innerHTML = page.opt2;
             document.getElementById("opt6").innerHTML = page.opt6;
-}
+        }
     </script>
 </head>
-<body class= "page"  onload="changeLanguage()">
-  <section>
-    <div class="main-menu">
-      <img src="img/btn3_main.png" onclick="window.document.location = './page3.html'"/>
-      <div id="opt1">כניסה לחדר שהוזמן מראש</div>
-      <br>
-      <img src="img/btn2_main.png" />
-      <div id="opt2">בחירת חדר ללא הזמנה</div>
-      <br>
-      <img src="img/btn1_main.png" />
-      <div id="opt6">בחירת חדר למספר שעות</div>
-    </div>
 
-    <img class="bottom-page" src="img/bottom-page.png"/>
+<body class="page" onload="changeLanguage()">
+    <section>
+        <div class="main-menu">
+            <img src="img/btn3_main.png" onclick="window.document.location = './page3.html'" />
+            <div id="opt1">כניסה לחדר שהוזמן מראש</div>
+            <br>
+            <img src="img/btn2_main.png" />
+            <div id="opt2">בחירת חדר ללא הזמנה</div>
+            <br>
+            <img src="img/btn1_main.png" />
+            <div id="opt6">בחירת חדר למספר שעות</div>
+        </div>
+
+        <img class="bottom-page" src="img/bottom-page.png" />
     </section>
 
 </body>
+
 </html>
