@@ -29,12 +29,12 @@
 
                 </div>
                 <div class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
-                    <input id="invitationbyNumber" type="text" class="accordion-item__label" placeholder=" הקלד מספר הזמנה" onfocus="if (this.value == '') {this.placeholder = 'הקלד מספר הזמנה';}">
+                    <input id="invitationbyNumber" type="text" class="accordion-item__label" placeholder=" הקלד מספר הזמנה" onfocus="focusFunction()" onblur="blurFunction()">
 
                     <!-- <label id="number" for="invitationbyNumber" class="form__label">    הקלד מספר הזמנה </label> -->
                 </div>
                 <div class="accordion-item" data-actab-group="0" data-actab-id="1">
-                    <input id="invitationByName" type="text" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה" onfocus="if (this.value == '') {this.placeholder ='שם משפחה ופרטי כפי שהוקלד בהזמנה' ;}">
+                    <input id="invitationByName" type="text" class="accordion-item__label" placeholder="שם משפחה ופרטי כפי שהוקלד בהזמנה" onfocus="focusFunction()" onblur="blurFunction()">
                     <!-- <label id="name" for="invitationByName" class="form__label">שם משפחה ופרטי כפי שהוקלד בהזמנה</label> -->
                 </div>
             </div>
@@ -58,6 +58,34 @@
             } else {
                 if (id == "1") {
                     var value = document.getElementById('invitationByName').value;
+                }
+            }
+        }
+
+        function focusFunction() {
+            var elements = document.getElementsByClassName('accordion-item accordion-active');
+            var id = elements[0].dataset.actabId;
+            if (id == "0") {
+                document.getElementById("invitationbyNumber").placeholder = '';
+
+            } else {
+                if (id == "1") {
+                    // Focus = Changes the background color of input to yellow
+                    document.getElementById("invitationByName").placeholder = '';
+                }
+            }
+        }
+
+        function blurFunction() {
+            var elements = document.getElementsByClassName('accordion-item accordion-active');
+            var id = elements[0].dataset.actabId;
+            if (id == "0") {
+                document.getElementById("invitationbyNumber").placeholder = 'הקלד מספר הזמנה';
+
+            } else {
+                if (id == "1") {
+                    // No focus = Changes the background color of input to red
+                    document.getElementById("invitationByName").placeholder = " שם משפחה ופרטי כפי שהוקלד בהזמנה "
                 }
             }
         }
