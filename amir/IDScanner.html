@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -24,21 +23,21 @@
 </head>
 
 <body class="page" onload="changeLanguagePage3()">
-    <img class="center-hor top-page" src="img/top-page.png" />
-    <img class="center-hor logo-page" src="img/logo.png" />
+    <img class="center-hor top-page" src="img/top-page.png">
+    <img class="center-hor logo-page" src="img/logo.png">
     <section>
         <div class="page-content">
             <h1 id="title">צילום תעודה מזהה</h1>
-            <p id="subtitle3">אנא צלמו בעזרת מצלמת המכשיר תעודה מזהה: דרכון, תעודה זהות ישראלית או רשיון נהיגה ישראלי</p>
+            <p id="subtitle3" class="subtitle3">אנא צלמו בעזרת מצלמת המכשיר תעודה מזהה: דרכון, תעודה זהות ישראלית או רשיון נהיגה ישראלי</p>
 
             <!-- <div for="startscan" class="page-button">הפעלת מצלמה</div> -->
-            <div class="page-button">
+            <div class="page-button pageIDScanner">
                 <label for="scan" id="startscan">הפעלת מצלמה</label> </div>
-            <input type="file" style="visibility:hidden;" id="scan" accept="image/*" capture="camera" multiple />
+            <div class="scanInput"><input type="file" style="visibility:hidden;" id="scan" accept="image/*" capture="camera" multiple=""></div>
 
 
         </div>
-        <p><img id="img" /></p>
+        <p><img id="img"></p>
     </section>
 
     <script>
@@ -60,7 +59,10 @@
             })
 
         })
-    </script>-->
+    </script>--&gt;
+
+
+
 </body>
 
 </html>
