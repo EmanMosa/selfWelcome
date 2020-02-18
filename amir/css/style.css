@@ -716,7 +716,17 @@ label {
     font-size: 18px;
 }
 
-
+/* kahled: added buttons to page17 */
+.button17{
+  width: 68%;
+  position: absolute;
+  left: 15%;
+}
+.update17{
+  position: absolute;
+  left: 15%;
+}
+/* ************ */sec
 /* khaled *********IDSCANNER*********** */
 
 

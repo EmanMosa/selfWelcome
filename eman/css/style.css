@@ -548,6 +548,17 @@ label {
     font-weight: bold;
 }
 
+/* kahled: added buttons to page17 */
+.button17{
+  width: 68%;
+  position: absolute;
+  left: 15%;
+}
+.update17{
+  position: absolute;
+  left: 15%;
+}
+/* ************ */
 
 /* Tablet :768px. */
 
