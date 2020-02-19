@@ -89,9 +89,10 @@ function clickCounter() {
 
 
 }
+localStorage.setItem("counter", 1);
 
 function hideme() {
-    localStorage.setItem("counter", 1);
+
 
     if (localStorage.getItem("counter") >= 3) {
         document.getElementsByClassName('page-button')[1].style.visibility = "visible"
