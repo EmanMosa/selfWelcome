@@ -62,8 +62,8 @@ function changeLanguageForIDScanner() {
     var page = language.page41;
     console.log(page);
     document.getElementById("title").innerHTML = page.titlephoto;
-    document.getElementById("subtitle3").innerHTML = page.subtitle3;
-    document.getElementById("startscan").innerHTML = page.startscan;
+    document.getElementById("subtitle3photo").innerHTML = page.subtitle3photo;
+    document.getElementById("startphoto").innerHTML = page.startphoto;
 
 }
 

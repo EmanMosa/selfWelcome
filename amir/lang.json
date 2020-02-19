@@ -232,6 +232,8 @@
         "page41": {
             "titlescan": "סריקת תעודה מזהה",
             "titlephoto": "צילום תעודה מזהה",
+            "startphoto": "הפעלת מצלמה",
+            "subtitle3photo": "אנא צלמו בעזרת מצלמת המכשיר  תעודה מזהה: דרכון ,תעודת זהות ישראלית או רישיון נהיגה ישראלי",
             "titleTakeYourCard": "קח את התעודה",
             "subtitle1": "חוקי מדינת ישראל מחייבים הזדהות באמצעות תעודה בעת כניסה למלון",
             "subtitle3": "אנא הנח את התעודה (דרכון, רישיון נהיגה, תעודת זהות ישראלית) בסורק ",
@@ -710,6 +712,9 @@
         "page41": {
             "titlescan": "Identification",
             "titlephoto": "ID photo",
+            "startphoto": "Use Camera",
+            "subtitle3photo": "Please use the device's camera to photo an ID card: a passport, an Israeli ID or an Israel driver license.",
+
             "titleTakeYourCard": "Take the ID Card",
             "subtitle1": "According to Israeli Law, guests must present a valid ID when checking in.",
             "subtitle3": "Please place your ID (Passport, Israeli driver's license, Israeli ID) in the scanner picture facing glass",
@@ -1173,7 +1178,9 @@
         },
         "page41": {
             "titlescan": "كشف الهوية",
-            "titlephoto": "تصوير الهويه",
+            "titlephoto": "تصوير الهوية الشخصية",
+            "startphoto": " تشغيل الكاميرا",
+            "subtitle3photo": "الرجاء تصوير بطاقة شخصية بواسطة كاميرا الجهاز: جواز سفر, بطاقة هوية او رخصة سياقة اسرائيلية",
             "titleTakeYourCard": "خذ بطاقة الهوية",
             "subtitle1": "وفقاً للقانون الإسرائيلي، يجب على النزلاء تقديم بطاقة هوية سارية المفعول عند تسجيل الدخول للفندق.",
             "subtitle3": "يرجى وضع بطاقة الهوية (جواز السفر،رخصة القيادة،بطاقة الهوية) في الماسح الضوئي وتحديد نوع الشهادة التي قمت بوضعها!",
@@ -1330,8 +1337,8 @@
                 "m201": "أدخل اسمك في كلا الحقلين، الاسم الأول واسم العائلة",
                 "m202": "أحرف غير صالحة. الرجاء إدخال اسمك كما هو مكتوب في بطاقة الهوية/جواز السفر",
                 "m211": "لم يتم العثور على أي عميل بهذا الاسم. يرجى استخدام الاسم الذي في الحجز",
-                "m2112": "اعادة تصوير البطاقه الشخصيه ",
-                "m2113": "الاستمرار بدون تصوير البطاقه الشخصيه",
+                "m2112": "اعادة تصوير البطاقة الشخصية ",
+                "m2113": "الاستمرار بدون تصوير البطاقة الشخصية",
                 "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
             },
             "page33": {
@@ -1644,6 +1651,8 @@
         "page41": {
             "titlescan": "Идентификация",
             "titlephoto": "ID photo",
+            "startphoto": "Use Camera",
+            "subtitle3photo": "Please use the device's camera to photo an ID card: a passport, an Israeli ID or an Israel driver license.",
             "titleTakeYourCard": "Возьмите ваш паспорт",
             "subtitle1": "По израильскому законодательству, постояльцы должны предъявлять удостоверение личности при заселении.",
             "subtitle3": "Поджалуйста положите ваш документ в сканнер и укажите вид документа (паспорт, водительские права…)",
