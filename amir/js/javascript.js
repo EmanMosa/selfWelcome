@@ -84,12 +84,14 @@ function changeLanguageForCustomerNotFound() {
 function clickCounter() {
 
 
+    if (typeof(localStorage.getItem("counter")) !== "undefined") {
+        localStorage.setItem("counter", Number(localStorage.getItem("counter")) + 1);
+    } else {
+        localStorage.setItem("counter", 1);
 
-    localStorage.setItem("counter", Number(localStorage.getItem("counter")) + 1);
-
+    }
 
 }
-localStorage.setItem("counter", 1);
 
 function hideme() {
 
