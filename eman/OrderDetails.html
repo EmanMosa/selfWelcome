@@ -11,8 +11,8 @@
 <body class="page">
     <img class="center-hor top-page" src="img/top-page.png">
     <img class="center-hor logo-page" src="img/logo.png"> 
-	<img class="orderbackground" src="img/Background.png">
-    <section>
+	<!-- <img class="orderbackground" src="img/Background.png"> -->
+    <section style="top: 42%;">
         <div class="page-content">
             <br><br>
             <br><br>
@@ -22,18 +22,22 @@
             <img src="img\profile.png" alt="" class="img">
             <h2 id="coustmer">שלום אילן דמבינסקי</h2>
             <img class="imgid" src="img\ilan.png" alt="">
-            <div class="page-button" onclick="window.document.location = 'NewInfo.html'"> שמי מאוית נכון</div>
+            <div class="page-button" style="margin-top:10%;" onclick="window.document.location = 'NewInfo.html'"> שמי מאוית נכון</div>
             <!-- too do display the capture img of ID -->
             <div onclick="window.document.location = 'IDScanner.html'" style="color: #D1C2E4;"> שמי אינו מאוית נכון, צילום חוזר</div>
-			
-
         </div>
 
     </section>
-
-
-   
-
+    <picture>
+        <source media="(min-width: 378px)" srcset="img/Background@2x.png">
+        <img src="img/Background.png" style="position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 42%;
+          width: 100%;
+          max-width: 100%;
+          z-index: -1;" alt="">
+      </picture>
 </body>
 
 </html>
