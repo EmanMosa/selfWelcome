@@ -24,8 +24,8 @@
         height: 143px;
         ">
 
-                <input id="TypingName" type="text" class="accordion-item__label" style="    left: 138px;">
-                <label for="TypingName" class="form__label" style="left: 137px;">הקלדת שם משפחה ושם פרטי</label>
+                <input id="TypingName" type="text" class="accordion-item__label" placeholder="הקלדת שם משפחה ושם פרטי" onfocus="focusFunction()" onblur="blurFunction()">
+                <!-- <label for="TypingName" class="form__label" style="left: 162px;">הקלדת שם משפחה ושם פרטי</label> -->
             </div>
         </div>
 
@@ -44,6 +44,16 @@
 
             var value = document.getElementById('TypingName').value;
 
+        }
+
+        function focusFunction() {
+            // Focus = Changes the background color of input to yellow
+            document.getElementById("TypingName").placeholder = '';
+        }
+
+        function blurFunction() {
+            // No focus = Changes the background color of input to red
+            document.getElementById("TypingName").placeholder = "הקלדת שם משפחה ושם פרטי "
         }
     </script>
 

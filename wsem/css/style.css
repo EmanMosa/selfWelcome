@@ -595,6 +595,7 @@ div#exitDate{
     }
 }
 
+<<<<<<< HEAD
 .page9Title {
     margin-bottom: 10px;
     ;
@@ -602,6 +603,13 @@ div#exitDate{
 
 .image1 {
     position: relative;
+=======
+label {
+    display: block;
+    font:inherit;
+    position: absolute;
+    margin-left: 25px;
+>>>>>>> e745d7536e1fd1b8253e06c5ff39af788ff26943
 }
 
 .image2 {

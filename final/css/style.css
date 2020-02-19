@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Assistant', Fallback, sans-serif;
+    text-align: center;
 }
 
 .page1 {
@@ -83,19 +84,88 @@ body {
     margin-bottom: 35px;
 }
 
+.imgid {
+    max-width: 100%;
+    height: auto;
+}
+
+.subtitle3 {
+    color: #576169;
+}
+
+
+/* eman for Button */
+
 .page-button {
     width: 50%;
     margin-left: 25%;
     padding-top: 10px;
     margin-bottom: 16px;
     height: 50px;
-    background: #A77FCB 0% 0% no-repeat padding-box;
-    color: #5A4199;
+    background: #584099 0% 0% no-repeat padding-box;
+    color: white;
     box-shadow: 0px 10px 30px #00000008;
     opacity: 1.4;
     border-radius: 30px;
-    font-size: 19px;
+    font-size: 20px;
 }
+
+.page-button.pageIDScanner {
+    background-color: rgba(167, 127, 203, 0.4);
+    font: SemiBold 20px/23px Assistant;
+    letter-spacing: 0;
+    color: #584099;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.page-button.scoundButton {
+    background: rgba(108, 35, 169, 1);
+    box-shadow: 0px 10px 30px #00000008;
+    width: 194px;
+    height: 53px;
+    line-height: 20px;
+}
+
+.page-button.firstButton {
+    width: 194px;
+    height: 53px;
+    line-height: 20px;
+}
+
+.page-button.ButtonIdentifyingInformation {
+    position: absolute;
+    color: white;
+    top: 618px;
+    left: 20%;
+    width: 177px;
+    margin-left: 0px;
+    background-color: rgba(224, 209, 237, 0.4);
+}
+
+.page-button.buttonReceiptCode {
+    left: -3px;
+    position: absolute;
+    top: 362px;
+    background-color: rgba(167, 127, 203, 0.4);
+    color: #584099;
+    font-weight: bold;
+}
+
+.textPageReceiptCode {
+    top: 220px;
+    left: 32px;
+    width: 313px;
+    height: 109px;
+    text-align: center;
+    font: Regular 20px/23px Assistant;
+    letter-spacing: 0;
+    color: #576169;
+    opacity: 1;
+}
+
+
+/* eman for Buttons */
 
 .shade-btm {
     width: 100%;
@@ -122,6 +192,16 @@ body {
     text-align: center;
 }
 
+.page-content.titleReceiptCode {
+    position: absolute;
+    top: -167px;
+    left: -135px;
+}
+
+.page-content.pageNumberPeople {
+    margin-top: 73px;
+}
+
 section {
     color: white;
     padding: 1em;
@@ -133,71 +213,371 @@ section {
     text-align: center;
 }
 
-@media (min-width:300px) {
-    .accordion-tabs :focus {
-        outline: none;
-    }
-    .accordion-tabs {
-        /* display: -webkit-box;
-    display: flex; */
-        background: transparent;
-        border: 2px solid #584099;
-        border-radius: 36px 35px;
-    }
-    .accordion-tabs .accordion-tab {
-        background: transparent;
-        padding: 1rem 2rem;
-        font: inherit;
-        -webkit-box-flex: 1;
-        flex: 1;
-        border: none;
-        cursor: pointer;
-        -webkit-transition: background .1s ease;
-        transition: background .1s ease;
-    }
-    .accordion-tabs .accordion-tab:hover {
-        background: transparent;
-    }
-    .accordion-tabs .accordion-tab:last-child {
-        border-right: 0;
-    }
-    .accordion-tabs .accordion-tab.accordion-active {
-        background: #584099;
-        border: 2px solid #584099;
-        border-radius: 36px 35px;
+
+/* eman  page 6+7*/
+
+.accordion-tabs {
+    background: transparent;
+    border: 2px solid #584099;
+    border-radius: 36px 35px;
+    height: 47px;
+}
+
+.accordion-tabs .accordion-tab {
+    background: transparent;
+    padding: 0rem 1rem;
+    font: inherit;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    outline: 0;
+}
+
+.accordion-tabs .accordion-tab:hover {
+    background: transparent;
+    outline: 0;
+}
+
+.accordion-tabs .accordion-tab:last-child {
+    border-right: 0;
+}
+
+.accordion-tabs .accordion-tab.accordion-active {
+    background: #584099;
+    border: 2px solid #584099;
+    border-radius: 36px 35px;
+    text-align: center;
+    color: #ffffff;
+    border-top-width: 3px;
+    padding-right: 30px;
+    border-right-width: 17px;
+    padding-left: 21px;
+    /* opacity: 1; */
+    outline: 0;
+}
+
+.accordion-item {
+    padding: 2.4rem;
+    display: none;
+    border: none;
+    background: transparent;
+}
+
+.accordion-item__label {
+    box-sizing: content-box;
+    position: fixed;
+    top: 78%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-style: hidden;
+    background-color: transparent;
+    background: transparent;
+    color: #584099;
+    height: 51px;
+    width: 303px;
+    font: inherit;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+}
+
+ ::placeholder {
+    color: #584099;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.accordion-item.accordion-active {
+    display: block;
+}
+
+.btm_img {
+    position: absolute;
+    top: 458px;
+    left: -76.5350341796875px;
+    width: 452px;
+    height: 403px;
+}
+
+
+/* .accordion-item__label {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+} */
+
+
+/* .accordion-item__label::placeholder {
+    color: transparent;
+}
+
+
+/* .accordion-item__label:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+} */
+
+.accordion-item__label:focus {
+    padding-bottom: 6px;
+    top: 100%;
+    font-weight: 700;
+    border-width: 3px;
+    /* border-image: linear-gradient(to right, #11998e, #38ef7d); */
+    border-image-slice: 1;
+    border-bottom: 2px solid #9b9b9b;
+    width: 303px;
+}
+
+
+/* reset input */
+
+.accordion-item__label:required,
+.accordion-item__label:invalid {
+    box-shadow: none;
+}
+
+
+/* wsem */
+
+.key {
+    position: absolute;
+    top: 235px;
+    left: 102px;
+    height: 99px;
+    opacity: 1;
+}
+
+.page-ok {
+    width: 50%;
+    margin-left: 25%;
+    background: #A77FCB 0% 0% no-repeat padding-box;
+    color: #5A4199;
+    box-shadow: 0px 10px 30px #00000008;
+    opacity: 1.4;
+    border-radius: 30px;
+    font-size: 19px;
+    position: absolute;
+    top: 356px;
+    left: -7px;
+    opacity: 0.4;
+    margin-left: 0px;
+    right: 0px;
+    padding-top: 0px;
+    border-bottom-width: 0px;
+    height: 45px;
+    margin-bottom: 0px;
+    bottom: 0px;
+    left: 75px;
+}
+
+label {
+    display: block;
+}
+
+.start {
+    position: absolute;
+    margin-top: 188px;
+}
+
+
+/* khaled */
+
+.title1 {
+    position: fixed;
+    top: 22%;
+    left: 52%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
+}
+
+.title2 {
+    position: fixed;
+    top: 40%;
+    left: 48%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
+}
+
+.title3 {
+    position: fixed;
+    top: 58%;
+    left: 46%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
+}
+
+.title4 {
+    position: fixed;
+    top: 76%;
+    left: 59%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
+}
+
+.type1 {
+    position: fixed;
+    top: 24%;
+    left: 28%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.type2 {
+    position: fixed;
+    top: 42%;
+    left: 55%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.type3 {
+    position: fixed;
+    top: 61%;
+    left: 65%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.type4 {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.button {
+    width: 48%;
+    height: 11%;
+    background-color: #8B4DB8;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    top: 98%;
+    left: 27%;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.button p {
+    margin-top: 13px;
+}
+
+.button:active {
+    background-color: #C29CDE;
+}
+
+.update {
+    position: absolute;
+    font-size: 20px;
+    color: #576169;
+    top: 108%;
+    left: 32%;
+}
+
+.update:active {
+    color: #000000;
+    font-weight: bold;
+}
+
+
+/* Tablet :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page1 {}
+}
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {}
+
+
+/* small mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+    #page2 .main-menu {
+        font-family: 'Assistant-bold', Fallback, sans-serif;
         text-align: center;
-        color: #ffffff;
-        border-top-width: 0px;
-        padding-right: 30px;
-        border-right-width: 17px;
-        /* opacity: 1; */
+        color: #5A4199;
     }
-    .accordion-item {
-        padding: 2.4rem;
-        display: none;
-        border: none;
-        background: transparent;
+    #page2 .main-menu img {
+        width: 20%;
     }
-    .accordion-item__label {
-        box-sizing: content-box;
-        position: fixed;
-        top: 78%;
+    #page2 {
+        color: white;
+        position: absolute;
+        top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-        text-align: center;
-        border-style: hidden;
-        background-color: transparent;
-        border-bottom: 1.5px solid #575a5d;
-        width: 250px;
-    }
-     ::placeholder {
-        color: #584099;
-        font-size: 20px;
-        font-weight: bold;
-        opacity: 1;
-    }
-    .accordion-item.accordion-active {
-        display: block;
+        width: fit-content;
     }
 }
+
+.page9Title {
+    margin-bottom: 10px;
+    ;
+}
+
+.image1 {
+    position: relative;
+}
+
+.image2 {
+    position: absolute;
+    right: 36px;
+    margin-right: 0px;
+    margin-top: 18px;
+}
+
+.text {
+    position: absolute;
+    color: white;
+    float: right;
+    font-size: 18px;
+}
+
+
+/* khaled *********IDSCANNER*********** */
+
+
+/*iphone 5/SE */
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+    .scanInput {
+        position: absolute;
+        left: -35%;
+    }
+}
+
+.scanInput {
+    position: absolute;
+    left: -43%;
+}
+
+
+/* khaled ********IDSCANNER************* */
