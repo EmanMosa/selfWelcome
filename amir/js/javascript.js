@@ -1,5 +1,6 @@
 function getData(lang) {
     console.log("here test" + lang)
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -81,17 +82,18 @@ function changeLanguageForCustomerNotFound() {
 
 
 function clickCounter() {
-    if (typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount) + 1;
-        } else {
-            localStorage.clickcount = 1;
-        }
-    }
+
+
+
+    localStorage.setItem("counter", Number(localStorage.getItem("counter")) + 1);
+
+
 }
 
 function hideme() {
-    if (localStorage.clickcount >= 3) {
+    localStorage.setItem("counter", 1);
+
+    if (localStorage.getItem("counter") >= 3) {
         document.getElementsByClassName('page-button')[1].style.visibility = "visible"
 
         document.getElementsByClassName('page-button')[0].onclick = "";
