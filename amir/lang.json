@@ -230,7 +230,8 @@
             "opt4B": "אובדן קוד כניסה"
         },
         "page41": {
-            "title": "סריקת תעודה מזהה",
+            "titlescan": "סריקת תעודה מזהה",
+            "titlephoto": "צילום תעודה מזהה",
             "titleTakeYourCard": "קח את התעודה",
             "subtitle1": "חוקי מדינת ישראל מחייבים הזדהות באמצעות תעודה בעת כניסה למלון",
             "subtitle3": "אנא הנח את התעודה (דרכון, רישיון נהיגה, תעודת זהות ישראלית) בסורק ",
@@ -384,6 +385,8 @@
                 "m201": "יש להזין ערכים בשני השדות  ",
                 "m202": "הוזנו תווים שאינם חוקיים. אנא כתוב את השם ושם המשפחה כפי שמופיעים בתעודת הזהות / הדרכון",
                 "m211": "לא נמצא לקוח בשם זה. אנא כתוב את השם כפי שהוא מופיע בהזמנה",
+                "m2112": "צילום חוזר של תעודה מזהה",
+                "m2113": "המשך ללא צילום תעודה מזהה",
                 "m212": "לא נמצא לקוח בשם זה. אנא פנה לצוות המלון לסיוע "
             },
             "page33": {
@@ -705,7 +708,8 @@
             "opt4": "Lost a Key"
         },
         "page41": {
-            "title": "Identification",
+            "titlescan": "Identification",
+            "titlephoto": "ID photo",
             "titleTakeYourCard": "Take the ID Card",
             "subtitle1": "According to Israeli Law, guests must present a valid ID when checking in.",
             "subtitle3": "Please place your ID (Passport, Israeli driver's license, Israeli ID) in the scanner picture facing glass",
@@ -861,6 +865,8 @@
                 "m201": "Enter you name in both fields, First Name and Last Name",
                 "m202": "Invalid characters. Please enter your name as written in your ID ",
                 "m211": "No customer was found with this name. Please use the name from the booking",
+                "m2112": "Retry ID photo",
+                "m2113": "continue without ID photo",
                 "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
             },
             "page33": {
@@ -1166,7 +1172,8 @@
             "opt4": "فقدان مفتاح"
         },
         "page41": {
-            "title": "كشف الهوية",
+            "titlescan": "كشف الهوية",
+            "titlephoto": "تصوير الهويه",
             "titleTakeYourCard": "خذ بطاقة الهوية",
             "subtitle1": "وفقاً للقانون الإسرائيلي، يجب على النزلاء تقديم بطاقة هوية سارية المفعول عند تسجيل الدخول للفندق.",
             "subtitle3": "يرجى وضع بطاقة الهوية (جواز السفر،رخصة القيادة،بطاقة الهوية) في الماسح الضوئي وتحديد نوع الشهادة التي قمت بوضعها!",
@@ -1323,6 +1330,8 @@
                 "m201": "أدخل اسمك في كلا الحقلين، الاسم الأول واسم العائلة",
                 "m202": "أحرف غير صالحة. الرجاء إدخال اسمك كما هو مكتوب في بطاقة الهوية/جواز السفر",
                 "m211": "لم يتم العثور على أي عميل بهذا الاسم. يرجى استخدام الاسم الذي في الحجز",
+                "m2112": "اعادة تصوير البطاقه الشخصيه ",
+                "m2113": "الاستمرار بدون تصوير البطاقه الشخصيه",
                 "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
             },
             "page33": {
@@ -1633,7 +1642,8 @@
             "opt4": "Потеря ключа"
         },
         "page41": {
-            "title": "Идентификация",
+            "titlescan": "Идентификация",
+            "titlephoto": "ID photo",
             "titleTakeYourCard": "Возьмите ваш паспорт",
             "subtitle1": "По израильскому законодательству, постояльцы должны предъявлять удостоверение личности при заселении.",
             "subtitle3": "Поджалуйста положите ваш документ в сканнер и укажите вид документа (паспорт, водительские права…)",
@@ -1792,6 +1802,8 @@
                 "m201": "Заполните ваше имя в две строчки - имя и фамилию.",
                 "m202": "Ошибка. Пожалуйста напишите ваше имя точно так как написано в документе",
                 "m211": "Нет заказа на это имя. Пожалуйста используйте имя, указанное при бронировании",
+                "m2112": "Retry ID photo",
+                "m2113": "continue without ID photo",
                 "m212": "No reservation was found with this name. Please contact hotel staff for further assistance."
             },
             "page33": {

@@ -5,24 +5,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8">
     <title>Self Welcome</title>
+    <script src="js/javascript.js"></script>
 
-    <script>
-        function changeLanguagePage3() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page41;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title;
-            document.getElementById("subtitle3").innerHTML = page.subtitle3;
-            document.getElementById("startscan").innerHTML = page.startscan;
 
-        }
-    </script>
 
 </head>
 
-<body class="page" onload="changeLanguagePage3()">
+<body class="page" onload="changeLanguageForIDScanner()">
     <img class="center-hor top-page" src="img/top-page.png">
     <img class="center-hor logo-page" src="img/logo.png">
     <section>
@@ -40,26 +29,7 @@
         <p><img id="img"></p>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', (ev) => {
-            let form = document.getElementById('myform');
-            //get the captured media file
-            let input = document.getElementById('scan');
-
-            input.addEventListener('change', (ev) => {
-                console.dir(input.files[0]);
-                if (input.files[0].type.indexOf("image/") > -1) {
-                    let img = document.getElementById('img');
-                    img.src = window.URL.createObjectURL(input.files[0]);
-                }
-
-
-
-
-            })
-
-        })
-    </script>--&gt;
+    --&gt;
 
 
 

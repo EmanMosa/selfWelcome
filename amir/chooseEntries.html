@@ -7,21 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <meta charset="utf-8">
     <title>Self Welcome</title>
-    <script>
-        function changeLanguage() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page3;
-            console.log(page);
-            document.getElementById("opt1").innerHTML = page.opt1;
-            document.getElementById("opt2").innerHTML = page.opt2;
-            document.getElementById("opt6").innerHTML = page.opt6;
-        }
-    </script>
+    <script src="js/javascript.js"></script>
+
 </head>
 
-<body class="page" onload="changeLanguage()">
+<body class="page" onload="ChangeLanguageForChooseEntries()">
     <section style="
     height: 100%;
     /* top: 50%; */
@@ -34,7 +24,7 @@
             <div id="opt2">בחירת חדר ללא הזמנה</div>
             <br>
             <img src="img/btn1_main.png" onclick="window.document.location = './IDScanner.html'" />
-            <div id="opt6">בחירת חדר למספר שעות</div>
+            <div id="checkboxText">בחירת חדר למספר שעות</div>
         </div>
 
         <img class="bottom-page" src="img/bottom-page.png" />
