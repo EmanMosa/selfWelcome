@@ -47,7 +47,7 @@ function ChangeLanguageForChooseEntries() {
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
     var page3 = language.page3;
-    //console.log(page);
+    console.log(page);
     document.getElementById("opt1").innerHTML = page3.opt1;
     document.getElementById("opt2").innerHTML = page3.opt2;
     var page33 = language.page33;
@@ -59,7 +59,7 @@ function changeLanguageForIDScanner() {
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
     var page = language.page41;
-    // console.log(page);
+    console.log(page);
     document.getElementById("title").innerHTML = page.titlephoto;
     document.getElementById("subtitle3").innerHTML = page.subtitle3;
     document.getElementById("startscan").innerHTML = page.startscan;
@@ -71,7 +71,7 @@ function changeLanguageForCustomerNotFound() {
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
     var page = language.page312;
-    // console.log(page);
+    console.log(page);
     document.getElementById("m211").innerHTML = page.m211;
     document.getElementById("m2112").innerHTML = page.m2112;
     document.getElementById("m2113").innerHTML = page.m2113;
