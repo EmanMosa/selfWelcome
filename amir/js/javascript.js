@@ -87,8 +87,7 @@ function clickCounter() {
     if (typeof(localStorage.getItem("counter")) !== "undefined") {
         localStorage.setItem("counter", Number(localStorage.getItem("counter")) + 1);
     } else {
-        localStorage.setItem("counter", 1);
-
+        localStorage.setItem("counter", 1)
     }
 
 }
@@ -101,7 +100,7 @@ function hideme() {
 
         document.getElementsByClassName('page-button')[0].onclick = "";
 
-        localStorage.clear();
+        localStorage.setItem("counter", 1)
     } else {
         document.getElementsByClassName('page-button')[1].style.visibility = "hidden"
     }
