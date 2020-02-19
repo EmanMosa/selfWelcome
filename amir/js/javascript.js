@@ -70,7 +70,7 @@ function changeLanguageForCustomerNotFound() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
-    var page = language.page312;
+    var page = language.errorMsgs.page312;
     console.log(page);
     document.getElementById("m211").innerHTML = page.m211;
     document.getElementById("m2112").innerHTML = page.m2112;
