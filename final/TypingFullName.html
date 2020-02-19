@@ -12,48 +12,22 @@
 </head>
 
 <body class="page">
+<div class="container">
     <img class="center-hor top-page" src="img/top-page.png" />
     <img class="center-hor logo-page" src="img/logo.png" />
     <section>
-        <div class="page-content">
-
-            <h1>הקלדת פרטי המזמין</h1>
-            <div style="top: 263px;
-        left: 39px;
-        width: 300px;
-        height: 143px;
-        ">
-
-                <input id="TypingName" type="text" class="accordion-item__label" placeholder="הקלדת שם משפחה ושם פרטי" onfocus="focusFunction()" onblur="blurFunction()">
-                <!-- <label for="TypingName" class="form__label" style="left: 162px;">הקלדת שם משפחה ושם פרטי</label> -->
-            </div>
-        </div>
-
-        <div>
-            <img class="btm_img" id="btm_img" src="img/Background.png" alt="">
-
-            <div class="page-button ButtonIdentifyingInformation " onclick="OnClickForButton2()">אישור </div>
-
-        </div>
-        </div>
-
-
+      <h1 id="info">הקלדת פרטי המזמין</h1>
+                <input id="TypingName" type="text" class="accordion-item__label">
+                <label for="TypingName" class="form__label">הקלדת שם משפחה ושם פרטי</label>
+        <div class="ButtonForpage6" onclick="OnClickForButton2()">אישור </div>
     </section>
+</div>
+
     <script>
         function OnClickForButton2() {
 
             var value = document.getElementById('TypingName').value;
 
-        }
-
-        function focusFunction() {
-            // Focus = Changes the background color of input to yellow
-            document.getElementById("TypingName").placeholder = '';
-        }
-
-        function blurFunction() {
-            // No focus = Changes the background color of input to red
-            document.getElementById("TypingName").placeholder = "הקלדת שם משפחה ושם פרטי "
         }
     </script>
 

@@ -42,7 +42,16 @@ body {
     background-size: cover;
 }
 
-.center-hor {
+/* .center-hor {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+} */
+
+/*  */
+
+  .center-hor {
     position: absolute;
     left: 50%;
     margin-right: -50%;
@@ -54,15 +63,21 @@ body {
     margin-top: 3em;
 }
 
-.logo-page {
+ .logo-page{
     width: 60%;
-    margin-top: 3em;
-}
+    margin-top: 2em;
+  }
 
 .top-page {
     width: 100%;
     margin-top: -20%;
 }
+
+/* .top-page{
+    width: 109%;
+    margin-top: -29%;
+
+  } */
 
 .bottom-page {
     width: 100%;
@@ -265,12 +280,11 @@ section {
 }
 
 .accordion-item__label {
-    box-sizing: content-box;
+	box-sizing: content-box;
     position: fixed;
     top: 78%;
-    left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-48%, -136%);
     text-align: center;
     border-style: hidden;
     background-color: transparent;
@@ -350,12 +364,121 @@ section {
 
 /* wsem */
 
+div#chosedate{
+  font-size: 44px;
+  color: #584099;
+  text-align: center;
+  letter-spacing: 0px;
+  margin-bottom: 44px;
+}
+input#start{
+  border: oldlace;
+  background: border-box;
+  font-size: 26px;
+  text-align: end;
+  font-family: cursive;
+  width: 9em;
+}
+input#number{
+  max-width: 100%
+}
+input#exit{
+  border: oldlace;
+  background: border-box;
+  font-size: 26px;
+  text-align: end;
+  font-family: cursive;
+  width: 9em;}
+ div#datemain{
+   border: 6px #254DDE66;
+   box-shadow: 1px 1px 7px;
+   width: 87%;
+   margin-left: 5%;
+   padding-top: 10px;
+   margin-bottom: 16px;
+   height: 15vh;
+   color: #a448b5;
+   opacity: 16.4;
+   border-radius: 82px;
+   font-size: 19px;
+   background-color: aliceblue;
+}
+div#entresDate{
+  width: 50%;
+      margin-left: -1%;
+      padding-top: 10px;
+      margin-bottom: 16px;
+      height: 50px;
+      color: #584099;
+      opacity: 1.4;
+      border-radius: 30px;
+      font-size: 19px;
+
+}
+div#exitDate{
+  width: 50%;
+      margin-left: -1%;
+      padding-top: 10px;
+      margin-bottom: 16px;
+      height: 50px;
+      color: #584099;
+      opacity: 1.4;
+      border-radius: 30px;
+      font-size: 19px;
+
+}
+
+
 .key {
     position: absolute;
     top: 235px;
     left: 102px;
     height: 99px;
     opacity: 1;
+}
+.form__label {
+	box-sizing: content-box;
+    position: fixed;
+    top: 78%;
+    margin-right: -50%;
+    transform: translate(10%, -212%);
+    text-align: center;
+    border-style: hidden;
+    background-color: transparent;
+    background: transparent;
+    color: #584099;
+    font: inherit;
+    outline: 0;
+    font-size: 24px;
+}
+div.container{
+	  width: 960px;
+  margin: 0px auto;
+background-color: red;
+
+}
+h1#info {
+  top: 263px;
+    left: 39px;
+    width: 300px;
+    height: 143px;
+    color: #584099;
+}
+.ButtonForpage6{
+	width: 50%;
+  margin-left: 25%;
+ padding-top: 4px;
+ margin-bottom: 16px;
+height: 50px;
+ background: #584099 0% 0% no-repeat padding-box;
+ color: white;
+box-shadow: 0px 10px 30px #00000008;
+opacity: 1.4;
+border-radius: 30px;
+position: sticky;
+font-size: 19px;
+transform: translate(6px, 327%);
+
 }
 
 .page-ok {
@@ -507,7 +630,9 @@ label {
 /* Tablet :768px. */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .page1 {}
+ .container{
+   width: 100;
+ }
 }
 
 
@@ -536,6 +661,29 @@ label {
         transform: translate(-50%, -50%);
         width: fit-content;
     }
+	    /* khaled page 9 responsive */
+.logo-page{
+      width: 60%;
+      margin-top: 2em;
+    }
+    .center-hor{
+      left: 50%;
+      margin-right: -50%;
+      max-width: 100%;
+
+    }
+    .top-page{
+      width: 109%;
+      margin-top: -29%;
+
+    }
+    .image2{
+      width: 14%;
+    }
+    .image1{
+      width: 100%;
+    }
+    /* khaled page 9 responsive */
 }
 
 .page9Title {
@@ -554,6 +702,13 @@ label {
     margin-top: 18px;
 }
 
+/* .image2{
+    width: 14%;
+  }
+  .image1{
+    width: 100%;
+  } */
+
 .text {
     position: absolute;
     color: white;
@@ -561,7 +716,17 @@ label {
     font-size: 18px;
 }
 
-
+/* kahled: added buttons to page17 */
+.button17{
+  width: 68%;
+  position: absolute;
+  left: 15%;
+}
+.update17{
+  position: absolute;
+  left: 15%;
+}
+/* ************ */sec
 /* khaled *********IDSCANNER*********** */
 
 
@@ -579,5 +744,7 @@ label {
     left: -43%;
 }
 
-
+.orderbackground{
+	transform: translate(-31%, 85%);
+}
 /* khaled ********IDSCANNER************* */
