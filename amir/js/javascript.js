@@ -47,7 +47,7 @@ function ChangeLanguageForChooseEntries() {
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
     var page3 = language.page3;
-    console.log(page);
+    console.log(page3);
     document.getElementById("opt1").innerHTML = page3.opt1;
     document.getElementById("opt2").innerHTML = page3.opt2;
     var page33 = language.page33;
