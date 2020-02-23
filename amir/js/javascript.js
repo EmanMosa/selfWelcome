@@ -286,6 +286,26 @@ function changeLanguageForTypingFullName() {
 
 }
 
+
+function OnClickForButton2() {
+
+    var value = document.getElementById('TypingName').value;
+
+}
+
+function focusFunctionforTypingName() {
+
+    document.getElementById("TypingName").placeholder = '';
+
+}
+
+function blurFunctionforTypingName() {
+
+    document.getElementById("TypingName").placeholder = "הקלדת שם משפחה ושם פרטי";
+
+
+}
+
 function changeLanguageForChooseDate() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)

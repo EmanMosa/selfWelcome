@@ -18,8 +18,8 @@
         <img class="center-hor logo-page" src="img/logo.png" />
         <section>
             <h1 id="info">הקלדת פרטי המזמין</h1>
-            <input id="TypingName" type="text" class="accordion-item__label">
-            <label id="inputtitle" for="TypingName" class="form__label">הקלדת שם משפחה ושם פרטי</label>
+            <input id="TypingName" type="text" class="accordion-item__label" placeholder="הקלדת שם משפחה ושם פרטי" onfocus="focusFunctionforTypingName()" onblur="blurFunctionforTypingName()">
+            <!-- <label id="inputtitle" for="TypingName" class="form__label">הקלדת שם משפחה ושם פרטי</label> -->
             <div id="ok" class="ButtonForpage6" style="width: 50%;
                 margin-left: 25%;
                 padding-top: 4px;
@@ -48,13 +48,6 @@
     " alt="">
     </picture>
 
-    <script>
-        function OnClickForButton2() {
-
-            var value = document.getElementById('TypingName').value;
-
-        }
-    </script>
 
 </body>
 
