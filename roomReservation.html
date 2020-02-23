@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Self Welcome</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script>
+        // function changeLanguagePage3() {
+        //     var lang = localStorage.getItem("langObj");
+        //     console.log("e " + JSON.parse(lang).code)
+        //     var language = JSON.parse(lang);
+        //     var page = language.page41;
+        //     console.log(page);
+        //     document.getElementById("title").innerHTML = page.title;
+        //     document.getElementById("subtitle3").innerHTML = page.subtitle3;
+        //     document.getElementById("startscan").innerHTML = page.startscan;
+        //     getData()
+        // }
+
+        var d = $.Deferred();
+        var array = [];
+        var  Query = "<DateRange from='2020-01-22' to='2020-01-23' /> ";
+
+        //var xmlRequest = "<?xml version='1.0' encoding='UTF-8'?><Request><Settings name='getRoomTypes'><Authentication username='test' password='2222' /><Hotel id='testhotel' /></Settings></Request>"
+        var xmlRequest =
+            "<?xml version='1.0' encoding='UTF-8' ?>" +
+            "<AvailRaterq xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>" +
+            "<Authentication username=' " +
+            'test' +
+            "' password='" +
+            '2222' +
+            "' ResponseType = '03' />" +
+            "<Hotel id='" +
+            'testhotel' +
+            "' Currency='ILS'/>" +
+            "" +
+            Query +
+            "" +
+            " <Guests adults='2' child='1' babies='1' />" +
+            "<Prices rateCode='TOURISTRATE'><Price boardCode='*ALL*' /></Prices>" +
+            "</AvailRaterq>";
+
+
+        function getData() {
+          var Url = 'http://api.minihotelpms.com/gds';
+          $.ajax({
+                url: Url,
+                type: "POST",
+                crossDomain: true,
+                data: xmlRequest,
+                async: false,
+                success: function (result) {
+                  console.log('Succes: ' + result);
+                  myFunction(result)
+                },
+          	  error: function (jqXHR, status) {
+                  console.log("Error: ", jqXHR.responseText + " " + status);
+                }
+
+                });
+        }
+
+        //*********************//
+        function myFunction(xml) {
+            //var xmlDoc = xml.responseXML;
+            //document.getElementById("demo").innerText =xml;
+            //.getElementsByTagName("Rooms")[0].childNodes[0].nodeValue;;
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(xml,"text/xml");
+
+            document.getElementById("type1").innerText = xmlDoc.getElementsByTagName("Reservations")[0].children[0].attributes["RoomType"].value;
+            document.getElementById("type2").innerText = xmlDoc.getElementsByTagName("Reservations")[0].children[0].attributes["RoomNumber"].value;
+            document.getElementById("type3").innerText = xmlDoc.getElementsByTagName("Reservations")[0].children[0].attributes["RoomsQty"].value;
+            document.getElementById("type4").innerText = xmlDoc.getElementsByTagName("Rooms")[0].children[0].attributes["Number"].value;
+        }
+    </script>
+
+
+</head>
+
+<body class="page" onload="getData();">
+    <img class="center-hor top-page" src="img/top-page.png" />
+    <img class="center-hor logo-page" src="img/logo.png" />
+    <section>
+        <div class="page-content">
+          <div class='page9Title'><h1 >פרטי הזמנה </h1></div>
+          <div class=card>
+            <img class='image1' src="img/Card1.png" >
+            <img class='image2' src="img/RoomType.png" >
+            <h2 class='title1'> סוג חדר</h2>
+            <h1 class='type1' id='type1'>זוגי סטנדרטי</h1>
+          </div>
+          <div class=card>
+            <img class='image1'src="img/Card1.png" >
+            <img class='image2' src="img/roomNumber.png" >
+            <h2 class='title2'>מספר חדר</h2>
+            <h1 class='type2' id='type2'>106</h1>
+          </div>
+          <div class=card>
+            <img class='image1' src="img/Card1.png" >
+            <img class='image2' src="img/guestNumber.png" >
+            <h2 class='title3'>כמות אורחים</h2>
+            <h1 class='type3' id='type3'>2</h1>
+          </div>
+          <div class=card>
+            <img class='image1'src="img/Card1.png" >
+            <img class='image2' src="img/price.png" >
+            <h2 class='title4'>מחיר</h2>
+            <h1 class='type4' id='type4'>₪689</h1>
+          </div>
+          <div class=button onclick="window.document.location = './ReceiptCode.html'"><p>אישור</p></div>
+          <div class='update'><p>עדכון פרטי הזמנה</p></div>
+        </div>
+
+    </section>
+
+    <script>
+    </script>
+</body>
+
+</html>
