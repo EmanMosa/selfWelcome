@@ -109,7 +109,7 @@ function hideme() {
 
 
 
-function changeLanguageForOrderDetails() {
+function changeLanguageForIdentifyingInformation() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
