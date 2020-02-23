@@ -105,3 +105,64 @@ function hideme() {
         document.getElementsByClassName('page-button')[1].style.visibility = "hidden"
     }
 }
+
+
+
+
+function changeLanguageForOrderDetails() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page31;
+    console.log(page);
+    // document.getElementById("opt5").innerHTML = page.opt5;
+    document.getElementById("opt6").innerHTML = page.opt6;
+    document.getElementById("opt7").innerHTML = page.opt7;
+    document.getElementById("invitationbyNumber").innerHTML = page.opt8;
+    document.getElementById("invitationByName").innerHTML = page.opt9;
+    document.getElementById("confirm").innerHTML = page.confirm;
+
+
+}
+
+
+
+function OnClickForButton() {
+    var elements = document.getElementsByClassName('accordion-item accordion-active');
+    var id = elements[0].dataset.actabId;
+    if (id == "0") {
+        var value = document.getElementById('invitationbyNumber').value;
+    } else {
+        if (id == "1") {
+            var value = document.getElementById('invitationByName').value;
+        }
+    }
+}
+
+function focusFunction() {
+    var elements = document.getElementsByClassName('accordion-item accordion-active');
+    var id = elements[0].dataset.actabId;
+    if (id == "0") {
+        document.getElementById("invitationbyNumber").placeholder = '';
+
+    } else {
+        if (id == "1") {
+            // Focus = Changes the background color of input to yellow
+            document.getElementById("invitationByName").placeholder = '';
+        }
+    }
+}
+
+function blurFunction() {
+    var elements = document.getElementsByClassName('accordion-item accordion-active');
+    var id = elements[0].dataset.actabId;
+    if (id == "0") {
+        document.getElementById("invitationbyNumber").placeholder = 'הקלד מספר הזמנה';
+
+    } else {
+        if (id == "1") {
+            // No focus = Changes the background color of input to red
+            document.getElementById("invitationByName").placeholder = " שם משפחה ופרטי כפי שהוקלד בהזמנה "
+        }
+    }
+}

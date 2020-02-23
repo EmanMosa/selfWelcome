@@ -44,11 +44,18 @@
 
         },
         "page31": {
-            "title": "איתור הזמנה",
             "opt1": "אתר לפי מספר הזמנה",
             "opt2": "אתר לפי שם מזמין",
             "opt3": "אתר לפי כרטיס אשראי",
             "opt4": "אתר לפי דואר אלקטרוני",
+
+            "opt5": "הקלדת פרטי הזמנה ",
+            "opt6": "מספר הזמנה",
+            "opt7": "שם מלא",
+            "opt8": "אנא הזינו מספר הזמנה",
+            "opt9": "אנא רשום את שמך כפי שמופיע בהזמנה",
+            "confirm": "אישור",
+
             "note1": "לא הצלחנו למצוא את הזמנתך בשם זה.",
             "note2": "אתר הזמנה שלך באחת הדרכים הבאות"
         },
@@ -530,6 +537,15 @@
             "opt2": " Name",
             "opt3": "Credit Card",
             "opt4": "Email",
+
+
+            "opt5": "Reservation Details ",
+            "opt6": "Reservation Number ",
+            "opt7": "Full Name ",
+            "opt8": "Please type your Reservation Number ",
+            "opt9": "Please type your name as it appears on your reservation.",
+            "confirm": "confirm",
+
             "note1": "We couldn't find your reservation with this name.",
             "note2": "Locate your reservation by:"
         },
@@ -1002,7 +1018,14 @@
             "opt1": "اعثر على الحجز برقم التأكيد",
             "opt2": "اعثر على الحجز بالاسم",
             "opt3": "اعثر على حجز بالبطاقة الائتمانية",
-            "opt4": "اعثر على حجز بالبريد الالكتروني"
+            "opt4": "اعثر على حجز بالبريد الالكتروني",
+
+            "opt5": " تفاصيل الحجز ",
+            "opt6": " رقم الحجز",
+            "opt7": "الاسم الكامل ",
+            "opt8": " فضلاً اكتب رقم الحجز",
+            "opt9": "فضلاً اكتب اسمك كما يظهر في الحجز",
+            "confirm": "تأكيد"
         },
         "page311": {
             "title": "رقم التأكيد",
@@ -1474,6 +1497,14 @@
             "opt2": "Имя",
             "opt3": "Кредитная карта",
             "opt4": "электронная почта",
+
+            "opt5": "Reservation Details ",
+            "opt6": "Reservation Number ",
+            "opt7": "Full Name ",
+            "opt8": "Please type your Reservation Number ",
+            "opt9": "Please type your name as it appears on your reservation.",
+            "confirm": "confirm",
+
             "note1": "Мы не смогли найти заказ на это имя.",
             "note2": "Укажите ваш заказ до…"
         },

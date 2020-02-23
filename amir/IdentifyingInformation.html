@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="page">
+<body class="page" onload="changeLanguageForOrderDetails()">
     <img class="center-hor top-page" src="img/top-page.png" />
     <img class="center-hor logo-page" src="img/logo.png" />
     <section>
@@ -24,8 +24,8 @@
         height: 143px;
         ">
                 <div class="accordion-tabs">
-                    <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0" onmousedown="document.getElementById('invitationByName').value=''">מספר הזמנה</button>
-                    <button class="accordion-tab" data-actab-group="0" data-actab-id="1" onmousedown="document.getElementById('invitationbyNumber').value=''"> שם מלא</button>
+                    <button class="accordion-tab accordion-active" data-actab-group="0" data-actab-id="0" onmousedown="document.getElementById('invitationByName').value=''" id="opt6">מספר הזמנה</button>
+                    <button class="accordion-tab" data-actab-group="0" data-actab-id="1" onmousedown="document.getElementById('invitationbyNumber').value=''" id="opt7"> שם מלא</button>
 
                 </div>
                 <div class="accordion-item accordion-active" data-actab-group="0" data-actab-id="0">
@@ -42,7 +42,7 @@
             <div>
                 <!-- <img class="btm_img" id="btm_img" src="img/Background.png" alt=""> -->
 
-                <div class="ButtonForpage6" onclick="OnClickForButton2()">אישור </div>
+                <div id="confirm" class="ButtonForpage6" onclick="OnClickForButton2()">אישור </div>
 
             </div>
         </div>
@@ -58,48 +58,8 @@
           width: 100%;
           max-width: 100%;
           z-index: -1;" alt="">
-      </picture>
-    <script>
-        function OnClickForButton() {
-            var elements = document.getElementsByClassName('accordion-item accordion-active');
-            var id = elements[0].dataset.actabId;
-            if (id == "0") {
-                var value = document.getElementById('invitationbyNumber').value;
-            } else {
-                if (id == "1") {
-                    var value = document.getElementById('invitationByName').value;
-                }
-            }
-        }
+    </picture>
 
-        function focusFunction() {
-            var elements = document.getElementsByClassName('accordion-item accordion-active');
-            var id = elements[0].dataset.actabId;
-            if (id == "0") {
-                document.getElementById("invitationbyNumber").placeholder = '';
-
-            } else {
-                if (id == "1") {
-                    // Focus = Changes the background color of input to yellow
-                    document.getElementById("invitationByName").placeholder = '';
-                }
-            }
-        }
-
-        function blurFunction() {
-            var elements = document.getElementsByClassName('accordion-item accordion-active');
-            var id = elements[0].dataset.actabId;
-            if (id == "0") {
-                document.getElementById("invitationbyNumber").placeholder = 'הקלד מספר הזמנה';
-
-            } else {
-                if (id == "1") {
-                    // No focus = Changes the background color of input to red
-                    document.getElementById("invitationByName").placeholder = " שם משפחה ופרטי כפי שהוקלד בהזמנה "
-                }
-            }
-        }
-    </script>
     <script>
         const labels = document.querySelectorAll(".accordion-item__label");
         const tabs = document.querySelectorAll(".accordion-tab");
