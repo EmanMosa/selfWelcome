@@ -7,54 +7,49 @@
     <meta charset="utf-8">
     <title>Self Welcome</title>
 
-    <script>
-        function changeLanguagePage3() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page41;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title;
-            document.getElementById("subtitle3").innerHTML = page.subtitle3;
-            document.getElementById("startscan").innerHTML = page.startscan;
+    <script src="js/javascript.js"></script>
 
-        }
-    </script>
 
 </head>
 
-<body class="page" onload="changeLanguagePage3()">
+<body class="page" onload="changeLanguageForNewInfo()">
     <img class="center-hor top-page" src="img/top-page.png" />
     <img class="center-hor logo-page" src="img/logo.png" />
     <section>
         <div class="page-content">
-          <div class='page9Title'><h1 >פרטי הזמנה </h1></div>
-          <div class=card>
-            <img class='image1' src="img/Card1.png" >
-            <img class='image2' src="img/RoomType.png" >
-            <h2 class='title1'> סוג חדר</h2>
-            <h1 class='type1'>זוגי סטנדרטי</h1>
-          </div>
-          <div class=card>
-            <img class='image1'src="img/Card1.png" >
-            <img class='image2' src="img/roomNumber.png" >
-            <h2 class='title2'>מספר חדר</h2>
-            <h1 class='type2'>106</h1>
-          </div>
-          <div class=card>
-            <img class='image1' src="img/Card1.png" >
-            <img class='image2' src="img/guestNumber.png" >
-            <h2 class='title3'>כמות אורחים</h2>
-            <h1 class='type3'>2</h1>
-          </div>
-          <div class=card>
-            <img class='image1'src="img/Card1.png" >
-            <img class='image2' src="img/price.png" >
-            <h2 class='title4'>מחיר</h2>
-            <h1 class='type4'>₪689</h1>
-          </div>
-          <div class=button onclick="window.document.location = './ReceiptCode.html'"><p>אישור</p></div>
-          <div class='update'><p>עדכון פרטי הזמנה</p></div>
+            <div class='page9Title'>
+                <h1 id="title">פרטי הזמנה </h1>
+            </div>
+            <div class=card>
+                <img class='image1' src="img/Card1.png">
+                <img class='image2' src="img/RoomType.png">
+                <h2 id="opt4" class='title1'> סוג חדר</h2>
+                <h1 class='type1'>זוגי סטנדרטי</h1>
+            </div>
+            <div class=card>
+                <img class='image1' src="img/Card1.png">
+                <img class='image2' src="img/roomNumber.png">
+                <h2 id="opt2" class='title2'>מספר חדר</h2>
+                <h1 class='type2'>106</h1>
+            </div>
+            <div class=card>
+                <img class='image1' src="img/Card1.png">
+                <img class='image2' src="img/guestNumber.png">
+                <h2 id="opt1" class='title3'>כמות אורחים</h2>
+                <h1 class='type3'>2</h1>
+            </div>
+            <div class=card>
+                <img class='image1' src="img/Card1.png">
+                <img class='image2' src="img/price.png">
+                <h2 id="opt5" class='title4'>מחיר</h2>
+                <h1 class='type4'>₪689</h1>
+            </div>
+            <div class=button onclick="window.document.location = './ReceiptCode.html'">
+                <p id="ok">אישור</p>
+            </div>
+            <div class='update'>
+                <p id="opt3">עדכון פרטי הזמנה</p>
+            </div>
         </div>
 
     </section>

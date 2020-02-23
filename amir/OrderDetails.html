@@ -8,24 +8,24 @@
     <title>Self Welcome</title>
 </head>
 
-<body class="page">
+<body class="page" onload="changeLanguageForOrderDetails()">
     <img class="center-hor top-page" src="img/top-page.png">
-    <img class="center-hor logo-page" src="img/logo.png"> 
-	<!-- <img class="orderbackground" src="img/Background.png"> -->
+    <img class="center-hor logo-page" src="img/logo.png">
+    <!-- <img class="orderbackground" src="img/Background.png"> -->
     <section style="top: 44%;">
         <div class="page-content">
             <br><br>
             <br><br>
 
 
-            <h1>פרטי הזמנה</h1>
+            <h1 id="title1">פרטי הזמנה</h1>
             <img src="img\profile.png" alt="" class="img">
             <h2 id="coustmer">שלום אילן דמבינסקי</h2>
             <img class="imgid" src="img\ilan.png" alt="">
-            <div class="page-button" onclick="window.document.location = 'NewInfo.html'"> שמי מאוית נכון</div>
+            <div id="next1" class="page-button" onclick="window.document.location = 'NewInfo.html'"> שמי מאוית נכון</div>
             <!-- too do display the capture img of ID -->
-            <div onclick="window.document.location = 'IDScanner.html'" style="color: #D1C2E4;"> שמי אינו מאוית נכון, צילום חוזר</div>
-			
+            <div id="again1" onclick="window.document.location = 'IDScanner.html'" style="color: #D1C2E4;"> שמי אינו מאוית נכון, צילום חוזר</div>
+
 
         </div>
 
@@ -39,9 +39,9 @@
           width: 100%;
           max-width: 100%;
           z-index: -1;" alt="">
-      </picture>
+    </picture>
 
-   
+
 
 </body>
 

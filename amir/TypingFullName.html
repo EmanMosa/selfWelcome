@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8">
+    <script src="js/javascript.js"></script>
 
     <title>Self Welcome</title>
 
 
 </head>
 
-<body class="page">
-<div class="container">
-    <img class="center-hor top-page" src="img/top-page.png" />
-    <img class="center-hor logo-page" src="img/logo.png" />
-    <section>
-      <h1 id="info">הקלדת פרטי המזמין</h1>
-                <input id="TypingName" type="text" class="accordion-item__label">
-                <label for="TypingName" class="form__label">הקלדת שם משפחה ושם פרטי</label>
-                <div class="ButtonForpage6" style="width: 50%;
+<body class="page" onload="changeLanguageForTypingFullName()">
+    <div class="container">
+        <img class="center-hor top-page" src="img/top-page.png" />
+        <img class="center-hor logo-page" src="img/logo.png" />
+        <section>
+            <h1 id="info">הקלדת פרטי המזמין</h1>
+            <input id="TypingName" type="text" class="accordion-item__label">
+            <label id="inputtitle" for="TypingName" class="form__label">הקלדת שם משפחה ושם פרטי</label>
+            <div id="ok" class="ButtonForpage6" style="width: 50%;
                 margin-left: 25%;
                 padding-top: 4px;
                 margin-bottom: 16px;
@@ -32,11 +33,11 @@
                 position: sticky;
                 font-size: 19px;
                 transform: translate(6px, 28vh);" onclick="OnClickForButton2()">אישור </div>
-    </section>
-</div>
-<picture>
-    <source media="(min-width: 378px)" srcset="img/Background@2x.png">
-    <img src="img/Background.png" style="
+        </section>
+    </div>
+    <picture>
+        <source media="(min-width: 378px)" srcset="img/Background@2x.png">
+        <img src="img/Background.png" style="
     position: absolute;
     bottom: 0;
     left: 0;
@@ -45,7 +46,7 @@
     max-width: 100%;
     z-index: -1;
     " alt="">
-  </picture>
+    </picture>
 
     <script>
         function OnClickForButton2() {

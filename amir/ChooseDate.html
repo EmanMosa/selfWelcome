@@ -6,29 +6,29 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Self Welcome</title>
     <meta charset="utf-8">
+    <script src="js/javascript.js"></script>
 
 </head>
 
-<body class="page">
+<body class="page" onload="changeLanguageForChooseDate()">
     <img class="center-hor top-page" src="img/top-page.png" />
     <img class="center-hor logo-page" src="img/logo.png" />
     <section>
-      <div id="chosedate">
-        בחירת תקןפת
-        השהות במלון
-      </div>
-      <div id="datemain">
-        <div id="">תאריך כניסה</div>
-        <input type="date" id="start">
-      </div>
-      <div id="datemain">
-        <div id="" >תאריך יציאה</div>
-        <input type="date" id="exit"></div>
-      </div>
-      <div class="button">
-      <p>  אישור</p>
+        <div id="chosedate">
+            בחירת תקןפת השהות במלון
+        </div>
+        <div id="datemain">
+            <div id="dateText1">תאריך כניסה</div>
+            <input type="date" id="start">
+        </div>
+        <div id="datemain">
+            <div id="dateText2">תאריך יציאה</div>
+            <input type="date" id="exit"></div>
+        </div>
+        <div class="button">
+            <p id="ok"> אישור</p>
 
-      </div>
+        </div>
     </section>
 
 

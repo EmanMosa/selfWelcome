@@ -30,6 +30,44 @@
             "CharacterDate2": "מ-",
             "CharacterDate3": " עד"
         },
+        "page9": {
+            "title": "פרטי הזמנה",
+            "opt1": "כמות אורחים",
+            "opt2": "מספר חדר",
+            "opt4": "סוג חדר",
+            "opt5": "מחיר",
+            "ok": "אישור",
+            "title2": "אפשרויות לינה",
+            "opt3": "עדכון פרטי הזמנה"
+
+        },
+        "page10": {
+            "title": "קבלת קוד",
+            "subtitle": "הקוד נדרש לצורך הנפקת מפתח לחדר מהעמדה האוטומטית שממוקמת בלובי המלון, הקוד נשלח אליכם לנייד במסרון"
+        },
+        "page13": {
+            "title": "כמות אורחים",
+            "choose": "בחר אחת מהאפשרויות",
+            "opt1": "אדם אחד",
+            "opt2": "זוג",
+            "opt3": "יותר משניים"
+
+
+        },
+        "page14": {
+            "title": "כמות אורחים וחדרים",
+            "subtitle": "מלאו את הפרטים",
+            "opt1": "מספר אנשים ",
+            "opt2": "מספר חדרים",
+            "ok": "אישור"
+
+        },
+        "page15": {
+            "title": "הקלדת פרטי המזמין",
+            "inputtitle": "הקלד שם משפחה ושם פרטי",
+            "ok": "אישור"
+
+        },
         "page2": {
             "opt1": "מלון",
             "opt2": "תשלום עבור חניה"
@@ -86,8 +124,10 @@
         },
         "page33": {
             "title": " תאריך ההזמנה",
+            "title1": "בחירת תקופת השהות במלון",
             "dateText1": "תאריך כניסה",
             "dateText2": "תאריך יציאה",
+            "ok": "אישור",
             "checkboxText": "מנוחת יום",
             "CharacterDate": "ב",
             "nightsCount": "כמות  הלילות שנבחרו"
@@ -249,13 +289,19 @@
             "opt2": "תעודת זהות / רישיון נהיגה",
             "opt3": "כניסה בלי תעודה מזהה",
             "subtitle2": "יש להניח תעודת זהות או רשיון נהיגה על משטח הסריקה.",
+            "titlecitizen": "מהי אזרחותך ?",
+            "choose": "בחר אחת מהאפשרויות",
             "citizen": "אני אזרח ישראלי",
             "nocitizen": "אני תייר",
             "Fname": "שם פרטי",
             "Lname": "שם משפחה",
             "result": "בדוק כי הפרטים המופיעים למטה כתובים נכון (אין שגיאות כתיב)",
             "next": "שמי מאוית וכתוב נכון",
-            "again": "נסה שוב"
+            "again": "נסה שוב",
+
+            "title1": " פרטי הזמנה ",
+            "next1": "שמי מאוית נכון",
+            "again1": "שמי אינו מאוית נכון, צילום חוזר"
         },
         "popUp": {
             "title": "אישור",
@@ -518,6 +564,46 @@
             "CharacterDate2": "at ",
             "CharacterDate3": " until "
         },
+        "page9": {
+            "title": "Reservation Details",
+            "opt1": "Number of Guests ",
+            "opt2": "Room Number ",
+            "opt4": "Room Type ",
+            "opt5": "Price",
+            "ok": "confirm",
+            "title2": "Sleeping options ",
+
+            "opt3": "Update reservation details"
+
+        },
+        "page10": {
+            "title": "Receive a code ",
+            "subtitle": "The code is needed to get a room key from the automated kiosk in the hotel Loby"
+        },
+
+        "page13": {
+            "title": "Number of Guests ",
+            "choose": "Select at least one of the options",
+            "opt1": "One person ",
+            "opt2": "A couple",
+            "opt3": "More than two "
+
+
+        },
+        "page14": {
+            "title": "Ammount of guests and rooms",
+            "subtitle": "Fill in the required information",
+            "opt1": "Number of Guests ",
+            "opt2": "Number of Rooms ",
+            "ok": "confirm"
+
+        },
+        "page15": {
+            "title": "Type inviter details",
+            "inputtitle": "Type last name and first name",
+            "ok": "confirm"
+
+        },
         "page2": {
             "opt1": "Hotel",
             "opt2": "Parking Fees"
@@ -577,8 +663,11 @@
         },
         "page33": {
             "title": "Reservation Dates",
+            "title1": "Choose the period of staying in the hotel",
             "dateText1": "Check-In",
             "dateText2": "Check-Out",
+            "ok": "confirm",
+
             "checkboxText": "Day Use",
             "CharacterDate": "",
             "nightsCount": "Number of selected nights:&nbsp"
@@ -592,9 +681,11 @@
             "todyText": "Today"
 
         },
+
         "page321": {
             "title": "Choose Your Room",
             "colName1": "Number of Guests",
+
             "colName2": "Room Type",
             "colName32": "(for your entire stay)",
             "colName31": "Total Cost",
@@ -610,6 +701,7 @@
             "gu5": "5 Guests",
             "guests": "Guests",
             "selectRooms": "Choose"
+
         },
 
         "page3211": {
@@ -739,13 +831,19 @@
             "opt2": "ID card / driver's license",
             "opt3": "Check in without an ID card",
             "subtitle2": "Please put your valid ID on the scanner.",
+            "titlecitizen": "What is your nationality?",
+            "choose": "Select at least one of the options",
             "citizen": "I am an Israeli citizen",
             "nocitizen": "I am a tourist",
             "Fname": "First Name",
             "Lname": "Last Name",
             "result": "Make sure the credentials below are properly spelled and written",
             "next": "My name is spelled correctly",
-            "again": "Scan again"
+            "again": "Scan again",
+            "title1": "Reservation Details",
+            "next1": "My name is spelled correctly  ",
+            "again1": "My name isn't spelled correctly, Retry photo "
+
         },
         "popUp": {
             "title": "Confirmation",
@@ -1001,6 +1099,46 @@
             "CharacterDate2": "من ",
             "CharacterDate3": " حتى "
         },
+        "page9": {
+            "title": "تفاصيل الحجز",
+            "opt1": " عدد الضيوف",
+            "opt2": " رقم الغرفة",
+            "opt4": " نوع الغرفة",
+            "opt5": "السعر",
+            "ok": "تأكيد",
+            "title2": "امكانيات المبيت ",
+
+            "opt3": "تحديث تفاصيل الحجز"
+
+        },
+        "page10": {
+            "title": "تلقي الكود",
+            "subtitle": "الرمز مطلوب لاستصدار مفتاح للغرفة من المكان المخصص لذلك في ردهة الفندق، سيتم إرسال الرمز إليكم في رسالة نصية"
+        },
+        "page13": {
+            "title": " عدد الاشخاص",
+            "choose": "حدد أحد الخيارات على الأقل",
+            "opt1": "شحص واحد ",
+            "opt2": "شخصان ",
+            "opt3": "اكثر من شخصين "
+
+
+        },
+        "page14": {
+            "title": "عدد الاشخاص والغرف",
+            "subtitle": "املأ المعلومات المطلوبة",
+            "opt1": "عدد الاشخاص ",
+            "opt2": "عدد الغرف",
+            "ok": "تأكيد"
+
+        },
+        "page15": {
+            "title": "الرجاء ادخال تفاصيل صاحب الحجز",
+            "inputtitle": "الرجاء ادخال الاسم الشخصي واسم العائلة  ",
+
+            "ok": "تأكيد"
+
+        },
         "page2": {
             "opt1": "فندق",
             "opt2": "رسوم الوقوف"
@@ -1023,8 +1161,8 @@
             "opt5": " تفاصيل الحجز ",
             "opt6": " رقم الحجز",
             "opt7": "الاسم الكامل ",
-            "opt8": " فضلاً اكتب رقم الحجز",
-            "opt9": "فضلاً اكتب اسمك كما يظهر في الحجز",
+            "opt8": " الرجاء اكتب رقم الحجز",
+            "opt9": "الرجاء اكتب اسمك كما يظهر في الحجز",
             "confirm": "تأكيد"
         },
         "page311": {
@@ -1055,8 +1193,11 @@
         },
         "page33": {
             "title": "تواريخ الحجز",
+            "title1": "اختر مدة الاقامة في الفندق",
             "dateText1": "تاريخ الوصول",
             "dateText2": "تاريخ المغادرة",
+            "ok": "تأكيد",
+
             "checkboxText": "استخدام يومي",
             "CharacterDate": "",
             "nightsCount": "عدد الليالي التي تم اختيارها"
@@ -1212,13 +1353,19 @@
             "opt2": "بطاقة الهوية / رخصة القيادة",
             "opt3": "دخول بدون بطاقة هوية",
             "subtitle2": "يرجى وضع هويتك السارية على الماسحة الضوئية.",
+            "titlecitizen": "ما هي جنسيتك؟",
+            "choose": "حدد أحد الخيارات على الأقل ",
             "citizen": "أنا مواطن إسرائيلي",
             "nocitizen": "أنا سائح",
             "Fname": "First Name",
             "Lname": "Last Name",
             "result": "Make sure the credentials below are properly spelled and written",
             "next": "My name is spelled correctly",
-            "again": "Scan again"
+            "again": "Scan again",
+            "title1": "تفاصيل الحجز",
+            "next1": "اسمي مكتوب بشكل صحيح",
+            "again1": "اسمي ليس مكتوب بشكل صحيح ,اعاده التصوير"
+
         },
         "popUp": {
             "title": "تأكيد",
@@ -1479,6 +1626,45 @@
             "CharacterDate2": "В",
             "CharacterDate3": " Еще "
         },
+        "page9": {
+            "title": "Reservation Details",
+            "opt1": "Number of Guests ",
+            "opt2": "Room Number ",
+            "opt4": "Room Type ",
+            "opt5": "Price",
+            "ok": "confirm",
+            "title2": "Sleeping options ",
+
+            "opt3": "Update reservation details"
+
+        },
+        "page10": {
+            "title": "Receive a code ",
+            "subtitle": "The code is needed to get a room key from the automated kiosk in the hotel Loby"
+        },
+        "page13": {
+            "title": "Number of Guests ",
+            "choose": "Select at least one of the options",
+            "opt1": "One person ",
+            "opt2": "A couple",
+            "opt3": "More than two "
+
+
+        },
+        "page14": {
+            "title": "Ammount of guests and rooms",
+            "subtitle": "Fill in the required information",
+            "opt1": "Number of Guests ",
+            "opt2": "Number of Rooms ",
+            "ok": "confirm"
+
+        },
+        "page15": {
+            "title": "Type inviter details",
+            "inputtitle": "Type last name and first name",
+            "ok": "confirm"
+
+        },
         "page2": {
             "opt1": "Гостиница",
             "opt2": "Плата за стоянку"
@@ -1535,6 +1721,8 @@
         },
         "page33": {
             "title": "Сроки бронирования",
+            "title1": "Choose the period of staying in the hotel",
+            "ok": "confirm",
             "dateText1": "Заселение",
             "dateText2": "Выселение",
             "checkboxText": "Дневное использование",
@@ -1692,13 +1880,20 @@
             "opt2": "Паспорт",
             "opt3": "Заезд без удостоверения личности",
             "subtitle2": "Поджалуйста положите ваш документ в сканнер",
+            "titlecitizen": "What is your nationality?",
+            "choose": "Select at least one of the options",
             "citizen": "я гражданин Израиля",
             "nocitizen": "я турист",
             "Fname": "First Name",
             "Lname": "Last Name",
             "result": "Make sure the credentials below are properly spelled and written",
             "next": "My name is spelled correctly",
-            "again": "Scan again"
+            "again": "Scan again",
+            "title1": "Reservation Details",
+            "next1": "My name is spelled correctly",
+            "again1": "My name isn't spelled correctly, Retry photo "
+
+
         },
         "popUp": {
             "title": "Подтверждение",

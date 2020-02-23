@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <meta charset="utf-8">
     <title>Self Welcome</title>
+    <script src="js/javascript.js"></script>
+
 </head>
 
-<body class="page" onload="changeLanguagePage3()">
+<body class="page" onload="changeLanguageForReceiptCode()">
     <img class="center-hor top-page" src="img/top-page.png" />
     <img class="center-hor logo-page" src="img/logo.png" />
     <section>
         <div class="page-content titleReceiptCode">
-            <h1>קבלת קוד</h1>
-            <p class="textPageReceiptCode">
+            <h1 id="title">קבלת קוד</h1>
+            <p id="subtitle" class="textPageReceiptCode">
                 הקוד נדרש לצורך הנפקת מפתח לחדר מהעמדה האוטומטית שממוקמת בלובי המלון הקוד נשלח אליכם לנייד במסרון</p>
             <img src="img\keycode.png" alt="" class="key">
             <div class="page-button buttonReceiptCode">
@@ -41,8 +43,8 @@
         max-width: 100%;
         z-index: -1;
         " alt="">
-      </picture>
-        <img src="img/logo.png" style="position: absolute;
+    </picture>
+    <img src="img/logo.png" style="position: absolute;
          bottom: 0;
          left: 0;
          height: 13%;
