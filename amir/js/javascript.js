@@ -120,6 +120,9 @@ function ChangeFontByLanguage() {
         elm2.style["font-size"] = "66%";
 
     }
+    if (language.code == "AR") {
+        // padding-right: 51px;
+    }
 
 }
 
@@ -134,10 +137,15 @@ function changeLanguageForIdentifyingInformation() {
     console.log(page);
     document.getElementById("opt5").innerHTML = page.opt5;
     document.getElementById("opt6").innerHTML = page.opt6;
-    ChangeFontByLanguage();
     document.getElementById("opt7").innerHTML = page.opt7;
+    ChangeFontByLanguage();
+
     document.getElementById("invitationbyNumber").innerHTML = page.opt8;
+    document.getElementById("invitationbyNumber").placeholder = page.opt8;;
+
     document.getElementById("invitationByName").innerHTML = page.opt9;
+    document.getElementById("invitationByName").placeholder = page.opt9;
+
     document.getElementById("confirm").innerHTML = page.confirm;
 
 
@@ -349,7 +357,8 @@ function changeLanguageForTypingFullName() {
     console.log(page);
     document.getElementById("info").innerHTML = page.title;
 
-    document.getElementById("inputtitle").innerHTML = page.inputtitle;
+    document.getElementById("TypingName").innerHTML = page.inputtitle;
+    document.getElementById("TypingName").placeholder = page.inputtitle;;
 
     document.getElementById("ok").innerHTML = page.ok;
 
