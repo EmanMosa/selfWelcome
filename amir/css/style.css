@@ -140,12 +140,16 @@ body {
     width: 194px;
     height: 53px;
     line-height: 20px;
+    position: relative;
+    left: -2%;
 }
 
 .page-button.firstButton {
     width: 194px;
     height: 53px;
     line-height: 20px;
+    position: relative;
+    left: -2%;
 }
 
 .page-button.ButtonIdentifyingInformation {
@@ -629,16 +633,22 @@ label {
 
 /* Tablet :768px. */
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
  .container{
    width: 100;
+ }
+ .page-button.scoundButton ,.page-button.firstButton{
+    position: relative;
+    left: 8%;
  }
 }
 
 
 /* Large Mobile :480px. */
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+
+}
 
 
 /* small mobile :320px. */
