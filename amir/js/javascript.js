@@ -237,7 +237,7 @@ function changeLanguageForNumberOfPeopleInRoom1() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
-    var page = language.page41;
+    var page = language.page13;
     console.log(page);
     document.getElementById("title").innerHTML = page.title;
 
