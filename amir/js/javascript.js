@@ -152,25 +152,7 @@ function changeLanguageForIdentifyingInformation() {
 }
 
 
-// function putplaceholder() {
-//     var lang = localStorage.getItem("langObj");
-//     console.log("e " + JSON.parse(lang).code)
-//     var language = JSON.parse(lang);
-//     var page = language.page31;
-//     console.log(page);
 
-//     var elements = document.getElementsByClassName('accordion-item accordion-active');
-//     var id = elements[0].dataset.actabId;
-//     if (id == "0") {
-//         document.getElementById("invitationbyNumber").placeholder = page.opt8;;
-
-//     } else {
-//         if (id == "1") {
-
-//             document.getElementById("invitationByName").placeholder = page.opt9;
-//         }
-//     }
-// }
 
 function OnClickForButton() {
     var elements = document.getElementsByClassName('accordion-item accordion-active');
@@ -242,20 +224,41 @@ function changeLanguageForOrderDetails() {
 
 function ChangeTextToLeft() {
     var lang = localStorage.getItem("langObj");
-    var elmni = document.getElementByClassName("image2");
-    var elmnt1 = document.getElementByClassName("title1");
-    var elmnt2 = document.getElementByClassName("title2");
-    var elmnt3 = document.getElementByClassName("title3");
-    var elmnt4 = document.getElementByClassName("title4");
+
+    var elementimage4 = document.getElementById("imagenewinfo4");
+    var elementopt4 = document.getElementById("opt4");
+    var elementroomtype = document.getElementById("roomType");
+
+    var elementimag2 = document.getElementById("imagenewinfo2");
+    var elementopt2 = document.getElementById("opt2");
+    var elementroomNumber = document.getElementById("roomNumber");
+
+    var elementimage1 = document.getElementById("imagenewinfo1");
+    var elementopt1 = document.getElementById("opt1");
+    var elementguestNumber = document.getElementById("guestNumber");
+
+    var elementimage5 = document.getElementById("imagenewinfo5");
+    var elementopt5 = document.getElementById("opt5");
+    var elementprice = document.getElementById("price");
 
 
     var language = JSON.parse(lang);
     if (language.code == "EN" || "RU") {
-        elmni.style["left"] = "15%";
-        elmnt1.style["left"] = "27%";
-        elmnt2.style["left"] = "27%";
-        elmnt3.style["left"] = "27%";
-        elmnt4.style["left"] = "27%";
+        elementimage4.style["left"] = "10%";
+        elementopt2.style["left"] = "27%";
+        elementroomtype.style["left"] = "27%";
+
+        elementimag2.style["left"] = "10%";
+        elementopt4.style["left"] = "27%";
+        elementroomNumber.style["left"] = "27%";
+
+        elementimage1.style["left"] = "10%";
+        elementopt1.style["left"] = "27%";
+        elementguestNumber.style["left"] = "27%";
+
+        elementimage5.style["left"] = "10%";
+        elementopt5.style["left"] = "27%";
+        elementprice.style["left"] = "27%";
 
 
     }
