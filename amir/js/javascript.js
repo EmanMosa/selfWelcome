@@ -112,9 +112,13 @@ function hideme() {
 function ChangeFontByLanguage() {
     var lang = localStorage.getItem("langObj");
     var elm = document.getElementById("opt6");
+        var elm2 = document.getElementById("opt7");
+
     var language = JSON.parse(lang);
     if (language.code == "EN") {
         elm.style["font-size"] = "60%";
+                elm2.style["font-size"] = "66%";
+
     }
 
 }
