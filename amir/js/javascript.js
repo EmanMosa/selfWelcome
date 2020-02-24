@@ -121,11 +121,22 @@ function changeLanguageForIdentifyingInformation() {
     console.log(page);
     // document.getElementById("opt5").innerHTML = page.opt5;
     document.getElementById("opt6").innerHTML = page.opt6;
+    ChangeFontByLanguage();
     document.getElementById("opt7").innerHTML = page.opt7;
     document.getElementById("invitationbyNumber").innerHTML = page.opt8;
     document.getElementById("invitationByName").innerHTML = page.opt9;
     document.getElementById("confirm").innerHTML = page.confirm;
 
+
+}
+
+function ChangeFontByLanguage() {
+    var lang = localStorage.getItem("langObj");
+    var elm = document.getElementById("opt6");
+    var language = JSON.parse(lang);
+    if (language.code == "EN") {
+        elm.style["font-size"] = "60%";
+    }
 
 }
 
