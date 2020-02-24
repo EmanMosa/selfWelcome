@@ -242,11 +242,11 @@ function changeLanguageForOrderDetails() {
 
 function ChangeTextToLeft() {
     var lang = localStorage.getItem("langObj");
-    var elmni = document.getElementById("image2");
-    var elmnt1 = document.getElementById("title1");
-    var elmnt2 = document.getElementById("title2");
-    var elmnt3 = document.getElementById("title3");
-    var elmnt4 = document.getElementById("title4");
+    var elmni = document.getElementByClassName("image2");
+    var elmnt1 = document.getElementByClassName("title1");
+    var elmnt2 = document.getElementByClassName("title2");
+    var elmnt3 = document.getElementByClassName("title3");
+    var elmnt4 = document.getElementByClassName("title4");
 
 
     var language = JSON.parse(lang);
