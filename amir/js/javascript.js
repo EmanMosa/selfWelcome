@@ -109,6 +109,15 @@ function hideme() {
 
 
 
+function ChangeFontByLanguage() {
+    var lang = localStorage.getItem("langObj");
+    var elm = document.getElementById("opt6");
+    var language = JSON.parse(lang);
+    if (language.code == "EN") {
+        elm.style["font-size"] = "60%";
+    }
+
+}
 
 
 
@@ -130,15 +139,6 @@ function changeLanguageForIdentifyingInformation() {
 
 }
 
-function ChangeFontByLanguage() {
-    var lang = localStorage.getItem("langObj");
-    var elm = document.getElementById("opt6");
-    var language = JSON.parse(lang);
-    if (language.code == "EN") {
-        elm.style["font-size"] = "60%";
-    }
-
-}
 
 function putplaceholder() {
     var lang = localStorage.getItem("langObj");
@@ -158,232 +158,233 @@ function putplaceholder() {
             document.getElementById("invitationByName").placeholder = page.opt9;
         }
     }
+}
 
-    function OnClickForButton() {
-        var elements = document.getElementsByClassName('accordion-item accordion-active');
-        var id = elements[0].dataset.actabId;
-        if (id == "0") {
-            var value = document.getElementById('invitationbyNumber').value;
-        } else {
-            if (id == "1") {
-                var value = document.getElementById('invitationByName').value;
-            }
+function OnClickForButton() {
+    var elements = document.getElementsByClassName('accordion-item accordion-active');
+    var id = elements[0].dataset.actabId;
+    if (id == "0") {
+        var value = document.getElementById('invitationbyNumber').value;
+    } else {
+        if (id == "1") {
+            var value = document.getElementById('invitationByName').value;
+        }
+    }
+}
+
+function focusFunction() {
+    var elements = document.getElementsByClassName('accordion-item accordion-active');
+    var id = elements[0].dataset.actabId;
+    if (id == "0") {
+        document.getElementById("invitationbyNumber").placeholder = '';
+
+    } else {
+        if (id == "1") {
+            // Focus = Changes the background color of input to yellow
+            document.getElementById("invitationByName").placeholder = '';
+        }
+    }
+}
+
+function blurFunction() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page31;
+    console.log(page);
+
+    var elements = document.getElementsByClassName('accordion-item accordion-active');
+    var id = elements[0].dataset.actabId;
+    if (id == "0") {
+        // document.getElementById("invitationbyNumber").innerHTML = page.opt8;
+        document.getElementById("invitationbyNumber").placeholder = page.opt8;;
+
+    } else {
+        if (id == "1") {
+            //document.getElementById("invitationByName").innerHTML = page.opt9;
+
+            // No focus = Changes the background color of input to red
+            document.getElementById("invitationByName").placeholder = page.opt9;
         }
     }
 
-    function focusFunction() {
-        var elements = document.getElementsByClassName('accordion-item accordion-active');
-        var id = elements[0].dataset.actabId;
-        if (id == "0") {
-            document.getElementById("invitationbyNumber").placeholder = '';
 
-        } else {
-            if (id == "1") {
-                // Focus = Changes the background color of input to yellow
-                document.getElementById("invitationByName").placeholder = '';
-            }
-        }
-    }
 
-    function blurFunction() {
-        var lang = localStorage.getItem("langObj");
-        console.log("e " + JSON.parse(lang).code)
-        var language = JSON.parse(lang);
-        var page = language.page31;
-        console.log(page);
+}
 
-        var elements = document.getElementsByClassName('accordion-item accordion-active');
-        var id = elements[0].dataset.actabId;
-        if (id == "0") {
-            // document.getElementById("invitationbyNumber").innerHTML = page.opt8;
-            document.getElementById("invitationbyNumber").placeholder = page.opt8;;
 
-        } else {
-            if (id == "1") {
-                //document.getElementById("invitationByName").innerHTML = page.opt9;
+function changeLanguageForOrderDetails() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page41;
+    console.log(page);
 
-                // No focus = Changes the background color of input to red
-                document.getElementById("invitationByName").placeholder = page.opt9;
-            }
-        }
+    document.getElementById("title1").innerHTML = page.title1;
+    document.getElementById("next1").innerHTML = page.next1;
+    document.getElementById("again1").innerHTML = page.again1;
 
 
 
+}
 
+function changeLanguageForNewInfo() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page9;
+    console.log(page);
+    document.getElementById("title").innerHTML = page.title;
 
+    document.getElementById("opt1").innerHTML = page.opt1;
+    document.getElementById("opt2").innerHTML = page.opt2;
+    document.getElementById("opt4").innerHTML = page.opt4;
+    document.getElementById("opt5").innerHTML = page.opt5;
+    document.getElementById("ok").innerHTML = page.ok;
+    document.getElementById("opt3").innerHTML = page.opt3;
 
-        function changeLanguageForOrderDetails() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page41;
-            console.log(page);
 
-            document.getElementById("title1").innerHTML = page.title1;
-            document.getElementById("next1").innerHTML = page.next1;
-            document.getElementById("again1").innerHTML = page.again1;
 
+}
 
+function changeLanguageForReceiptCode() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page10;
+    console.log(page);
+    document.getElementById("title").innerHTML = page.title;
 
-        }
+    document.getElementById("subtitle").innerHTML = page.subtitle;
 
-        function changeLanguageForNewInfo() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page9;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title;
 
-            document.getElementById("opt1").innerHTML = page.opt1;
-            document.getElementById("opt2").innerHTML = page.opt2;
-            document.getElementById("opt4").innerHTML = page.opt4;
-            document.getElementById("opt5").innerHTML = page.opt5;
-            document.getElementById("ok").innerHTML = page.ok;
-            document.getElementById("opt3").innerHTML = page.opt3;
 
 
+}
 
-        }
+function changeLanguageForCitizenShip() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page41;
+    console.log(page);
+    document.getElementById("titlecitizen").innerHTML = page.titlecitizen;
 
-        function changeLanguageForReceiptCode() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page10;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title;
+    document.getElementById("choose").innerHTML = page.choose;
+    document.getElementById("citizen").innerHTML = page.citizen;
+    document.getElementById("nocitizen").innerHTML = page.nocitizen;
 
-            document.getElementById("subtitle").innerHTML = page.subtitle;
 
 
 
+}
 
-        }
+function changeLanguageForNumberOfPeopleInRoom1() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page13;
+    console.log(page);
+    document.getElementById("title").innerHTML = page.title;
 
-        function changeLanguageForCitizenShip() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page41;
-            console.log(page);
-            document.getElementById("titlecitizen").innerHTML = page.titlecitizen;
+    document.getElementById("choose").innerHTML = page.choose;
+    document.getElementById("opt1").innerHTML = page.opt1;
+    document.getElementById("opt2").innerHTML = page.opt2;
+    document.getElementById("opt3").innerHTML = page.opt3;
 
-            document.getElementById("choose").innerHTML = page.choose;
-            document.getElementById("citizen").innerHTML = page.citizen;
-            document.getElementById("nocitizen").innerHTML = page.nocitizen;
 
 
 
+}
 
-        }
+function changeLanguageForNumberOfPeopleInRoom2() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page14;
+    console.log(page);
+    document.getElementById("title").innerHTML = page.title;
 
-        function changeLanguageForNumberOfPeopleInRoom1() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page13;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title;
+    document.getElementById("subtitle").innerHTML = page.subtitle;
+    document.getElementById("opt1").innerHTML = page.opt1;
+    document.getElementById("opt2").innerHTML = page.opt2;
+    document.getElementById("ok").innerHTML = page.ok;
 
-            document.getElementById("choose").innerHTML = page.choose;
-            document.getElementById("opt1").innerHTML = page.opt1;
-            document.getElementById("opt2").innerHTML = page.opt2;
-            document.getElementById("opt3").innerHTML = page.opt3;
 
 
 
+}
 
-        }
+function changeLanguageForTypingFullName() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page15;
+    console.log(page);
+    document.getElementById("info").innerHTML = page.title;
 
-        function changeLanguageForNumberOfPeopleInRoom2() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page14;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title;
+    document.getElementById("inputtitle").innerHTML = page.inputtitle;
 
-            document.getElementById("subtitle").innerHTML = page.subtitle;
-            document.getElementById("opt1").innerHTML = page.opt1;
-            document.getElementById("opt2").innerHTML = page.opt2;
-            document.getElementById("ok").innerHTML = page.ok;
+    document.getElementById("ok").innerHTML = page.ok;
 
 
 
 
-        }
+}
 
-        function changeLanguageForTypingFullName() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page15;
-            console.log(page);
-            document.getElementById("info").innerHTML = page.title;
 
-            document.getElementById("inputtitle").innerHTML = page.inputtitle;
+function OnClickForButton2() {
 
-            document.getElementById("ok").innerHTML = page.ok;
+    var value = document.getElementById('TypingName').value;
 
+}
 
+function focusFunctionforTypingName() {
 
+    document.getElementById("TypingName").placeholder = '';
 
-        }
+}
 
+function blurFunctionforTypingName() {
 
-        function OnClickForButton2() {
+    document.getElementById("TypingName").placeholder = "הקלדת שם משפחה ושם פרטי";
 
-            var value = document.getElementById('TypingName').value;
 
-        }
+}
 
-        function focusFunctionforTypingName() {
+function changeLanguageForChooseDate() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page33;
+    console.log(page);
+    document.getElementById("chosedate").innerHTML = page.title1;
 
-            document.getElementById("TypingName").placeholder = '';
+    document.getElementById("dateText1").innerHTML = page.dateText1;
+    document.getElementById("dateText2").innerHTML = page.dateText2;
 
-        }
+    document.getElementById("ok").innerHTML = page.ok;
 
-        function blurFunctionforTypingName() {
 
-            document.getElementById("TypingName").placeholder = "הקלדת שם משפחה ושם פרטי";
 
 
-        }
+}
 
-        function changeLanguageForChooseDate() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page33;
-            console.log(page);
-            document.getElementById("chosedate").innerHTML = page.title1;
+function changeLanguageForChooseRoom() {
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page9;
+    console.log(page);
+    document.getElementById("title").innerHTML = page.title2;
 
-            document.getElementById("dateText1").innerHTML = page.dateText1;
-            document.getElementById("dateText2").innerHTML = page.dateText2;
+    document.getElementById("opt4").innerHTML = page.opt4;
+    document.getElementById("opt5").innerHTML = page.opt5;
+    document.getElementById("opt3").innerHTML = page.opt3;
 
-            document.getElementById("ok").innerHTML = page.ok;
+    document.getElementById("ok").innerHTML = page.ok;
 
 
 
 
-        }
-
-        function changeLanguageForChooseRoom() {
-            var lang = localStorage.getItem("langObj");
-            console.log("e " + JSON.parse(lang).code)
-            var language = JSON.parse(lang);
-            var page = language.page9;
-            console.log(page);
-            document.getElementById("title").innerHTML = page.title2;
-
-            document.getElementById("opt4").innerHTML = page.opt4;
-            document.getElementById("opt5").innerHTML = page.opt5;
-            document.getElementById("opt3").innerHTML = page.opt3;
-
-            document.getElementById("ok").innerHTML = page.ok;
-
-
-
-
-        }
+}
