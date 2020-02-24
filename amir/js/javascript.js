@@ -132,7 +132,7 @@ function changeLanguageForIdentifyingInformation() {
     var language = JSON.parse(lang);
     var page = language.page31;
     console.log(page);
-    // document.getElementById("opt5").innerHTML = page.opt5;
+    document.getElementById("opt5").innerHTML = page.opt5;
     document.getElementById("opt6").innerHTML = page.opt6;
     ChangeFontByLanguage();
     document.getElementById("opt7").innerHTML = page.opt7;
@@ -144,25 +144,25 @@ function changeLanguageForIdentifyingInformation() {
 }
 
 
-function putplaceholder() {
-    var lang = localStorage.getItem("langObj");
-    console.log("e " + JSON.parse(lang).code)
-    var language = JSON.parse(lang);
-    var page = language.page31;
-    console.log(page);
+// function putplaceholder() {
+//     var lang = localStorage.getItem("langObj");
+//     console.log("e " + JSON.parse(lang).code)
+//     var language = JSON.parse(lang);
+//     var page = language.page31;
+//     console.log(page);
 
-    var elements = document.getElementsByClassName('accordion-item accordion-active');
-    var id = elements[0].dataset.actabId;
-    if (id == "0") {
-        document.getElementById("invitationbyNumber").placeholder = page.opt8;;
+//     var elements = document.getElementsByClassName('accordion-item accordion-active');
+//     var id = elements[0].dataset.actabId;
+//     if (id == "0") {
+//         document.getElementById("invitationbyNumber").placeholder = page.opt8;;
 
-    } else {
-        if (id == "1") {
+//     } else {
+//         if (id == "1") {
 
-            document.getElementById("invitationByName").placeholder = page.opt9;
-        }
-    }
-}
+//             document.getElementById("invitationByName").placeholder = page.opt9;
+//         }
+//     }
+// }
 
 function OnClickForButton() {
     var elements = document.getElementsByClassName('accordion-item accordion-active');
@@ -232,6 +232,28 @@ function changeLanguageForOrderDetails() {
 
 }
 
+function ChangeTextToLeft() {
+    var lang = localStorage.getItem("langObj");
+    var elmni = document.getElementById("image2");
+    var elmnt1 = document.getElementById("title1");
+    var elmnt2 = document.getElementById("title2");
+    var elmnt3 = document.getElementById("title3");
+    var elmnt4 = document.getElementById("title4");
+
+
+    var language = JSON.parse(lang);
+    if (language.code == "EN" || "RU") {
+        elmni.style["left"] = "15%";
+        elmnt1.style["left"] = "27%";
+        elmnt2.style["left"] = "27%";
+        elmnt3.style["left"] = "27%";
+        elmnt4.style["left"] = "27%";
+
+
+    }
+
+}
+
 function changeLanguageForNewInfo() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
@@ -239,13 +261,13 @@ function changeLanguageForNewInfo() {
     var page = language.page9;
     console.log(page);
     document.getElementById("title").innerHTML = page.title;
-
     document.getElementById("opt1").innerHTML = page.opt1;
     document.getElementById("opt2").innerHTML = page.opt2;
     document.getElementById("opt4").innerHTML = page.opt4;
     document.getElementById("opt5").innerHTML = page.opt5;
     document.getElementById("ok").innerHTML = page.ok;
     document.getElementById("opt3").innerHTML = page.opt3;
+    ChangeTextToLeft();
 
 
 
@@ -350,8 +372,12 @@ function focusFunctionforTypingName() {
 }
 
 function blurFunctionforTypingName() {
-
-    document.getElementById("TypingName").placeholder = "הקלדת שם משפחה ושם פרטי";
+    var lang = localStorage.getItem("langObj");
+    console.log("e " + JSON.parse(lang).code)
+    var language = JSON.parse(lang);
+    var page = language.page15;
+    console.log(page);
+    document.getElementById("TypingName").placeholder = page.inputtitle;
 
 
 }
