@@ -153,7 +153,7 @@ body {
     height: 53px;
     line-height: 20px;
     position: relative;
-    left: -2%;
+    left: 0%;
 }
 
 .page-button.ButtonIdentifyingInformation {
@@ -262,7 +262,7 @@ body {
 }
 
 .page-content.pageNumberPeople {
-    margin-top: 73px;
+    /*margin-top: 73px;*/
 }
 
 section {
@@ -648,7 +648,7 @@ label {
     .page-button.scoundButton,
     .page-button.firstButton {
         position: relative;
-        left: 8%;
+        left:12%;
     }
 }
 
