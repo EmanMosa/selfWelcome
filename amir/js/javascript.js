@@ -67,6 +67,22 @@ function changeLanguageForIDScanner() {
 
 }
 
+function previewFile() {
+    const preview = document.getElementById('img');
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+        // convert image file to base64 string
+        preview.src = reader.result;
+        console.dir(reader.result);
+    }, false);
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+}
+
 function changeLanguageForCustomerNotFound() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
@@ -206,6 +222,16 @@ function blurFunction() {
 
 }
 
+function EditStyleForOrderDetails() {
+    var lang = localStorage.getItem("langObj");
+    var language = JSON.parse(lang);
+    var next1 = document.getElementById("next1");
+    var again1 = document.getElementById("again1");
+    if (language.code == "EN" || language.code == "RU") {
+        next1.style["font-size"] = "16px";
+        again1.style["font-size"] = "16px";
+    }
+}
 
 function changeLanguageForOrderDetails() {
     var lang = localStorage.getItem("langObj");
@@ -217,7 +243,7 @@ function changeLanguageForOrderDetails() {
     document.getElementById("title1").innerHTML = page.title1;
     document.getElementById("next1").innerHTML = page.next1;
     document.getElementById("again1").innerHTML = page.again1;
-
+    EditStyleForOrderDetails();
 
 
 }
@@ -243,7 +269,7 @@ function ChangeTextToLeft() {
 
 
     var language = JSON.parse(lang);
-    if (language.code == "EN" || "RU") {
+    if (language.code == "EN" || language.code == "RU") {
         elementimage4.style["left"] = "10%";
         elementopt2.style["left"] = "27%";
         elementroomtype.style["left"] = "27%";
@@ -412,6 +438,56 @@ function changeLanguageForChooseDate() {
 
 }
 
+
+function ChangeimageToLeftForChooseRoom() {
+    var lang = localStorage.getItem("langObj");
+    var title = document.getElementById("title");
+    var single = document.getElementById("roomTybe1");
+    var couple = document.getElementById("roomTybe2");
+    var group = document.getElementById("roomTybe3");
+    var apartment = document.getElementById("roomTybe4");
+    var rightSecT1 = document.getElementById("rightSecT1");
+    var rightSecT2 = document.getElementById("rightSecT2");
+    var rightSecT3 = document.getElementById("rightSecT3");
+    var rightSecT4 = document.getElementById("rightSecT4");
+    var leftSecT1 = document.getElementById("leftSecT1");
+    var leftSecT2 = document.getElementById("leftSecT2");
+    var leftSecT3 = document.getElementById("leftSecT3");
+    var leftSecT4 = document.getElementById("leftSecT4");
+
+    var changePos = document.getElementById("changePos");
+
+
+
+    var language = JSON.parse(lang);
+    if (language.code == "EN" || language.code == "RU") {
+        title.style["transform"] = "translate(12%, 50%)";
+        single.style["left"] = "16%";
+        couple.style["left"] = "16%";
+        group.style["left"] = "16%";
+        apartment.style["left"] = "16%";
+        changePos.style["transform"] = "translate(-12%, -3%)"
+        rightSecT1.style["left"] = "2%";
+        rightSecT1.style["text-align"] = "left";
+        rightSecT2.style["left"] = "2%";
+        rightSecT3.style["left"] = "2%";
+        rightSecT4.style["left"] = "2%";
+        leftSecT1.style["width"] = "48%";
+        leftSecT2.style["width"] = "48%";
+        leftSecT3.style["width"] = "48%";
+        leftSecT4.style["width"] = "48%";
+        leftSecT1.style["left"] = "78%";
+        leftSecT3.style["left"] = "78%";
+        leftSecT2.style["left"] = "78%";
+        leftSecT4.style["left"] = "78%";
+
+
+
+
+    }
+
+}
+
 function changeLanguageForChooseRoom() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
@@ -422,10 +498,20 @@ function changeLanguageForChooseRoom() {
 
     document.getElementById("opt4").innerHTML = page.opt4;
     document.getElementById("opt5").innerHTML = page.opt5;
+
+    document.getElementById("opt41").innerHTML = page.opt4;
+    document.getElementById("opt51").innerHTML = page.opt5;
+
+    document.getElementById("opt42").innerHTML = page.opt4;
+    document.getElementById("opt52").innerHTML = page.opt5;
+
+    document.getElementById("opt43").innerHTML = page.opt4;
+    document.getElementById("opt53").innerHTML = page.opt5;
+
     document.getElementById("opt3").innerHTML = page.opt3;
 
     document.getElementById("ok").innerHTML = page.ok;
-
+    ChangeimageToLeftForChooseRoom();
 
 
 
