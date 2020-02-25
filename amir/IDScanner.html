@@ -22,33 +22,12 @@
             <!-- <div for="startscan" class="page-button">הפעלת מצלמה</div> -->
             <div class="page-button pageIDScanner">
                 <label for="scan" id="startphoto">הפעלת מצלמה</label> </div>
-            <div class="scanInput"><input type="file" style="visibility:hidden;" id="scan" accept="image/*" capture="camera" multiple=""></div>
+            <div class="scanInput"><input type="file" style="visibility:hidden;" id="scan" accept="image/*" capture="camera" multiple="" onchange="previewFile()"></div>
 
 
         </div>
         <p><img id="img"></p>
     </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', (ev) => {
-            //let form = document.getElementById('myform');
-            //get the captured media file
-            let input = document.getElementById('scan');
-
-            input.addEventListener('change', (ev) => {
-                console.dir(input.files[0]);
-                if (input.files[0].type.indexOf("image/") > -1) {
-                    let img = document.getElementById('img');
-                    img.src = window.URL.createObjectURL(input.files[0]);
-                }
-
-
-
-
-            });
-
-        });
-    </script>
-    --&gt;
 
 
 
