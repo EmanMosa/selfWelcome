@@ -227,9 +227,11 @@ function EditStyleForOrderDetails() {
     var language = JSON.parse(lang);
     var next1 = document.getElementById("next1");
     var again1 = document.getElementById("again1");
-    if (language.code == "EN" || language.code == "RU") {
-        next1.style["font-size"] = "16px";
+    if (language.code == "EN" || language.code == "RU" || language.code == "AR") {
+        next1.style["font-size"] = "14px";
+        next1.style["height"] = "56px;"
         again1.style["font-size"] = "16px";
+
     }
 }
 
@@ -457,6 +459,10 @@ function ChangeimageToLeftForChooseRoom() {
 
     var changePos = document.getElementById("changePos");
 
+    var singleText = document.getElementById("singleText");
+    var coupleText = document.getElementById("coupleText");
+    var groupText = document.getElementById("groupText");
+    var apartmentText = document.getElementById("apartmentText");
 
 
     var language = JSON.parse(lang);
@@ -480,7 +486,10 @@ function ChangeimageToLeftForChooseRoom() {
         leftSecT3.style["left"] = "78%";
         leftSecT2.style["left"] = "78%";
         leftSecT4.style["left"] = "78%";
-
+        singleText.style["text-align"] = "left";
+        coupleText.style["text-align"] = "left";
+        groupText.style["text-align"] = "left";
+        apartmentText.style["text-align"] = "left";
 
 
 
