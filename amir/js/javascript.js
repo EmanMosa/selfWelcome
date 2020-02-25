@@ -259,7 +259,7 @@ function ChangeTextToLeft() {
 
 
     var language = JSON.parse(lang);
-    if (language.code == "EN" || "RU") {
+    if (language.code == "EN" ||language.code ==  "RU") {
         elementimage4.style["left"] = "10%";
         elementopt2.style["left"] = "27%";
         elementroomtype.style["left"] = "27%";
@@ -449,7 +449,7 @@ function ChangeimageToLeftForChooseRoom() {
 
 
     var language = JSON.parse(lang);
-    if (language.code == "EN" || "RU") {
+    if (language.code == "EN" ||language.code ==  "RU") {
         single.style["left"] = "16%";
         couple.style["left"] = "16%";
         group.style["left"] = "16%";
