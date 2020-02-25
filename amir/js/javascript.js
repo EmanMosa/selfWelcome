@@ -412,6 +412,29 @@ function changeLanguageForChooseDate() {
 
 }
 
+function ChangeimageToLeft() {
+    var lang = localStorage.getItem("langObj");
+    var single = document.getElementById("roomTybe1");
+    var couple = document.getElementById("roomTybe2");
+    var group = document.getElementById("roomTybe3");
+    var apartment = document.getElementById("roomTybe4");
+
+    var rightSec = document.getElementById("rightSec");
+    var leftSec = document.getElementById("leftSec");
+
+
+    var language = JSON.parse(lang);
+    if (language.code == "EN" || "RU") {
+        single.style["left"] = "22%";
+        couple.style["left"] = "22%";
+        group.style["left"] = "22%";
+        apartment.style["left"] = "22%";
+        rightSec.style["left"] = "3%";
+        leftSec.style["left"] = "70%";
+    }
+
+}
+
 function changeLanguageForChooseRoom() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
@@ -425,7 +448,7 @@ function changeLanguageForChooseRoom() {
     document.getElementById("opt3").innerHTML = page.opt3;
 
     document.getElementById("ok").innerHTML = page.ok;
-
+    ChangeimageToLeft();
 
 
 
