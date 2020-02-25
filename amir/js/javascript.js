@@ -431,6 +431,7 @@ function changeLanguageForChooseDate() {
 
 function ChangeimageToLeftForChooseRoom() {
     var lang = localStorage.getItem("langObj");
+    var title = document.getElementById("title");
     var single = document.getElementById("roomTybe1");
     var couple = document.getElementById("roomTybe2");
     var group = document.getElementById("roomTybe3");
@@ -450,6 +451,7 @@ function ChangeimageToLeftForChooseRoom() {
 
     var language = JSON.parse(lang);
     if (language.code == "EN" || "RU") {
+        title.style["transform"] = "translate(12%, 50%)";
         single.style["left"] = "16%";
         couple.style["left"] = "16%";
         group.style["left"] = "16%";
@@ -486,6 +488,16 @@ function changeLanguageForChooseRoom() {
 
     document.getElementById("opt4").innerHTML = page.opt4;
     document.getElementById("opt5").innerHTML = page.opt5;
+
+    document.getElementById("opt41").innerHTML = page.opt4;
+    document.getElementById("opt51").innerHTML = page.opt5;
+
+    document.getElementById("opt42").innerHTML = page.opt4;
+    document.getElementById("opt52").innerHTML = page.opt5;
+
+    document.getElementById("opt43").innerHTML = page.opt4;
+    document.getElementById("opt53").innerHTML = page.opt5;
+
     document.getElementById("opt3").innerHTML = page.opt3;
 
     document.getElementById("ok").innerHTML = page.ok;

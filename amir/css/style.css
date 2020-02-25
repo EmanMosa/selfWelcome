@@ -103,6 +103,10 @@ body {
 
 /* eman for Button */
 
+.card {
+    font-size: 20px;
+}
+
 .page-button {
     width: 50%;
     margin-left: 25%;
