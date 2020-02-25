@@ -42,17 +42,6 @@ body {
     background-size: cover;
 }
 
-
-/* .center-hor {
-    position: absolute;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-} */
-
-
-/*  */
-
 .center-hor {
     position: absolute;
     left: 50%;
@@ -119,7 +108,7 @@ body {
     margin-left: 25%;
     padding-top: 10px;
     margin-bottom: 16px;
-    /* height: 50px; */
+    height: 50px;
     background: #584099 0% 0% no-repeat padding-box;
     color: white;
     box-shadow: 0px 10px 30px #00000008;
@@ -365,32 +354,6 @@ section {
     height: 403px;
 }
 
-
-/* .accordion-item__label {
-    font-family: inherit;
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid #9b9b9b;
-    outline: 0;
-    font-size: 1.3rem;
-    color: #fff;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
-} */
-
-
-/* .accordion-item__label::placeholder {
-    color: transparent;
-}
-
-
-/* .accordion-item__label:placeholder-shown~.form__label {
-    font-size: 1.3rem;
-    cursor: text;
-    top: 20px;
-} */
-
 .accordion-item__label:focus {
     padding-bottom: 6px;
     top: 100%;
@@ -402,16 +365,10 @@ section {
     width: 303px;
 }
 
-
-/* reset input */
-
 .accordion-item__label:required,
 .accordion-item__label:invalid {
     box-shadow: none;
 }
-
-
-/* wsem */
 
 div#chosedate {
     font-size: 44px;
@@ -648,14 +605,14 @@ label {
     .page-button.scoundButton,
     .page-button.firstButton {
         position: relative;
-        left:12%;
+        left: 12%;
     }
 }
 
 @media only screen and (max-width: 767px) {}
 
 @media only screen and (max-width: 479px) {
-    .page .main-menu .cis{
+    .page .main-menu .cis {
         width: 39%;
     }
     #page2 .main-menu {

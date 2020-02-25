@@ -428,25 +428,50 @@ function changeLanguageForChooseDate() {
 
 }
 
-function ChangeimageToLeft() {
+
+function ChangeimageToLeftForChooseRoom() {
     var lang = localStorage.getItem("langObj");
     var single = document.getElementById("roomTybe1");
     var couple = document.getElementById("roomTybe2");
     var group = document.getElementById("roomTybe3");
     var apartment = document.getElementById("roomTybe4");
+    var rightSecT1 = document.getElementById("rightSecT1");
+    var rightSecT2 = document.getElementById("rightSecT2");
+    var rightSecT3 = document.getElementById("rightSecT3");
+    var rightSecT4 = document.getElementById("rightSecT4");
+    var leftSecT1 = document.getElementById("leftSecT1");
+    var leftSecT2 = document.getElementById("leftSecT2");
+    var leftSecT3 = document.getElementById("leftSecT3");
+    var leftSecT4 = document.getElementById("leftSecT4");
 
-    var rightSec = document.getElementById("rightSec");
-    var leftSec = document.getElementById("leftSec");
+    var changePos = document.getElementById("changePos");
+
 
 
     var language = JSON.parse(lang);
     if (language.code == "EN" || "RU") {
-        single.style["left"] = "22%";
-        couple.style["left"] = "22%";
-        group.style["left"] = "22%";
-        apartment.style["left"] = "22%";
-        rightSec.style["left"] = "3%";
-        leftSec.style["left"] = "70%";
+        single.style["left"] = "16%";
+        couple.style["left"] = "16%";
+        group.style["left"] = "16%";
+        apartment.style["left"] = "16%";
+        changePos.style["transform"] = "translate(-12%, -3%)"
+        rightSecT1.style["left"] = "2%";
+        rightSecT1.style["text-align"] = "left";
+        rightSecT2.style["left"] = "2%";
+        rightSecT3.style["left"] = "2%";
+        rightSecT4.style["left"] = "2%";
+        leftSecT1.style["width"] = "48%";
+        leftSecT2.style["width"] = "48%";
+        leftSecT3.style["width"] = "48%";
+        leftSecT4.style["width"] = "48%";
+        leftSecT1.style["left"] = "78%";
+        leftSecT3.style["left"] = "78%";
+        leftSecT2.style["left"] = "78%";
+        leftSecT4.style["left"] = "78%";
+
+
+
+
     }
 
 }
@@ -464,7 +489,7 @@ function changeLanguageForChooseRoom() {
     document.getElementById("opt3").innerHTML = page.opt3;
 
     document.getElementById("ok").innerHTML = page.ok;
-    ChangeimageToLeft();
+    ChangeimageToLeftForChooseRoom();
 
 
 
