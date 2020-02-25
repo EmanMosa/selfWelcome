@@ -42,6 +42,7 @@ body {
     background-size: cover;
 }
 
+
 /* .center-hor {
     position: absolute;
     left: 50%;
@@ -49,9 +50,10 @@ body {
     transform: translate(-50%, -50%)
 } */
 
+
 /*  */
 
-  .center-hor {
+.center-hor {
     position: absolute;
     left: 50%;
     margin-right: -50%;
@@ -63,15 +65,16 @@ body {
     margin-top: 3em;
 }
 
- .logo-page{
+.logo-page {
     width: 60%;
     margin-top: 2em;
-  }
+}
 
 .top-page {
     width: 100%;
     margin-top: -20%;
 }
+
 
 /* .top-page{
     width: 109%;
@@ -123,6 +126,7 @@ body {
     opacity: 1.4;
     border-radius: 30px;
     font-size: 20px;
+    box-sizing: border-box;
 }
 
 .page-button.pageIDScanner {
@@ -169,6 +173,46 @@ body {
     background-color: rgba(167, 127, 203, 0.4);
     color: #584099;
     font-weight: bold;
+}
+
+.page-button.ButtonForOrderDetails {
+    background: rgba(224, 209, 237, 0.4);
+    margin-top: 21px;
+}
+
+.page-button.ButtonForconfirm {
+    background: rgba(224, 209, 237, 0.4);
+    transform: translate(6px, 327%);
+}
+
+.page-button.ButtonForChooseDate {
+    transform: translate(5px, 118%);
+}
+
+.page-button p {
+    margin-top: 5px;
+}
+
+.page-button.ButtonForChooseRoom {
+    background-color: #8B4DB8;
+    box-sizing: border-box;
+    width: 68%;
+    position: absolute;
+    left: -11%;
+    top: 533px;
+}
+
+.page-button.ButtonForNewInfo {
+    background-color: #8B4DB8;
+    box-sizing: border-box;
+    width: 41%;
+    position: absolute;
+    left: 5%;
+    top: 533px;
+}
+
+.page-button:active {
+    background-color: #C29CDE;
 }
 
 .textPageReceiptCode {
@@ -284,7 +328,7 @@ section {
 }
 
 .accordion-item__label {
-	box-sizing: content-box;
+    box-sizing: content-box;
     position: fixed;
     top: 78%;
     margin-right: -50%;
@@ -368,70 +412,74 @@ section {
 
 /* wsem */
 
-div#chosedate{
-  font-size: 44px;
-  color: #584099;
-  text-align: center;
-  letter-spacing: 0px;
-  margin-bottom: 44px;
-}
-input#start{
-  border: oldlace;
-  background: border-box;
-  font-size: 26px;
-  text-align: end;
-  font-family: cursive;
-  width: 9em;
-}
-input#number{
-  max-width: 100%
-}
-input#exit{
-  border: oldlace;
-  background: border-box;
-  font-size: 26px;
-  text-align: end;
-  font-family: cursive;
-  width: 9em;}
- div#datemain{
-   border: 6px #254DDE66;
-   box-shadow: 1px 1px 7px;
-   width: 87%;
-   margin-left: 5%;
-   padding-top: 10px;
-   margin-bottom: 16px;
-   height: 15vh;
-   color: #a448b5;
-   opacity: 16.4;
-   border-radius: 82px;
-   font-size: 19px;
-   background-color: aliceblue;
-}
-div#entresDate{
-  width: 50%;
-      margin-left: -1%;
-      padding-top: 10px;
-      margin-bottom: 16px;
-      height: 50px;
-      color: #584099;
-      opacity: 1.4;
-      border-radius: 30px;
-      font-size: 19px;
-
-}
-div#exitDate{
-  width: 50%;
-      margin-left: -1%;
-      padding-top: 10px;
-      margin-bottom: 16px;
-      height: 50px;
-      color: #584099;
-      opacity: 1.4;
-      border-radius: 30px;
-      font-size: 19px;
-
+div#chosedate {
+    font-size: 44px;
+    color: #584099;
+    text-align: center;
+    letter-spacing: 0px;
+    margin-bottom: 44px;
 }
 
+input#start {
+    border: oldlace;
+    background: border-box;
+    font-size: 26px;
+    text-align: end;
+    font-family: cursive;
+    width: 9em;
+}
+
+input#number {
+    max-width: 100%
+}
+
+input#exit {
+    border: oldlace;
+    background: border-box;
+    font-size: 26px;
+    text-align: end;
+    font-family: cursive;
+    width: 9em;
+}
+
+div#datemain {
+    border: 6px #254DDE66;
+    box-shadow: 1px 1px 7px;
+    width: 87%;
+    margin-left: 5%;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    height: 15vh;
+    color: #a448b5;
+    opacity: 16.4;
+    border-radius: 82px;
+    font-size: 19px;
+    background-color: aliceblue;
+}
+
+div#entresDate {
+    width: 50%;
+    margin-left: -1%;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    height: 50px;
+    color: #584099;
+    opacity: 1.4;
+    border-radius: 30px;
+    font-size: 19px;
+}
+
+div#exitDate {
+    width: 50%;
+    margin-left: -1%;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    height: 50px;
+    color: #584099;
+    opacity: 1.4;
+    border-radius: 30px;
+    font-size: 19px;
+}
 
 .key {
     position: absolute;
@@ -440,8 +488,9 @@ div#exitDate{
     height: 99px;
     opacity: 1;
 }
+
 .form__label {
-	box-sizing: content-box;
+    box-sizing: content-box;
     position: fixed;
     top: 78%;
     margin-right: -50%;
@@ -455,34 +504,19 @@ div#exitDate{
     outline: 0;
     font-size: 24px;
 }
-div.container{
-	  width: 960px;
-  margin: 0px auto;
-background-color: red;
 
+div.container {
+    width: 960px;
+    margin: 0px auto;
+    background-color: red;
 }
+
 h1#info {
-  top: 263px;
+    top: 263px;
     left: 39px;
     width: 300px;
     height: 143px;
     color: #584099;
-}
-.ButtonForpage6{
-	width: 50%;
-  margin-left: 25%;
- padding-top: 4px;
- margin-bottom: 16px;
-height: 50px;
- background: #584099 0% 0% no-repeat padding-box;
- color: white;
-box-shadow: 0px 10px 30px #00000008;
-opacity: 1.4;
-border-radius: 30px;
-position: sticky;
-font-size: 19px;
-transform: translate(6px, 327%);
-
 }
 
 .page-ok {
@@ -516,9 +550,6 @@ label {
     position: absolute;
     margin-top: 188px;
 }
-
-
-/* khaled */
 
 .title1 {
     position: fixed;
@@ -596,27 +627,6 @@ label {
     color: white;
 }
 
-.button {
-    width: 48%;
-    height: 11%;
-    background-color: #8B4DB8;
-    position: absolute;
-    font-size: 20px;
-    color: white;
-    top: 98%;
-    left: 27%;
-    box-sizing: border-box;
-    border-radius: 40px;
-}
-
-.button p {
-    margin-top: 13px;
-}
-
-.button:active {
-    background-color: #C29CDE;
-}
-
 .update {
     position: absolute;
     font-size: 20px;
@@ -630,28 +640,18 @@ label {
     font-weight: bold;
 }
 
-
-/* Tablet :768px. */
-
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
- .container{
-   width: 100;
- }
- .page-button.scoundButton ,.page-button.firstButton{
-    position: relative;
-    left: 8%;
- }
+    .container {
+        width: 100;
+    }
+    .page-button.scoundButton,
+    .page-button.firstButton {
+        position: relative;
+        left: 8%;
+    }
 }
 
-
-/* Large Mobile :480px. */
-
-@media only screen and (max-width: 767px) {
-
-}
-
-
-/* small mobile :320px. */
+@media only screen and (max-width: 767px) {}
 
 @media only screen and (max-width: 479px) {
     #page2 .main-menu {
@@ -671,29 +671,25 @@ label {
         transform: translate(-50%, -50%);
         width: fit-content;
     }
-	    /* khaled page 9 responsive */
-.logo-page{
-      width: 60%;
-      margin-top: 2em;
+    .logo-page {
+        width: 60%;
+        margin-top: 2em;
     }
-    .center-hor{
-      left: 50%;
-      margin-right: -50%;
-      max-width: 100%;
-
+    .center-hor {
+        left: 50%;
+        margin-right: -50%;
+        max-width: 100%;
     }
-    .top-page{
-      width: 109%;
-      margin-top: -29%;
-
+    .top-page {
+        width: 109%;
+        margin-top: -29%;
     }
-    .image2{
-      width: 14%;
+    .image2 {
+        width: 14%;
     }
-    .image1{
-      width: 100%;
+    .image1 {
+        width: 100%;
     }
-    /* khaled page 9 responsive */
 }
 
 .page9Title {
@@ -712,13 +708,6 @@ label {
     margin-top: 18px;
 }
 
-/* .image2{
-    width: 14%;
-  }
-  .image1{
-    width: 100%;
-  } */
-
 .text {
     position: absolute;
     color: white;
@@ -726,21 +715,10 @@ label {
     font-size: 18px;
 }
 
-/* kahled: added buttons to page17 */
-.button17{
-  width: 68%;
-  position: absolute;
-  left: 15%;
+.update17 {
+    position: absolute;
+    left: 15%;
 }
-.update17{
-  position: absolute;
-  left: 15%;
-}
-/* ************ */sec
-/* khaled *********IDSCANNER*********** */
-
-
-/*iphone 5/SE */
 
 @media only screen and (min-width: 320px) and (max-width: 568px) {
     .scanInput {
@@ -754,7 +732,6 @@ label {
     left: -43%;
 }
 
-.orderbackground{
-	transform: translate(-31%, 85%);
+.orderbackground {
+    transform: translate(-31%, 85%);
 }
-/* khaled ********IDSCANNER************* */
