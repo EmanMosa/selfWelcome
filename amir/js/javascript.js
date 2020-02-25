@@ -222,6 +222,16 @@ function blurFunction() {
 
 }
 
+function EditStyleForOrderDetails() {
+    var lang = localStorage.getItem("langObj");
+    var language = JSON.parse(lang);
+    var next1 = document.getElementById("next1");
+    var again1 = document.getElementById("again1");
+    if (language.code == "EN" || language.code == "RU") {
+        next1.style["font-size"] = "16px";
+        again1.style["font-size"] = "16px";
+    }
+}
 
 function changeLanguageForOrderDetails() {
     var lang = localStorage.getItem("langObj");
@@ -233,7 +243,7 @@ function changeLanguageForOrderDetails() {
     document.getElementById("title1").innerHTML = page.title1;
     document.getElementById("next1").innerHTML = page.next1;
     document.getElementById("again1").innerHTML = page.again1;
-
+    EditStyleForOrderDetails();
 
 
 }
