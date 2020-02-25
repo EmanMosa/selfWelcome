@@ -306,6 +306,7 @@ section {
     font-size: 20px;
     font-weight: bold;
     opacity: 1;
+    word-wrap: break-word;
 }
 
 .accordion-item.accordion-active {
@@ -654,6 +655,9 @@ label {
 /* small mobile :320px. */
 
 @media only screen and (max-width: 479px) {
+    .page .main-menu .cis{
+        width: 39%;
+    }
     #page2 .main-menu {
         font-family: 'Assistant-bold', Fallback, sans-serif;
         text-align: center;
