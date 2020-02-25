@@ -67,6 +67,22 @@ function changeLanguageForIDScanner() {
 
 }
 
+function previewFile() {
+    const preview = document.getElementById('img');
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+        // convert image file to base64 string
+        preview.src = reader.result;
+        console.dir(reader.result);
+    }, false);
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+}
+
 function changeLanguageForCustomerNotFound() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
