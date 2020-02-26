@@ -175,7 +175,10 @@ body {
 
 .page-button.ButtonForconfirm {
     background: rgba(224, 209, 237, 0.4);
-    transform: translate(6px, 327%);
+    /* transform: translate(6px, 327%); */
+    position: absolute;
+    left: 0;
+    bottom: 5%;
 }
 
 .page-button.ButtonForChooseDate {
