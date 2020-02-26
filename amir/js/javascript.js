@@ -494,7 +494,7 @@ function ChangeimageToLeftForChooseRoom() {
 
 
     }
-    if (language.code == "EN") {
+    if (language.code == "AR") {
         singleText.style["text-align"] = "right";
         coupleText.style["text-align"] = "right";
         groupText.style["text-align"] = "right";
