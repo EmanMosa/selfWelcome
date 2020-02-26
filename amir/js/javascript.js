@@ -55,6 +55,13 @@ function ChangeLanguageForChooseEntries() {
     document.getElementById("checkboxText").innerHTML = page33.checkboxText;
 }
 
+function choiceEntries(id) {
+    localStorage.setItem("choice", id);
+    window.document.location = './IDScanner.html'
+
+
+}
+
 function changeLanguageForIDScanner() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
@@ -65,6 +72,26 @@ function changeLanguageForIDScanner() {
     document.getElementById("subtitle3photo").innerHTML = page.subtitle3photo;
     document.getElementById("startphoto").innerHTML = page.startphoto;
 
+}
+
+function checkInChoice() {
+    var IsFound = false;
+    if (IsFound == false) {
+        window.document.location = './CustomerNotFound.html';
+    } else if (IsFound == true) {
+        window.document.location = './OrderDetails.html';
+    }
+}
+
+function checkchoice() {
+    var choice = localStorage.getItem("choice");
+    if (choice == "checkIn") {
+        checkInChoice();
+    } else if ((choice == "walkIn" || choice == "dayUse")) {
+        //if the User choice walkin or DayUse
+        window.document.location = './CitizenShip.html';
+
+    }
 }
 
 function previewFile() {
@@ -81,6 +108,8 @@ function previewFile() {
     if (file) {
         reader.readAsDataURL(file);
     }
+    checkchoice();
+
 }
 
 function changeLanguageForCustomerNotFound() {
@@ -180,6 +209,8 @@ function OnClickForButton() {
             var value = document.getElementById('invitationByName').value;
         }
     }
+    window.document.location = './OrderDetails.html';
+
 }
 
 function focusFunction() {
@@ -401,9 +432,11 @@ function changeLanguageForTypingFullName() {
 
 function OnClickForButton2() {
 
-    var value = document.getElementById('TypingName').value;
+    // var value = document.getElementById('TypingName').value;
+    window.document.location = './ChooseDate.html';
 
 }
+
 
 function focusFunctionforTypingName() {
 

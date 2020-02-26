@@ -17,13 +17,13 @@
     /* top: 50%; */
 ">
         <div style="font-size: 4.5vw;" class="main-menu">
-            <img class="cis" src="img/btn3_main.png" onclick="window.document.location = './IDScanner.html'" />
+            <img id="checkIn" class="cis" src="img/btn3_main.png" onclick="choiceEntries(this.id)" />
             <div id="opt1">כניסה לחדר שהוזמן מראש</div>
             <br>
-            <img class="cis" src="img/btn2_main.png" onclick="window.document.location = './IDScanner.html'" />
+            <img id="walkIn" class="cis" src="img/btn2_main.png" onclick="choiceEntries(this.id)" />
             <div id="opt2">בחירת חדר ללא הזמנה</div>
             <br>
-            <img class="cis" src="img/btn1_main.png" onclick="window.document.location = './IDScanner.html'" />
+            <img id="dayUse" class="cis" src="img/btn1_main.png" onclick="choiceEntries(this.id)" />
             <div id="checkboxText">בחירת חדר למספר שעות</div>
         </div>
 
