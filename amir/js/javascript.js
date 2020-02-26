@@ -494,6 +494,13 @@ function ChangeimageToLeftForChooseRoom() {
 
 
     }
+    if (language.code == "EN") {
+        singleText.style["text-align"] = "right";
+        coupleText.style["text-align"] = "right";
+        groupText.style["text-align"] = "right";
+        apartmentText.style["text-align"] = "right";
+
+    }
 
 }
 
