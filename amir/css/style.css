@@ -204,7 +204,7 @@ body {
     width: 41%;
     position: absolute;
     left: 5%;
-    top: 533px;
+    bottom: -13%;
 }
 
 .page-button:active {
