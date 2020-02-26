@@ -88,7 +88,7 @@ body {
 }
 
 .img {
-    margin-bottom: 35px;
+    margin-bottom: 4%;
 }
 
 .imgid {
@@ -204,7 +204,7 @@ body {
     width: 41%;
     position: absolute;
     left: 5%;
-    top: 533px;
+    bottom: -13%;
 }
 
 .page-button:active {
@@ -247,7 +247,7 @@ body {
     font-family: 'Assistant', Fallback, sans-serif;
     text-align: center;
     color: #5A4199;
-    font-size: 1.5em;
+    font-size: 5vw;
     text-align: center;
 }
 
