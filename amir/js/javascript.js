@@ -268,11 +268,11 @@ function EditStyleForOrderDetails() {
 
 function changeLanguageForOrderDetails() {
     var lang = localStorage.getItem("langObj");
-    console.log("e " + JSON.parse(lang).code)
+    // console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
+    document.getElementById("welcomeMsg").innerHTML = page.welcomeMsg;
     var page = language.page41;
-    console.log(page);
-
+    //console.log(page);
     document.getElementById("title1").innerHTML = page.title1;
     document.getElementById("next1").innerHTML = page.next1;
     document.getElementById("again1").innerHTML = page.again1;
@@ -376,13 +376,25 @@ function changeLanguageForCitizenShip() {
 }
 
 function choiceForCitizenShip(id) {
+    var choice = localStorage.getItem("choice");
 
     if (id == "citizenImg") {
-        window.document.location = 'NumberOfPeopleInRoom1.html';
+        if (choice == "walkIn") {
+            window.document.location = 'NumberOfPeopleInRoom2.html';
+
+
+        } else if (choice == "dayUse") {
+            window.document.location = 'NumberOfPeopleInRoom1.html';
+        }
 
     } else if (id == "nocitizenImg") {
-        window.document.location = 'NumberOfPeopleInRoom1.html';
+        if (choice == "walkIn") {
+            window.document.location = 'NumberOfPeopleInRoom2.html';
 
+
+        } else if (choice == "dayUse") {
+            window.document.location = 'NumberOfPeopleInRoom1.html';
+        }
     }
 }
 
