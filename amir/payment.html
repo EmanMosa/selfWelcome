@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Self Welcome</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+  .cardInfo{
+    transform: translate(-76%, 134%);
+    text-align: start;
+  }
+  .inputInfo{
+    position: fixed;
+    left: 54%;
+    top: 18%;
+    float: right;
+    width: 30%;
+  }
+  .expiration {
+    border: 1px solid #bbbbbb;
+  }
+  .expiration input {
+    border: 0;
+  }
+  .paybutton{
+    transform: translate(-96%,87%);
+    height: 33%;
+    width: 87%;
+  }
+
+
+</style>
+
+
+</head>
+
+<body class="page" ">
+    <img class="center-hor top-page" src="img/top-page.png" />
+    <img class="center-hor logo-page" src="img/logo.png" />
+    <div><h2 style="    position: absolute;
+    top: 10%;">עמוד תשלום</h2></div>
+    <div class="cardInfo">
+      <div>Card Type</div>
+      <div>Card Number</div>
+      <div>Name On Card</div>
+      <div>Security Code</div>
+      <div>Expiry Date</div>
+
+    </div>
+    <div class="inputInfo">
+      <select id="cards" name="cards">
+          <option value="Visa">Visa</option>
+          <option value="American">American Express</option>
+          <option value="Mastercard">Mastercard</option>
+          <option value="Isracard">Isracard</option>
+      </select>
+      <input></input>
+      <input></input>
+      <input></input>
+      <span class="expiration">
+         <input type="text" name="month" placeholder="MM" maxlength="2" size="2" />
+         <span>/</span>
+         <input type="text" name="year" placeholder="YY" maxlength="2" size="2" />
+      </span>
+      <input class="button paybutton" type="button" name="proceed" value="proceed">
+    </div>
+
+
+
+
+</body>
+
+</html>
