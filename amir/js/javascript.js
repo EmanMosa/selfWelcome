@@ -375,6 +375,17 @@ function changeLanguageForCitizenShip() {
 
 }
 
+function choiceForCitizenShip(id) {
+
+    if (id == "citizenImg") {
+        window.document.location = 'NumberOfPeopleInRoom1.html';
+
+    } else if (id == "nocitizenImg") {
+        window.document.location = 'NumberOfPeopleInRoom1.html';
+
+    }
+}
+
 function changeLanguageForNumberOfPeopleInRoom1() {
     var lang = localStorage.getItem("langObj");
     console.log("e " + JSON.parse(lang).code)
@@ -391,6 +402,19 @@ function changeLanguageForNumberOfPeopleInRoom1() {
 
 
 
+}
+
+function choiceForNumberOfPeopleInRoom1(id) {
+    if (id == "onePerson") {
+        window.document.location = 'NumberOfPeopleInRoom2.html';
+
+    } else if (id == "couple") {
+        window.document.location = 'NumberOfPeopleInRoom2.html';
+
+    } else if (id == "group") {
+        window.document.location = 'NumberOfPeopleInRoom2.html';
+
+    }
 }
 
 function changeLanguageForNumberOfPeopleInRoom2() {
@@ -432,7 +456,7 @@ function changeLanguageForTypingFullName() {
 
 function OnClickForButton2() {
 
-    // var value = document.getElementById('TypingName').value;
+    var value = document.getElementById('TypingName').value;
     window.document.location = './ChooseDate.html';
 
 }
@@ -473,6 +497,12 @@ function changeLanguageForChooseDate() {
 
 }
 
+function getDateFromChooseDate() {
+    var start = document.getElementById("start");
+    var exit = document.getElementById("exit");
+
+    window.document.location = './choose-room.html'
+}
 
 function ChangeimageToLeftForChooseRoom() {
     var lang = localStorage.getItem("langObj");
