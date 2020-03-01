@@ -1,4 +1,4 @@
-function getData(lang) {
+function getLanguage(lang) {
     console.log("here test" + lang)
 
     var xhttp = new XMLHttpRequest();
@@ -102,16 +102,17 @@ function previewFile() {
     reader.addEventListener("load", function() {
         // convert image file to base64 string
         preview.src = reader.result;
-        localStorage.setItem("image",reader.result);
+        localStorage.setItem("image", reader.result);
         console.dir(reader.result);
-        getData();
+
 
     }, false);
 
     if (file) {
         reader.readAsDataURL(file);
     }
-    checkchoice();
+    getData();
+    // checkchoice();
 
 }
 
@@ -610,21 +611,23 @@ function changeLanguageForChooseRoom() {
 
 
 }
-var Authentication =({
-"UserId": "testuser",
-"Password": "Regul@SdkTest"});
-var Transaction2=(
-  [{    "Base64ImageString": localStorage.getItem("image"),
+var Authentication = ({
+    "UserId": "testuser",
+    "Password": "Regul@SdkTest"
+});
+var Transaction2 = (
+    [{
+        "Base64ImageString": localStorage.getItem("image"),
         "Format": ".jpg",
         "LightIndex": 6,
         "PageIndex": 0
-  }]
+    }]
 );
 
 
 function getData() {
-  var Url = 'https://api.regulaforensics.com/webapi/Authentication/Authenticate';
-  $.ajax({
+    var Url = 'https://api.regulaforensics.com/webapi/Authentication/Authenticate';
+    $.ajax({
         url: Url,
         dataType: "json",
         contentType: "application/json",
@@ -632,22 +635,23 @@ function getData() {
         crossDomain: true,
         data: JSON.stringify(Authentication),
         async: false,
-        success: function(data, textStatus, request){
-          console.log(request.getResponseHeader('x-Token'));
-       },
-        error: function (request, textStatus, errorThrown) {
-          console.log(request.getResponseHeader('x-Token'));
-          var xtoken=request.getResponseHeader('x-Token');
-          getData1(xtoken);
+        success: function(data, textStatus, request) {
+            console.log(request.getResponseHeader('x-Token'));
+        },
+        error: function(request, textStatus, errorThrown) {
+            console.log(request.getResponseHeader('x-Token'));
+            var xtoken = request.getResponseHeader('x-Token');
+            getData1(xtoken);
 
 
-         }
+        }
 
-        });
+    });
 }
+
 function getData1(xtoken) {
-  var Url = 'https://api.regulaforensics.com/webapi/Transaction2/SubmitTransaction?capabilities=252&authenticity=0';
-  $.ajax({
+    var Url = 'https://api.regulaforensics.com/webapi/Transaction2/SubmitTransaction?capabilities=252&authenticity=0';
+    $.ajax({
         url: Url,
         dataType: "json",
         contentType: "application/json",
@@ -656,24 +660,25 @@ function getData1(xtoken) {
         crossDomain: true,
         data: JSON.stringify(Transaction2),
         async: false,
-        beforeSend: function(xhr){
-          xhr.setRequestHeader( "X-Token",xtoken );
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader("X-Token", xtoken);
 
         },
-        success: function (jqXHR,result) {
-         console.log('Succes: ' + result);
-       },
-         error: function (jqXHR, status) {
-         console.log("Error: ", jqXHR.responseText + " " + status);
-         var transactionID=jqXHR.responseText;
-         getData2(transactionID,xtoken);
-       }
+        success: function(jqXHR, result) {
+            console.log('Succes: ' + result);
+        },
+        error: function(jqXHR, status) {
+            console.log("Error: ", jqXHR.responseText + " " + status);
+            var transactionID = jqXHR.responseText;
+            getData2(transactionID, xtoken);
+        }
 
-        });
+    });
 }
-function getData2(transactionID,xtoken){
-  var Url = "https://api.regulaforensics.com/webapi/Transaction2/GetTransactionResult?"+"transactionID"+"&resultType=15";
-  $.ajax({
+
+function getData2(transactionID, xtoken) {
+    var Url = "https://api.regulaforensics.com/webapi/Transaction2/GetTransactionResult?" + "transactionID" + "&resultType=15";
+    $.ajax({
         url: Url,
         dataType: "json",
         contentType: "application/json",
@@ -682,17 +687,17 @@ function getData2(transactionID,xtoken){
         crossDomain: true,
         // data: JSON.stringify(Transaction2),
         async: false,
-        beforeSend: function(xhr){
-          xhr.setRequestHeader( "X-Token",xtoken );
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader("X-Token", xtoken);
 
         },
-        success: function (jqXHR,result) {
-         console.log('Succes: ' + result);
-       },
-         error: function (jqXHR, status) {
-         console.log("Error: ", jqXHR.responseText + " " + status);
-       }
+        success: function(jqXHR, result) {
+            console.log('Succes: ' + result);
+        },
+        error: function(jqXHR, status) {
+            console.log("Error: ", jqXHR.responseText + " " + status);
+        }
 
-        });
+    });
 
 }
