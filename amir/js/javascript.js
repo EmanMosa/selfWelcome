@@ -103,7 +103,8 @@ function previewFile() {
         // convert image file to base64 string
         preview.src = reader.result;
         var imageStr = reader.result;
-        imageStr = imageStr.substr(22, imageStr.length)
+        imageStr = imageStr.substr(23, imageStr.length)
+        console.log(imageStr);
         localStorage.setItem("image", imageStr);
         console.dir(reader.result);
 
