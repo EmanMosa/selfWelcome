@@ -104,6 +104,8 @@ function previewFile() {
         preview.src = reader.result;
         localStorage.setItem("image", reader.result);
         console.dir(reader.result);
+        getData();
+
 
 
     }, false);
@@ -111,8 +113,7 @@ function previewFile() {
     if (file) {
         reader.readAsDataURL(file);
     }
-    getData();
-    // checkchoice();
+    checkchoice();
 
 }
 
@@ -130,7 +131,7 @@ function changeLanguageForCustomerNotFound() {
 
 
 
-function clickiCounter() {
+function clickCounter() {
 
 
     if (typeof(localStorage.getItem("counter")) !== "undefined") {
@@ -422,13 +423,13 @@ function changeLanguageForNumberOfPeopleInRoom1() {
 
 function choiceForNumberOfPeopleInRoom1(id) {
     if (id == "onePerson") {
-        window.document.location = 'NumberOfPeopleInRoom2.html';
+        window.document.location = 'ChooseDate.html';
 
     } else if (id == "couple") {
-        window.document.location = 'NumberOfPeopleInRoom2.html';
+        window.document.location = 'ChooseDate.html';
 
     } else if (id == "group") {
-        window.document.location = 'NumberOfPeopleInRoom2.html';
+        window.document.location = 'ChooseDate.html';
 
     }
 }
@@ -447,6 +448,15 @@ function changeLanguageForNumberOfPeopleInRoom2() {
     document.getElementById("ok").innerHTML = page.ok;
 
 
+
+
+}
+
+function nextPageForrNumberOfPeopleInRoom2(room, people) {
+    localStorage.setItem('room', room);
+    localStorage.setItem('people', people);
+    localStorage.setItem("helpValue", localStorage.getItem("room"));
+    window.document.location = "./choose-room.html";
 
 
 }
@@ -473,7 +483,7 @@ function changeLanguageForTypingFullName() {
 function OnClickForButton2() {
 
     var value = document.getElementById('TypingName').value;
-    window.document.location = './ChooseDate.html';
+    window.document.location = './payment.html';
 
 }
 
@@ -517,7 +527,7 @@ function getDateFromChooseDate() {
     var start = document.getElementById("start");
     var exit = document.getElementById("exit");
 
-    window.document.location = './choose-room.html'
+    window.document.location = './TypingFullName.html'
 }
 
 function ChangeimageToLeftForChooseRoom() {
@@ -611,6 +621,20 @@ function changeLanguageForChooseRoom() {
 
 
 }
+
+function RoomChoice(id) {
+    localStorage.setItem("RoomChoice", id);
+}
+
+function ButtonForChooseRoom() {
+    // for (i = 0; i < localStorage.getItem("helpValue"); i++) {
+    //     localStorage.setItem('helpValue', (localStorage.getItem("helpValue")) - 1);
+    //     window.document.location = "./choose-room.html";
+
+    // }
+    window.document.location = "./ChooseDate.html";
+}
+
 var Authentication = ({
     "UserId": "testuser",
     "Password": "Regul@SdkTest"
@@ -675,6 +699,8 @@ function getData1(xtoken) {
 
     });
 }
+
+
 
 function getData2(transactionID, xtoken) {
     var Url = "https://api.regulaforensics.com/webapi/Transaction2/GetTransactionResult?" + "transactionID" + "&resultType=15";

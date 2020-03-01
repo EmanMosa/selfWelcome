@@ -19,7 +19,7 @@
             position: relative;
             left: -61%;
         }
-
+        
         .rightSection {
             float: right;
             position: relative;
@@ -29,7 +29,7 @@
             display: flex;
             left: 0%;
         }
-
+        
         .leftSection {
             position: absolute;
             float: left;
@@ -39,14 +39,14 @@
             border-radius: 11px;
             left: 0%;
         }
-
+        
         .cardInfo {
-        width: fit-content;
-        position: relative;
-        top: 7%;
-        left: 33%;
+            width: fit-content;
+            position: relative;
+            top: 7%;
+            left: 33%;
         }
-
+        
         .card .rightSection img {
             position: relative;
             top: 15%;
@@ -55,13 +55,13 @@
             height: 74%;
             margin-left: 0;
         }
-
+        
         .card .cardInfo h3,
         .card .cardCost h3 {
             margin-top: 0px;
             font-size: 25px;
         }
-
+        
         .cardCost {
             width: fit-content;
             position: relative;
@@ -82,7 +82,7 @@
             </br>
             <h1 id="title">אפשרות לינה</h1>
             <!-- card  -->
-            <div class="card">
+            <div class="card" id="singleCard" onclick="RoomChoice(this.id)">
                 <div id="rightSecT1" class="rightSection">
                     <img id="roomTybe1" src="img\profile.png" />
                     <div class="cardInfo">
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <!-- card  -->
-            <div class="card">
+            <div class="card" id="coupleCard" onclick="RoomChoice(this.id)">
                 <div id="rightSecT2" class="rightSection">
                     <img id="roomTybe2" src="img\Group 1508.png" />
                     <div class="cardInfo">
@@ -114,7 +114,7 @@
                 </div>
             </div>
             <!-- card  -->
-            <div class="card">
+            <div class="card" id="groupCard" onclick="RoomChoice(this.id)">
                 <div id="rightSecT3" class="rightSection">
                     <img id="roomTybe3" src="img\Group 1509.png" />
                     <div class="cardInfo">
@@ -130,9 +130,9 @@
                 </div>
             </div>
             <!-- card  -->
-            <div class="card">
+            <div class="card" id="apartmentCard" onclick="RoomChoice(this.id)">
                 <div id="rightSecT4" class="rightSection">
-                    <img id="roomTybe4" src="img\Group 1509.png"/>
+                    <img id="roomTybe4" src="img\Group 1509.png" />
                     <div class="cardInfo">
                         <span id="opt43">סוג חדר</span>
                         <h3 id="apartmentText">דירה</h3>
@@ -147,12 +147,12 @@
             </div>
 
         </div>
-        <div class="page-button ButtonForChooseRoom" onclick="window.document.location = './payment.html'">
-            <p id="ok" >אישור</p>
+        <div class="page-button ButtonForChooseRoom" onclick="ButtonForChooseRoom()">
+            <p id="ok">אישור</p>
         </div>
-        <div class='update update17'>
+        <!-- <div class='update update17'>
             <p id="opt3">עדכון פרטי הזמנה</p>
-        </div>
+        </div> -->
     </section>
 </body>
 
