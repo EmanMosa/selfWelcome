@@ -104,7 +104,6 @@ function previewFile() {
         preview.src = reader.result;
         localStorage.setItem("image", reader.result);
         console.dir(reader.result);
-        getData();
 
 
 
@@ -113,7 +112,7 @@ function previewFile() {
     if (file) {
         reader.readAsDataURL(file);
     }
-    checkchoice();
+    getData();
 
 }
 
