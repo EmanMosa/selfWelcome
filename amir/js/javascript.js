@@ -705,7 +705,7 @@ function getData1(xtoken) {
 
 
 function getData2(transactionID, xtoken) {
-    var Url = "https://api.regulaforensics.com/webapi/Transaction2/GetTransactionResult?" + transactionID + "&resultType=15";
+    var Url = "https://api.regulaforensics.com/webapi/Transaction2/GetTransactionResult?transactionId=" + transactionID + "&resultType=15";
     $.ajax({
         url: Url,
         dataType: "json",
