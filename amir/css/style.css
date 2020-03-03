@@ -160,7 +160,7 @@ body {
 }
 
 .page-button.buttonReceiptCode {
-    left: 24%;
+    left: -14%;
     position: absolute;
     top: 362px;
     background-color: rgba(167, 127, 203, 0.4);
@@ -218,7 +218,7 @@ body {
     width: 313px;
     height: 109px;
     text-align: center;
-    font: Regular 20px/23px Assistant;
+    font-size: 24px;
     letter-spacing: 0;
     color: #576169;
     opacity: 1;
