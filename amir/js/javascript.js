@@ -708,8 +708,8 @@ function getData2(transactionID, xtoken) {
     var Url = "https://api.regulaforensics.com/webapi/Transaction2/GetTransactionResult?transactionId=" + transactionID + "&resultType=15";
     $.ajax({
         url: Url,
-        dataType: "json",
-        contentType: "application/json",
+        dataType: "xml",
+        contentType: "text/xml",
         type: "GET",
         // XToken: "VXNlcklkPXRlc3R1c2VyO0lQPTEzMi43Mi4yMzQuMTEwO0RhdGU9NjM3MTg2NTAwMTAwMDExNjI2",
         crossDomain: true,
