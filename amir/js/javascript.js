@@ -709,7 +709,6 @@ function getData2(transactionID, xtoken) {
     $.ajax({
         url: Url,
         dataType: "xml",
-        contentType: "text/xml",
         type: "GET",
         // XToken: "VXNlcklkPXRlc3R1c2VyO0lQPTEzMi43Mi4yMzQuMTEwO0RhdGU9NjM3MTg2NTAwMTAwMDExNjI2",
         crossDomain: true,
