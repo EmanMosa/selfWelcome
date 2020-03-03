@@ -106,7 +106,7 @@ function previewFile() {
         imageStr = imageStr.substr(23, imageStr.length)
         console.log(imageStr);
         localStorage.setItem("image", imageStr);
-        console.dir(reader.result);
+        
 
 
 
@@ -718,8 +718,13 @@ function getData2(transactionID, xtoken) {
             xhr.setRequestHeader("X-Token", xtoken);
 
         },
-        success: function(jqXHR, result) {
-            console.log('Succes: ' + result);
+
+        success: function(jqXHR, result,response) {
+            console.log('Succes: ' + response.responseText+','+result);
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(response.responseText,"text/xml");
+            console.log(xmlDoc);
+
         },
         error: function(jqXHR, status) {
             console.log("Error: ", jqXHR.responseText + " " + status);
