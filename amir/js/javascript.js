@@ -455,11 +455,13 @@ function changeLanguageForNumberOfPeopleInRoom2() {
 }
 
 function nextPageForrNumberOfPeopleInRoom2(room, people) {
+    localStorage.removeItem('ListForRooms');
+    localStorage.removeItem('myFavoriteSandwich');
+
     localStorage.setItem('room', room);
     localStorage.setItem('people', people);
     localStorage.setItem("helpValue", localStorage.getItem("room"));
     window.document.location = "./choose-room.html";
-
 
 }
 
@@ -625,16 +627,42 @@ function changeLanguageForChooseRoom() {
 }
 
 function RoomChoice(id) {
-    localStorage.setItem("RoomChoice", id);
+    localStorage.setItem('RoomChoice', id);
+
+    // e.preventDefault()
+
 }
-
+//not compleate 
 function ButtonForChooseRoom() {
-    // for (i = 0; i < localStorage.getItem("helpValue"); i++) {
-    //     localStorage.setItem('helpValue', (localStorage.getItem("helpValue")) - 1);
-    //     window.document.location = "./choose-room.html";
+    for (i = 0; i < localStorage.getItem("helpValue"); i++) {
 
-    // }
-    window.document.location = "./ChooseDate.html";
+        localStorage.setItem('helpValue', (localStorage.getItem("helpValue")) - 1);
+        var existing = localStorage.getItem('ListForRooms');
+
+        // If no existing data, create an array
+        // Otherwise, convert the localStorage string to an array
+        existing = existing ? existing.split(',') : [];
+
+        // Add new data to localStorage Array
+        existing.push(localStorage.getItem('RoomChoice'));
+
+        // Save back to localStorage
+        localStorage.setItem('ListForRooms', existing.toString());
+        if (localStorage.getItem("helpValue") != 0) {
+            window.document.location = "./choose-room.html";
+        } else {
+            break;
+        }
+
+
+
+
+
+
+
+    }
+    if (localStorage.getItem("helpValue") == 0)
+        window.document.location = "./ChooseDate.html";
 }
 
 var Authentication = ({
