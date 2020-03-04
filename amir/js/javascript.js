@@ -106,7 +106,7 @@ function previewFile() {
         imageStr = imageStr.substr(23, imageStr.length)
         console.log(imageStr);
         localStorage.setItem("image", imageStr);
-        
+
 
 
 
@@ -116,6 +116,8 @@ function previewFile() {
         reader.readAsDataURL(file);
     }
     getData();
+    checkchoice();
+
 
 }
 
@@ -277,9 +279,9 @@ function changeLanguageForOrderDetails() {
     var lang = localStorage.getItem("langObj");
     // console.log("e " + JSON.parse(lang).code)
     var language = JSON.parse(lang);
-    document.getElementById("welcomeMsg").innerHTML = page.welcomeMsg;
+    document.getElementById("welcomeMsg").innerHTML = language.welcomeMsg;
     var page = language.page41;
-    //console.log(page);
+    console.log(page);
     document.getElementById("title1").innerHTML = page.title1;
     document.getElementById("next1").innerHTML = page.next1;
     document.getElementById("again1").innerHTML = page.again1;
@@ -632,7 +634,7 @@ function RoomChoice(id) {
     // e.preventDefault()
 
 }
-//not compleate 
+//not compleate
 function ButtonForChooseRoom() {
     for (i = 0; i < localStorage.getItem("helpValue"); i++) {
 
@@ -752,6 +754,7 @@ function getData2(transactionID, xtoken) {
             var parser = new DOMParser();
             var xmlDoc = parser.parseFromString(response.responseText,"text/xml");
             console.log(xmlDoc);
+            extractFullName(xmlDoc);
 
         },
         error: function(jqXHR, status) {
@@ -759,5 +762,9 @@ function getData2(transactionID, xtoken) {
         }
 
     });
+
+}
+function extractFullName(xmlDoc){
+  document.getElementById("coustmer").innerText = xmlDoc.getElementsByTagName("Document_Field_Analysis_Info")[0].children[0].value;
 
 }
