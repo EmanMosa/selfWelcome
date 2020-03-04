@@ -74,9 +74,39 @@ function changeLanguageForIDScanner() {
 
 }
 
+function CheckIfCustomerExists() {
+    var Invitation = localStorage.getItem('invitationByName');
+    getDataFromMiniHotel();
+    result = localStorage.getItem('responseFromMiniHotel');
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(result, "text/xml");
+    var length = xmlDoc.getElementsByTagName("Reservations")[0].children.length;
+    //console.log(length);
+    IsFound = false;
+    i = 0;
+    while (IsFound != true && i < length) {
+        if (invitationType == 'invitationByName') {
+            var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
+            if (fullname == Invitation) {
+                IsFound = true;
+                console.log(IsFound);
+                localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
+                return true;
+            } else {
+                i++;
+                if (i == length - 1) {
+
+                    return false;
+                }
+            }
+        }
+    }
+    return false;
+}
+
 function checkInChoice() {
-  //check if customer exists
-    var IsFound = false;
+    //check if customer exists
+    var IsFound = CheckIfCustomerExists();
     if (IsFound == false) {
         window.document.location = './CustomerNotFound.html';
     } else if (IsFound == true) {
@@ -883,27 +913,28 @@ function getData2(transactionID, xtoken) {
     });
 
 }
-function extractFullName(xmlDoc){
-  var FullName="";
-  parser = new DOMParser();
-  // xmlDoc = parser.parseFromString(xmlDoc,"text/xml");
-  x = xmlDoc.documentElement.children;
-  for (i=0;i<x.length;i++){
 
-          if(x[i].children[0] && x[i].children[0].innerHTML==25){
-              console.log(x[i].children[3].innerHTML);
-              FullName=x[i].children[3].innerHTML;
-              localStorage.setItem('invitationByName',FullName);
-              break;
+function extractFullName(xmlDoc) {
+    var FullName = "";
+    parser = new DOMParser();
+    // xmlDoc = parser.parseFromString(xmlDoc,"text/xml");
+    x = xmlDoc.documentElement.children;
+    for (i = 0; i < x.length; i++) {
 
-  }
+        if (x[i].children[0] && x[i].children[0].innerHTML == 25) {
+            console.log(x[i].children[3].innerHTML);
+            FullName = x[i].children[3].innerHTML;
+            localStorage.setItem('invitationByName', FullName);
+            break;
 
-  }
+        }
+
+    }
 
 }
 
-function orderDetailsData(){
-  document.getElementById("customer").innerHTML=localStorage.getItem("invitationByName");
-  document.getElementById("imageid").src=localStorage.getItem("image");
+function orderDetailsData() {
+    document.getElementById("customer").innerHTML = localStorage.getItem("invitationByName");
+    document.getElementById("imageid").src = localStorage.getItem("image");
 
 }
