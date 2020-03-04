@@ -75,6 +75,7 @@ function changeLanguageForIDScanner() {
 }
 
 function checkInChoice() {
+  //check if customer exists
     var IsFound = false;
     if (IsFound == false) {
         window.document.location = './CustomerNotFound.html';
@@ -293,7 +294,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
             } else {
                 i++;
                 if (i == length - 1) {
-                    // Reservation not found 
+                    // Reservation not found
                     window.document.location = './IdentifyingInformation.html';
                 }
             }
@@ -306,7 +307,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
             } else {
                 i++;
                 if (i == length - 1) {
-                    // Reservation not found 
+                    // Reservation not found
                     window.document.location = './IdentifyingInformation.html';
                 }
             }
@@ -883,6 +884,26 @@ function getData2(transactionID, xtoken) {
 
 }
 function extractFullName(xmlDoc){
-  document.getElementById("coustmer").innerText = xmlDoc.getElementsByTagName("Document_Field_Analysis_Info")[0].children[0].value;
+  var FullName="";
+  parser = new DOMParser();
+  // xmlDoc = parser.parseFromString(xmlDoc,"text/xml");
+  x = xmlDoc.documentElement.children;
+  for (i=0;i<x.length;i++){
+
+          if(x[i].children[0] && x[i].children[0].innerHTML==25){
+              console.log(x[i].children[3].innerHTML);
+              FullName=x[i].children[3].innerHTML;
+              localStorage.setItem('invitationByName',FullName);
+              break;
+
+  }
+
+  }
+
+}
+
+function orderDetailsData(){
+  document.getElementById("customer").innerHTML=localStorage.getItem("invitationByName");
+  document.getElementById("imageid").src=localStorage.getItem("image");
 
 }
