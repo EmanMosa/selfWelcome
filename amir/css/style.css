@@ -1,3 +1,7 @@
+/* ---------------------------- */
+/*          HTML page           */
+/* ---------------------------- */
+
 @font-face {
     font-family: 'Assistant';
     src: url('../fonts/Assistant-Regular.ttf');
@@ -19,17 +23,6 @@ body {
     text-align: center;
 }
 
-.page1 {
-    background-image: linear-gradient(to bottom, rgba(3, 177, 254, 0.52) 0%, rgba(26, 100, 180, 0.52) 45%, rgba(50, 15, 112, 0.73) 100%), url('../img/Image\ 1.png');
-    margin-left: auto;
-    margin-right: auto;
-    width: 8em;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
 .page {
     background-image: url('../img/shade-btm.png');
     background-color: #f2f4f7;
@@ -42,17 +35,32 @@ body {
     background-size: cover;
 }
 
-.center-hor {
+section {
+    color: white;
+    padding: 1em;
     position: absolute;
+    top: 48%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.page-content {
+    font-family: 'Assistant', Fallback, sans-serif;
+    text-align: center;
+    color: #5A4199;
+    font-size: 5vw;
+    text-align: center;
 }
 
-.logo {
-    width: 90%;
-    margin-top: 3em;
+
+.main-menu {
+    font-family: 'Assistant-bold', Fallback, sans-serif;
+    text-align: center;
+    color: #5A4199;
+    font-size: 1.5em;
 }
+
 
 .logo-page {
     width: 60%;
@@ -62,49 +70,6 @@ body {
 .top-page {
     width: 100%;
     margin-top: -20%;
-}
-
-
-/* .top-page{
-    width: 109%;
-    margin-top: -29%;
-
-  } */
-
-.bottom-page {
-    width: 100%;
-}
-
-#tab1 {
-    border-radius: 30px;
-    border: 2px solid purple;
-    border-radius: 1px 1px 1px 1px;
-}
-
-#tab2 {
-    border-radius: 30px;
-    border: 2px solid purple;
-    border-radius: 1px 1px 1px 1px;
-}
-
-.img {
-    margin-bottom: 4%;
-}
-
-.imgid {
-    max-width: 100%;
-    height: auto;
-}
-
-.subtitle3 {
-    color: #576169;
-}
-
-
-/* eman for Button */
-
-.card {
-    font-size: 20px;
 }
 
 .page-button {
@@ -122,6 +87,58 @@ body {
     box-sizing: border-box;
 }
 
+.bottom-page {
+    width: 100%;
+}
+
+/* ---------------------------- */
+/*      ChooseLanguage page     */
+/* ---------------------------- */
+.page1 {
+    background-image: linear-gradient(to bottom, rgba(3, 177, 254, 0.52) 0%, rgba(26, 100, 180, 0.52) 45%, rgba(50, 15, 112, 0.73) 100%), url('../img/Image\ 1.png');
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.center-hor {
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.logo {
+    width: 90%;
+    margin-top: 3em;
+}
+
+
+
+/* ---------------------------- */
+/*      chooseEntries page      */
+/* ---------------------------- */
+
+
+
+/* ---------------------------- */
+/*        IDScanner page        */
+/* ---------------------------- */
+
+.subtitle3 {
+    color: #576169;
+}
+
 .page-button.pageIDScanner {
     background-color: rgba(167, 127, 203, 0.4);
     font: SemiBold 20px/23px Assistant;
@@ -129,6 +146,18 @@ body {
     color: #584099;
     line-height: 35px;
     font-weight: bold;
+}
+
+.scanInput {
+    position: absolute;
+    left: -43%;
+}
+
+/* ---------------------------- */
+/*     CustomerNotFound page    */
+/* ---------------------------- */
+.img {
+    margin-bottom: 4%;
 }
 
 .page-button.scoundButton {
@@ -149,24 +178,113 @@ body {
     left: -9.5%;
 }
 
-.page-button.ButtonIdentifyingInformation {
-    position: absolute;
-    color: white;
-    top: 618px;
-    left: 20%;
-    width: 177px;
-    margin-left: 0px;
-    background-color: rgba(224, 209, 237, 0.4);
+/* ---------------------------- */
+/* IdentifyingInformation page  */
+/* ---------------------------- */
+
+.accordion-tabs {
+    background: transparent;
+    border: 2px solid #584099;
+    border-radius: 36px 35px;
+    height: 47px;
 }
 
-.page-button.buttonReceiptCode {
-    left: -14%;
-    position: absolute;
-    top: 362px;
-    background-color: rgba(167, 127, 203, 0.4);
+.accordion-tabs .accordion-tab {
+    background: transparent;
+    padding: 0rem 1rem;
+    font: inherit;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    height: 48px;
+    outline: 0;
+}
+
+.accordion-tabs .accordion-tab:hover {
+    background: transparent;
+    outline: 0;
+}
+
+.accordion-tabs .accordion-tab:last-child {
+    border-right: 0;
+}
+
+.accordion-tabs .accordion-tab.accordion-active {
+    background: #584099;
+    border: 2px solid #584099;
+    border-radius: 36px 35px;
+    text-align: center;
+    color: #ffffff;
+    border-top-width: 3px;
+    padding-right: 30px;
+    border-right-width: 17px;
+    padding-left: 21px;
+    /* opacity: 1; */
+    outline: 0;
+}
+
+.accordion-item.accordion-active {
+    display: block;
+}
+
+.accordion-item {
+    padding: 2.4rem;
+    display: none;
+    border: none;
+    background: transparent;
+}
+
+.accordion-item__label {
+    box-sizing: content-box;
+    position: fixed;
+    top: 78%;
+    margin-right: -50%;
+    transform: translate(-48%, -136%);
+    text-align: center;
+    border-style: hidden;
+    background-color: transparent;
+    background: transparent;
     color: #584099;
+    height: 51px;
+    width: 303px;
+    font: inherit;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+}
+
+ ::placeholder {
+    color: #584099;
+    font-size: 20px;
     font-weight: bold;
-    width: 78%;
+    opacity: 1;
+    word-wrap: break-word;
+}
+
+
+.accordion-item__label:focus {
+    padding-bottom: 6px;
+    top: 100%;
+    font-weight: 700;
+    border-width: 3px;
+    /* border-image: linear-gradient(to right, #11998e, #38ef7d); */
+    border-image-slice: 1;
+    border-bottom: 2px solid #9b9b9b;
+    width: 303px;
+}
+
+.accordion-item__label:required,
+.accordion-item__label:invalid {
+    box-shadow: none;
+}
+
+
+/* ---------------------------- */
+/*      Order Details page      */
+/* ---------------------------- */
+
+.imgid {
+    max-width: 100%;
+    height: auto;
 }
 
 .page-button.ButtonForOrderDetails {
@@ -174,29 +292,103 @@ body {
     margin-top: 21px;
 }
 
-.page-button.ButtonForconfirm {
-    background: rgba(224, 209, 237, 0.4);
-    /* transform: translate(6px, 327%); */
+
+/* ---------------------------- */
+/*         New Info page        */
+/* ---------------------------- */
+
+.card {
+    font-size: 20px;
+}
+
+.image1 {
+    position: relative;
+    width: -webkit-fill-available;
+}
+
+
+.image2 {
     position: absolute;
-    left: 0;
-    bottom: 1%;
+    right: 36px;
+    margin-right: 0px;
+    margin-top: 18px;
 }
 
-.page-button.ButtonForChooseDate {
-    transform: translate(5px, 118%);
+
+.title1 {
+    position: fixed;
+    top: 18%;
+    left: 52%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
 }
 
-.page-button p {
-    margin-top: 5px;
+.title2 {
+    position: fixed;
+    top: 38%;
+    left: 48%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
 }
 
-.page-button.ButtonForChooseRoom {
-    background-color: #8B4DB8;
-    box-sizing: border-box;
-    width: 68%;
-    position: absolute;
-    left: -11%;
-    top: 100%;
+.title3 {
+    position: fixed;
+    top: 58%;
+    left: 46%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
+}
+
+.title4 {
+    position: fixed;
+    top: 76%;
+    left: 59%;
+    font-size: 18px;
+    z-index: 1;
+    color: white;
+    opacity: 0.6;
+}
+
+.type1 {
+    position: fixed;
+    top: 20%;
+    left: 28%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.type2 {
+    position: fixed;
+    top: 42%;
+    left: 55%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.type3 {
+    position: fixed;
+    top: 61%;
+    left: 65%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
+}
+
+.type4 {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    font-size: 30px;
+    z-index: 1;
+    color: white;
 }
 
 .page-button.ButtonForNewInfo {
@@ -208,8 +400,17 @@ body {
     bottom: -13%;
 }
 
-.page-button:active {
-    background-color: #C29CDE;
+
+
+/* ---------------------------- */
+/*     Receipt Code page        */
+/* ---------------------------- */
+
+
+.page-content.titleReceiptCode {
+    position: absolute;
+    top: -167px;
+    left: -135px;
 }
 
 .textPageReceiptCode {
@@ -224,6 +425,39 @@ body {
     opacity: 1;
 }
 
+.key {
+    position: absolute;
+    top: 235px;
+    left: 102px;
+    height: 99px;
+    opacity: 1;
+}
+
+.page-button.buttonReceiptCode {
+    left: -14%;
+    position: absolute;
+    top: 362px;
+    background-color: rgba(167, 127, 203, 0.4);
+    color: #584099;
+    font-weight: bold;
+    width: 78%;
+}
+
+
+/* ---------------------------- */
+/*     Citizen Ship page        */
+/* ---------------------------- */
+
+
+.VtybeInfo img {
+    width: 17vw;
+}
+
+.VtybeInfo h3 {
+    margin-top: 1%;
+    font-size: 3vw;
+}
+
 .CTSEction{
     color: white;
     padding: 1em;
@@ -235,57 +469,179 @@ body {
     text-align: center;
 }
 
-/* eman for Buttons */
+/* ---------------------------- */
+/*  NumberOfPeopleInRoom1 page  */
+/* ---------------------------- */
 
-.shade-btm {
-    width: 100%;
+.pageNumberPeople .VtybeInfo img {
+    width: 85px;
 }
 
-.menu {
-    text-align: center;
-    color: white;
-    font-size: 2em;
-}
-
-.main-menu {
-    font-family: 'Assistant-bold', Fallback, sans-serif;
-    text-align: center;
-    color: #5A4199;
-    font-size: 1.5em;
-}
-
-.page-content {
-    font-family: 'Assistant', Fallback, sans-serif;
-    text-align: center;
-    color: #5A4199;
-    font-size: 5vw;
-    text-align: center;
-}
-
-.page-content.titleReceiptCode {
-    position: absolute;
-    top: -167px;
-    left: -135px;
+.pageNumberPeople .VtybeInfo h3 {
+    margin-top: -7px;
+    font-size: 21px;
 }
 
 .page-content.pageNumberPeople {
     /*margin-top: 73px;*/
 }
 
-section {
-    color: white;
-    padding: 1em;
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+
+/* ---------------------------- */
+/*  NumberOfPeopleInRoom2 page  */
+/* ---------------------------- */
+
+.NumberOfPeopleRoom2 .page-content {
+    height: 500px;
+    font-family: 'Assistant', Fallback, sans-serif;
+    text-align: center;
+    color: #5A4199;
+    font-size: 1.5em;
     text-align: center;
 }
 
-/* -------------------- */
-/* choose room page start */
-/* -------------------- */
+.rounded_btn {
+    border-radius: 30px 30px;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    outline: none;
+    color: purple;
+    background-color: white;
+}
+
+.Numcount {
+    font-size: 71px;
+    padding: 16px;
+    position: relative;
+    top: 15px;
+}
+
+.title {
+    position: relative;
+    top: 35px;
+    left: -2px;
+    margin-top: -5px;
+}
+
+
+/* ---------------------------- */
+/*      TypingFullName page     */
+/* ---------------------------- */
+
+div.container {
+    width: 960px;
+    margin: 0px auto;
+    background-color: red;
+}
+
+h1#info {
+    top: 263px;
+    left: 39px;
+    width: 300px;
+    height: 143px;
+    color: #584099;
+}
+
+.page-button.ButtonForconfirm {
+    background: rgba(224, 209, 237, 0.4);
+    /* transform: translate(6px, 327%); */
+    position: absolute;
+    left: 0;
+    bottom: 1%;
+}
+
+
+/* ---------------------------- */
+/*        Choose Date page      */
+/* ---------------------------- */
+
+div#chosedate {
+    font-size: 44px;
+    color: #584099;
+    text-align: center;
+    letter-spacing: 0px;
+    margin-bottom: 5%;
+}
+
+
+div#datemain {
+    border: 6px #254DDE66;
+    box-shadow: 1px 1px 7px;
+    width: 87%;
+    margin-left: 5%;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    height: 15vh;
+    color: #a448b5;
+    opacity: 16.4;
+    border-radius: 82px;
+    font-size: 19px;
+    background-color: aliceblue;
+}
+
+div#entresDate {
+    width: 50%;
+    margin-left: -1%;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    height: 50px;
+    color: #584099;
+    opacity: 1.4;
+    border-radius: 30px;
+    font-size: 19px;
+}
+
+div#exitDate {
+    width: 50%;
+    margin-left: -1%;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    height: 50px;
+    color: #584099;
+    opacity: 1.4;
+    border-radius: 30px;
+    font-size: 19px;
+}
+
+input#start {
+    border: oldlace;
+    background: border-box;
+    font-size: 26px;
+    text-align: end;
+    font-family: cursive;
+    width: 9em;
+}
+
+input#number {
+    max-width: 100%
+}
+
+input#exit {
+    border: oldlace;
+    background: border-box;
+    font-size: 26px;
+    text-align: end;
+    font-family: cursive;
+    width: 9em;
+}
+
+
+.page-button.ButtonForChooseDate {
+    transform: translate(5px, 118%);
+}
+
+.page-button p {
+    margin-top: 5px;
+}
+
+
+/* ---------------------------- */
+/*       choose-room page       */
+/* ---------------------------- */
+
+
 .cardInfo {
     width: fit-content;
     position: relative;
@@ -300,9 +656,9 @@ section {
     background: blue;
     border-radius: 12px;
     margin-bottom: 5%;
-    width: 229%;
+    /* width: 229%; */
     position: relative;
-    left: -61%;
+    /* left: -61%; */
 }
 
 .rightSection {
@@ -349,87 +705,122 @@ section {
     top: 7%;
     left: 21%;
 }
-/* choose room page End */
+
+/* __________________________________________________________________ */
 
 
-/* eman  page 6+7*/
 
-.accordion-tabs {
-    background: transparent;
-    border: 2px solid #584099;
-    border-radius: 36px 35px;
-    height: 47px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#tab1 {
+    border-radius: 30px;
+    border: 2px solid purple;
+    border-radius: 1px 1px 1px 1px;
 }
 
-.accordion-tabs .accordion-tab {
-    background: transparent;
-    padding: 0rem 1rem;
-    font: inherit;
-    flex: 1;
-    border: none;
-    cursor: pointer;
-    height: 48px;
-    outline: 0;
+#tab2 {
+    border-radius: 30px;
+    border: 2px solid purple;
+    border-radius: 1px 1px 1px 1px;
 }
 
-.accordion-tabs .accordion-tab:hover {
-    background: transparent;
-    outline: 0;
+.img {
+    margin-bottom: 4%;
 }
 
-.accordion-tabs .accordion-tab:last-child {
-    border-right: 0;
+
+
+.page-button.scoundButton {
+    background: rgba(108, 35, 169, 1);
+    box-shadow: 0px 10px 30px #00000008;
+    width: 194px;
+    height: 53px;
+    line-height: 20px;
+    position: relative;
+    left: -2%;
 }
 
-.accordion-tabs .accordion-tab.accordion-active {
-    background: #584099;
-    border: 2px solid #584099;
-    border-radius: 36px 35px;
-    text-align: center;
-    color: #ffffff;
-    border-top-width: 3px;
-    padding-right: 30px;
-    border-right-width: 17px;
-    padding-left: 21px;
-    /* opacity: 1; */
-    outline: 0;
+.page-button.firstButton {
+    width: 194px;
+    height: 53px;
+    line-height: 20px;
+    position: relative;
+    left: -9.5%;
 }
 
-.accordion-item {
-    padding: 2.4rem;
-    display: none;
-    border: none;
-    background: transparent;
+.page-button.ButtonIdentifyingInformation {
+    position: absolute;
+    color: white;
+    top: 618px;
+    left: 20%;
+    width: 177px;
+    margin-left: 0px;
+    background-color: rgba(224, 209, 237, 0.4);
 }
 
-.accordion-item__label {
-    box-sizing: content-box;
-    position: fixed;
-    top: 78%;
-    margin-right: -50%;
-    transform: translate(-48%, -136%);
-    text-align: center;
-    border-style: hidden;
-    background-color: transparent;
-    background: transparent;
-    color: #584099;
-    height: 51px;
-    width: 303px;
-    font: inherit;
-    border-bottom: 2px solid #9b9b9b;
-    outline: 0;
+
+
+
+
+.page-button.ButtonForChooseRoom {
+    background-color: #8B4DB8;
+    box-sizing: border-box;
+    width: 68%;
+    position: absolute;
+    left: -11%;
+    top: 100%;
 }
 
- ::placeholder {
-    color: #584099;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 1;
-    word-wrap: break-word;
+
+
+.page-button:active {
+    background-color: #C29CDE;
 }
 
-.accordion-item.accordion-active {
-    display: block;
+
+
+
+
+/* eman for Buttons */
+
+.shade-btm {
+    width: 100%;
 }
 
 .btm_img {
@@ -440,98 +831,13 @@ section {
     height: 403px;
 }
 
-.accordion-item__label:focus {
-    padding-bottom: 6px;
-    top: 100%;
-    font-weight: 700;
-    border-width: 3px;
-    /* border-image: linear-gradient(to right, #11998e, #38ef7d); */
-    border-image-slice: 1;
-    border-bottom: 2px solid #9b9b9b;
-    width: 303px;
-}
 
-.accordion-item__label:required,
-.accordion-item__label:invalid {
-    box-shadow: none;
-}
 
-div#chosedate {
-    font-size: 44px;
-    color: #584099;
-    text-align: center;
-    letter-spacing: 0px;
-    margin-bottom: 5%;
-}
 
-input#start {
-    border: oldlace;
-    background: border-box;
-    font-size: 26px;
-    text-align: end;
-    font-family: cursive;
-    width: 9em;
-}
 
-input#number {
-    max-width: 100%
-}
 
-input#exit {
-    border: oldlace;
-    background: border-box;
-    font-size: 26px;
-    text-align: end;
-    font-family: cursive;
-    width: 9em;
-}
 
-div#datemain {
-    border: 6px #254DDE66;
-    box-shadow: 1px 1px 7px;
-    width: 87%;
-    margin-left: 5%;
-    padding-top: 10px;
-    margin-bottom: 16px;
-    height: 15vh;
-    color: #a448b5;
-    opacity: 16.4;
-    border-radius: 82px;
-    font-size: 19px;
-    background-color: aliceblue;
-}
 
-div#entresDate {
-    width: 50%;
-    margin-left: -1%;
-    padding-top: 10px;
-    margin-bottom: 16px;
-    height: 50px;
-    color: #584099;
-    opacity: 1.4;
-    border-radius: 30px;
-    font-size: 19px;
-}
-
-div#exitDate {
-    width: 50%;
-    margin-left: -1%;
-    padding-top: 10px;
-    margin-bottom: 16px;
-    height: 50px;
-    color: #584099;
-    opacity: 1.4;
-    border-radius: 30px;
-    font-size: 19px;
-}
-
-.key {
-    position: absolute;
-    top: 235px;
-    left: 102px;
-    height: 99px;
-    opacity: 1;
-}
 
 .form__label {
     box-sizing: content-box;
@@ -549,19 +855,6 @@ div#exitDate {
     font-size: 24px;
 }
 
-div.container {
-    width: 960px;
-    margin: 0px auto;
-    background-color: red;
-}
-
-h1#info {
-    top: 263px;
-    left: 39px;
-    width: 300px;
-    height: 143px;
-    color: #584099;
-}
 
 .page-ok {
     width: 50%;
@@ -595,81 +888,6 @@ label {
     margin-top: 188px;
 }
 
-.title1 {
-    position: fixed;
-    top: 22%;
-    left: 52%;
-    font-size: 18px;
-    z-index: 1;
-    color: white;
-    opacity: 0.6;
-}
-
-.title2 {
-    position: fixed;
-    top: 40%;
-    left: 48%;
-    font-size: 18px;
-    z-index: 1;
-    color: white;
-    opacity: 0.6;
-}
-
-.title3 {
-    position: fixed;
-    top: 58%;
-    left: 46%;
-    font-size: 18px;
-    z-index: 1;
-    color: white;
-    opacity: 0.6;
-}
-
-.title4 {
-    position: fixed;
-    top: 76%;
-    left: 59%;
-    font-size: 18px;
-    z-index: 1;
-    color: white;
-    opacity: 0.6;
-}
-
-.type1 {
-    position: fixed;
-    top: 24%;
-    left: 28%;
-    font-size: 30px;
-    z-index: 1;
-    color: white;
-}
-
-.type2 {
-    position: fixed;
-    top: 42%;
-    left: 55%;
-    font-size: 30px;
-    z-index: 1;
-    color: white;
-}
-
-.type3 {
-    position: fixed;
-    top: 61%;
-    left: 65%;
-    font-size: 30px;
-    z-index: 1;
-    color: white;
-}
-
-.type4 {
-    position: fixed;
-    top: 80%;
-    left: 50%;
-    font-size: 30px;
-    z-index: 1;
-    color: white;
-}
 
 .update {
     position: absolute;
@@ -683,6 +901,11 @@ label {
     color: #000000;
     font-weight: bold;
 }
+
+/* -------------------------- */
+/*     Responsive Elements    */
+/* -------------------------- */
+
 
 @media only screen and (max-width: 1024px) and (min-width: 760px) {
     .container {
@@ -786,7 +1009,7 @@ label {
         width: 14%;
     }
     .image1 {
-        width: 100%;
+        /* width: 100%; */
     }
 }
 
@@ -795,16 +1018,7 @@ label {
     ;
 }
 
-.image1 {
-    position: relative;
-}
 
-.image2 {
-    position: absolute;
-    right: 36px;
-    margin-right: 0px;
-    margin-top: 18px;
-}
 
 .text {
     position: absolute;
@@ -825,10 +1039,20 @@ label {
     }
 }
 
-.scanInput {
-    position: absolute;
-    left: -43%;
-}
+@media screen and (min-width: 823px) {
+    #confirm {
+        left: 0%;
+        position: absolute;
+        bottom: 3%;
+    }
+};
+
+@media screen and (min-width: 823px) {
+    #ok {
+        left: 0%;
+        position: absolute;
+        bottom: 3%;
+      }};
 
 .orderbackground {
     transform: translate(-31%, 85%);

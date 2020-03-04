@@ -208,19 +208,137 @@ function changeLanguageForIdentifyingInformation() {
 
 
 
-function OnClickForButton() {
+function getDataFromMiniHotel() {
+    var d = $.Deferred();
+    var array = [];
+    var Query = "<DateRange from='2020-02-22' to='2020-02-23' /> ";
+
+    var xmlRequest =
+        "<?xml version='1.0' encoding='UTF-8' ?>" +
+        "<AvailRaterq xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>" +
+        "<Authentication username=' " +
+        'test' +
+        "' password='" +
+        '2222' +
+        "' ResponseType = '03' />" +
+        "<Hotel id='" +
+        'testhotel' +
+        "' Currency='ILS'/>" +
+        "" +
+        Query +
+        "" +
+        " <Guests adults='2' child='1' babies='1' />" +
+        "<Prices rateCode='TOURISTRATE'><Price boardCode='*ALL*' /></Prices>" +
+        "</AvailRaterq>";
+
+    var Url = 'http://api.minihotelpms.com/gds';
+    $.ajax({
+        url: Url,
+        type: "POST",
+        crossDomain: true,
+        data: xmlRequest,
+        async: false,
+        success: function(result) {
+            //console.log('Succes: ' + result);
+            localStorage.setItem('responseFromMiniHotel', result);
+        },
+        error: function(jqXHR, status) {
+            console.log("Error: ", jqXHR.responseText + " " + status);
+        }
+
+    });
+}
+
+function ReceiptCodeForUser() {
+    var code = Math.floor(Math.random() * 99999) + 10000;
+    console.log(code);
+    localStorage.setItem('Code', code);
+    console.log(localStorage['Code']);
+    //document.getElementById('code').placeholder = localStorage['Code'];
+
+}
+
+function setDataToNewInfoPage() {
+    parser = new DOMParser();
+    Reservation = parser.parseFromString(localStorage.getItem('Reservation'), "text/xml");
+
+    document.getElementById('roomType').innerHTML = Reservation.documentElement.attributes['RoomType'].value;
+    document.getElementById('roomNumber').innerHTML = Reservation.documentElement.attributes['RoomNumber'].value;
+
+}
+
+function getReservationFromMiniHotelByInvitationType(invitationType) {
+    var Invitation = localStorage.getItem(invitationType);
+
+    getDataFromMiniHotel();
+    result = localStorage.getItem('responseFromMiniHotel');
+    // console.log(result);
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(result, "text/xml");
+    // console.log(xmlDoc.getElementsByTagName("Reservations"));
+
+    //console.log(xmlDoc.getElementsByTagName("Reservations"));
+    // console.log(xmlDoc.getElementsByTagName("Reservations")[0].children[0].attributes['ResNumber'].value);
+    var length = xmlDoc.getElementsByTagName("Reservations")[0].children.length;
+    //console.log(length);
+    IsFound = false;
+    i = 0;
+    while (IsFound != true && i < length) {
+        console.log(i);
+        if (invitationType == 'invitationbyNumber') {
+            if (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['ResNumber'].value == Invitation) {
+                IsFound = true;
+                console.log(IsFound);
+                localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
+            } else {
+                i++;
+                if (i == length - 1) {
+                    // Reservation not found 
+                    window.document.location = './IdentifyingInformation.html';
+                }
+            }
+        } else if (invitationType == 'invitationByName') {
+            var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
+            if (fullname == Invitation) {
+                IsFound = true;
+                console.log(IsFound);
+                localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
+            } else {
+                i++;
+                if (i == length - 1) {
+                    // Reservation not found 
+                    window.document.location = './IdentifyingInformation.html';
+                }
+            }
+        }
+
+    }
+
+    window.document.location = './NewInfo.html';
+
+}
+
+
+
+function OnClickForButtonForIdentifyingInformation() {
     var elements = document.getElementsByClassName('accordion-item accordion-active');
     var id = elements[0].dataset.actabId;
     if (id == "0") {
         var value = document.getElementById('invitationbyNumber').value;
+        localStorage.setItem('invitationbyNumber', value);
+        getReservationFromMiniHotelByInvitationType('invitationbyNumber');
+
     } else {
         if (id == "1") {
             var value = document.getElementById('invitationByName').value;
+            localStorage.setItem('invitationByName', value);
+            getReservationFromMiniHotelByInvitationType('invitationByName');
         }
     }
-    window.document.location = './OrderDetails.html';
+
 
 }
+
 
 function focusFunction() {
     var elements = document.getElementsByClassName('accordion-item accordion-active');
@@ -749,10 +867,10 @@ function getData2(transactionID, xtoken) {
 
         },
 
-        success: function(jqXHR, result,response) {
-            console.log('Succes: ' + response.responseText+','+result);
+        success: function(jqXHR, result, response) {
+            console.log('Succes: ' + response.responseText + ',' + result);
             var parser = new DOMParser();
-            var xmlDoc = parser.parseFromString(response.responseText,"text/xml");
+            var xmlDoc = parser.parseFromString(response.responseText, "text/xml");
             console.log(xmlDoc);
             extractFullName(xmlDoc);
 
