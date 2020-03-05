@@ -1,9 +1,5 @@
 /* ---------------------------- */
-
-
 /*          HTML page           */
-
-
 /* ---------------------------- */
 
 @font-face {
@@ -49,7 +45,6 @@ section {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
 .page-content {
     font-family: 'Assistant', Fallback, sans-serif;
     text-align: center;
@@ -58,12 +53,14 @@ section {
     text-align: center;
 }
 
+
 .main-menu {
     font-family: 'Assistant-bold', Fallback, sans-serif;
     text-align: center;
     color: #5A4199;
     font-size: 1.5em;
 }
+
 
 .logo-page {
     width: 60%;
@@ -94,15 +91,9 @@ section {
     width: 100%;
 }
 
-
 /* ---------------------------- */
-
-
 /*      ChooseLanguage page     */
-
-
 /* ---------------------------- */
-
 .page1 {
     background-image: linear-gradient(to bottom, rgba(3, 177, 254, 0.52) 0%, rgba(26, 100, 180, 0.52) 45%, rgba(50, 15, 112, 0.73) 100%), url('../img/Image\ 1.png');
     margin-left: auto;
@@ -133,21 +124,15 @@ section {
 }
 
 
+
 /* ---------------------------- */
-
-
 /*      chooseEntries page      */
-
-
 /* ---------------------------- */
 
 
+
 /* ---------------------------- */
-
-
 /*        IDScanner page        */
-
-
 /* ---------------------------- */
 
 .subtitle3 {
@@ -168,15 +153,9 @@ section {
     left: -43%;
 }
 
-
 /* ---------------------------- */
-
-
 /*     CustomerNotFound page    */
-
-
 /* ---------------------------- */
-
 .img {
     margin-bottom: 4%;
 }
@@ -199,13 +178,8 @@ section {
     left: -9.5%;
 }
 
-
 /* ---------------------------- */
-
-
 /* IdentifyingInformation page  */
-
-
 /* ---------------------------- */
 
 .accordion-tabs {
@@ -217,12 +191,12 @@ section {
 
 .accordion-tabs .accordion-tab {
     background: transparent;
-    padding: 0rem 1rem;
+    /* padding: 0rem 1rem; */
     font: inherit;
     flex: 1;
     border: none;
     cursor: pointer;
-    height: 48px;
+    height: 100%;
     outline: 0;
 }
 
@@ -263,7 +237,7 @@ section {
 .accordion-item__label {
     box-sizing: content-box;
     position: fixed;
-    top: 78%;
+    top: 100%;
     margin-right: -50%;
     transform: translate(-48%, -136%);
     text-align: center;
@@ -272,7 +246,7 @@ section {
     background: transparent;
     color: #584099;
     height: 51px;
-    width: 303px;
+    width: 100%;
     font: inherit;
     border-bottom: 2px solid #9b9b9b;
     outline: 0;
@@ -285,6 +259,7 @@ section {
     opacity: 1;
     word-wrap: break-word;
 }
+
 
 .accordion-item__label:focus {
     padding-bottom: 6px;
@@ -304,15 +279,11 @@ section {
 
 
 /* ---------------------------- */
-
-
 /*      Order Details page      */
-
-
 /* ---------------------------- */
 
 .imgid {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -323,11 +294,7 @@ section {
 
 
 /* ---------------------------- */
-
-
 /*         New Info page        */
-
-
 /* ---------------------------- */
 
 .card {
@@ -339,12 +306,14 @@ section {
     width: -webkit-fill-available;
 }
 
+
 .image2 {
     position: absolute;
     right: 36px;
     margin-right: 0px;
     margin-top: 18px;
 }
+
 
 .title1 {
     position: fixed;
@@ -432,13 +401,11 @@ section {
 }
 
 
+
 /* ---------------------------- */
-
-
 /*     Receipt Code page        */
-
-
 /* ---------------------------- */
+
 
 .page-content.titleReceiptCode {
     position: absolute;
@@ -478,12 +445,9 @@ section {
 
 
 /* ---------------------------- */
-
-
 /*     Citizen Ship page        */
-
-
 /* ---------------------------- */
+
 
 .VtybeInfo img {
     width: 17vw;
@@ -494,7 +458,7 @@ section {
     font-size: 3vw;
 }
 
-.CTSEction {
+.CTSEction{
     color: white;
     padding: 1em;
     position: absolute;
@@ -505,13 +469,8 @@ section {
     text-align: center;
 }
 
-
 /* ---------------------------- */
-
-
 /*  NumberOfPeopleInRoom1 page  */
-
-
 /* ---------------------------- */
 
 .pageNumberPeople .VtybeInfo img {
@@ -529,11 +488,7 @@ section {
 
 
 /* ---------------------------- */
-
-
 /*  NumberOfPeopleInRoom2 page  */
-
-
 /* ---------------------------- */
 
 .NumberOfPeopleRoom2 .page-content {
@@ -572,11 +527,7 @@ section {
 
 
 /* ---------------------------- */
-
-
 /*      TypingFullName page     */
-
-
 /* ---------------------------- */
 
 div.container {
@@ -603,11 +554,7 @@ h1#info {
 
 
 /* ---------------------------- */
-
-
 /*        Choose Date page      */
-
-
 /* ---------------------------- */
 
 div#chosedate {
@@ -617,6 +564,7 @@ div#chosedate {
     letter-spacing: 0px;
     margin-bottom: 5%;
 }
+
 
 div#datemain {
     border: 6px #254DDE66;
@@ -679,6 +627,7 @@ input#exit {
     width: 9em;
 }
 
+
 .page-button.ButtonForChooseDate {
     transform: translate(5px, 118%);
 }
@@ -689,12 +638,9 @@ input#exit {
 
 
 /* ---------------------------- */
-
-
 /*       choose-room page       */
-
-
 /* ---------------------------- */
+
 
 .cardInfo {
     width: fit-content;
@@ -735,6 +681,7 @@ input#exit {
     left: 0%;
 }
 
+
 .card .rightSection img {
     position: relative;
     top: 15%;
@@ -759,8 +706,47 @@ input#exit {
     left: 21%;
 }
 
-
 /* __________________________________________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #tab1 {
     border-radius: 30px;
@@ -777,6 +763,8 @@ input#exit {
 .img {
     margin-bottom: 4%;
 }
+
+
 
 .page-button.scoundButton {
     background: rgba(108, 35, 169, 1);
@@ -806,6 +794,10 @@ input#exit {
     background-color: rgba(224, 209, 237, 0.4);
 }
 
+
+
+
+
 .page-button.ButtonForChooseRoom {
     background-color: #8B4DB8;
     box-sizing: border-box;
@@ -815,9 +807,14 @@ input#exit {
     top: 100%;
 }
 
+
+
 .page-button:active {
     background-color: #C29CDE;
 }
+
+
+
 
 
 /* eman for Buttons */
@@ -834,6 +831,7 @@ input#exit {
     height: 403px;
 }
 
+
 .form__label {
     box-sizing: content-box;
     position: fixed;
@@ -849,6 +847,7 @@ input#exit {
     outline: 0;
     font-size: 24px;
 }
+
 
 .page-ok {
     width: 50%;
@@ -882,6 +881,7 @@ label {
     margin-top: 188px;
 }
 
+
 .update {
     position: absolute;
     font-size: 20px;
@@ -895,14 +895,10 @@ label {
     font-weight: bold;
 }
 
-
 /* -------------------------- */
-
-
 /*     Responsive Elements    */
-
-
 /* -------------------------- */
+
 
 @media only screen and (max-width: 1024px) and (min-width: 760px) {
     .container {
@@ -932,13 +928,14 @@ label {
         left: 12%;
     }
 }
-
+/* ipad pro */
 @media only screen and (min-width: 1000px) and (max-width: 1340px) {
     .page-button.scoundButton,
     .page-button.firstButton {
         position: relative;
         left: 12.5%;
     }
+
     .textPageReceiptCode {
         width: 443%;
         height: 109px;
@@ -953,6 +950,7 @@ label {
         font-size: 2.5rem;
         transform: translate(43%, -26%);
     }
+
     .page-button.buttonReceiptCode {
         left: 24%;
         position: absolute;
@@ -962,9 +960,192 @@ label {
         font-weight: bold;
         width: 78%;
     }
+
+    /* identifying info.. */
+    .accordion-tabs .accordion-tab.accordion-active {
+        background: #584099;
+        border: 2px solid #584099;
+        border-radius: 36px 35px;
+        text-align: center;
+        color: #ffffff;
+        border-top-width: 11px;
+        padding-right: 15%;
+        border-right-width: 17px;
+        padding-left: 4%;
+        outline: 0;
+    }
+    .accordion-tabs {
+        background: transparent;
+        border: 2px solid #584099;
+        border-radius: 36px 35px;
+        height: 77px;
+    }
+    .accordion-item {
+        padding: 4.4rem;
+        display: none;
+        border: none;
+        background: transparent;
+    }
+
+    /* NewInfo */
+    .title1 {
+        position: fixed;
+        top: 35%;
+        left: 48%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type1 {
+        position: fixed;
+        top: 38%;
+        left: 27%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+    .title2 {
+        position: fixed;
+        top: 50%;
+        left: 46%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type2 {
+        position: fixed;
+        top: 53%;
+        left: 53%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+    .title3 {
+        position: fixed;
+        top: 66%;
+        left: 42%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type3 {
+        position: fixed;
+        top: 69%;
+        left: 61%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+    .title4 {
+        position: fixed;
+        top: 81%;
+        left: 55%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type4 {
+        position: fixed;
+        top: 85%;
+        left: 47%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
 }
 
-@media only screen and (max-width: 767px) {}
+/* ipad */
+@media only screen and (min-width: 750px) and (max-width: 780px) {
+    /* identifying info.. */
+
+    .accordion-tabs .accordion-tab.accordion-active {
+        background: #584099;
+        border: 2px solid #584099;
+        border-radius: 36px 35px;
+        text-align: center;
+        color: #ffffff;
+        border-top-width: 8px;
+        padding-right: 30px;
+        border-right-width: 17px;
+        padding-left: 11%;
+        /* opacity: 1; */
+        outline: 0;
+    }
+
+    /* NewInfo */
+    .title1 {
+        position: fixed;
+        top: 31%;
+        left: 48%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type1 {
+        position: fixed;
+        top: 33%;
+        left: 27%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+    .title2 {
+        position: fixed;
+        top: 48%;
+        left: 46%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type2 {
+        position: fixed;
+        top: 50%;
+        left: 53%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+    .title3 {
+        position: fixed;
+        top: 64%;
+        left: 42%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type3 {
+        position: fixed;
+        top: 67%;
+        left: 61%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+    .title4 {
+        position: fixed;
+        top: 81%;
+        left: 55%;
+        font-size: 18px;
+        z-index: 1;
+        color: white;
+        opacity: 0.6;
+    }
+    .type4 {
+        position: fixed;
+        top: 84%;
+        left: 47%;
+        font-size: 30px;
+        z-index: 1;
+        color: white;
+    }
+}
 
 @media only screen and (max-width: 479px) {
     .page .main-menu .cis {
@@ -1014,6 +1195,8 @@ label {
     ;
 }
 
+
+
 .text {
     position: absolute;
     color: white;
@@ -1039,18 +1222,15 @@ label {
         position: absolute;
         bottom: 3%;
     }
-}
+};
 
-;
 @media screen and (min-width: 823px) {
     #ok {
         left: 0%;
         position: absolute;
         bottom: 3%;
-    }
-}
+      }};
 
-;
 .orderbackground {
     transform: translate(-31%, 85%);
 }
