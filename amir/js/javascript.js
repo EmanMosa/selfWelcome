@@ -313,7 +313,7 @@ function setDataToNewInfoPage() {
 }
 
 function getReservationFromMiniHotelByInvitationType(invitationType) {
-    var Invitation = localStorage.getItem(invitationType);
+    var Invitation = (localStorage.getItem(invitationType)).toUpperCase();
 
     getDataFromMiniHotel();
     result = localStorage.getItem('responseFromMiniHotel');
@@ -331,7 +331,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
     while (IsFound != true && i < length) {
         console.log(i);
         if (invitationType == 'invitationbyNumber') {
-            if (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['ResNumber'].value == Invitation) {
+            if ((xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['ResNumber'].value).toUpperCase() == Invitation) {
                 IsFound = true;
                 console.log(IsFound);
                 localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
@@ -345,7 +345,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
             }
         } else if (invitationType == 'invitationByName') {
             var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
-            if (fullname == Invitation) {
+            if (fullname.toUpperCase() == Invitation) {
                 IsFound = true;
                 console.log(IsFound);
                 localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
