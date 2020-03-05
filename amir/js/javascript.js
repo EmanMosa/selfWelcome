@@ -177,7 +177,7 @@ function clickCounter() {
 
 }
 
-function hideme() {
+function ShowMe() {
 
 
     if (localStorage.getItem("counter") >= 3) {
@@ -205,9 +205,7 @@ function ChangeFontByLanguage() {
         elm2.style["font-size"] = "66%";
 
     }
-    if (language.code == "AR") {
-        // padding-right: 51px;
-    }
+
 
 }
 
