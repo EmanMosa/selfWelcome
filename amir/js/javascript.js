@@ -344,7 +344,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
                 }
             }
         } else if (invitationType == 'invitationByName') {
-            var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
+            var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value);
             if (fullname.toUpperCase() == Invitation) {
                 IsFound = true;
                 console.log(IsFound);
