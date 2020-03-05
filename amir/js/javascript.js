@@ -338,7 +338,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
                 window.document.location = './NewInfo.html';
             } else {
                 i++;
-                if (i == length - 1) {
+                if (i == length) {
                     // Reservation not found
                     window.document.location = './IdentifyingInformation.html';
                 }
@@ -352,7 +352,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
                 window.document.location = './NewInfo.html';
             } else {
                 i++;
-                if (i == length - 1) {
+                if (i == length) {
                     // Reservation not found
                     window.document.location = './IdentifyingInformation.html';
                 }
