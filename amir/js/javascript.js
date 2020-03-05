@@ -1,6 +1,6 @@
 function getLanguage(lang) {
     console.log("here test" + lang)
-
+    localStorage.clear();
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -75,7 +75,7 @@ function changeLanguageForIDScanner() {
 }
 
 function CheckIfCustomerExists() {
-    var Invitation = localStorage.getItem('invitationByName');
+    var Invitation = (localStorage.getItem('invitationByName')).toUpperCase();
     getDataFromMiniHotel();
     result = localStorage.getItem('responseFromMiniHotel');
     parser = new DOMParser();
@@ -85,33 +85,46 @@ function CheckIfCustomerExists() {
     IsFound = false;
     i = 0;
     while (IsFound != true && i < length) {
-        if (invitationType == 'invitationByName') {
-            var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
-            if (fullname == Invitation) {
-                IsFound = true;
-                console.log(IsFound);
-                localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
-                return true;
-            } else {
-                i++;
-                if (i == length - 1) {
 
-                    return false;
-                }
+        var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value);
+
+        if ((fullname.toUpperCase()) == Invitation) {
+            IsFound = true;
+            console.log(IsFound);
+            localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
+            return true;
+        } else {
+            i++;
+            if (i == length) {
+
+                return false;
             }
         }
+
     }
-    return false;
+    //  return false;
 }
 
 function checkInChoice() {
     //check if customer exists
-    var IsFound = CheckIfCustomerExists();
-    if (IsFound == false) {
+    var Status = localStorage.getItem('imageScanStatus');
+    var fullname = localStorage.getItem('invitationByName');
+
+    if (Status == 'true') {
+        if (fullname != null) {
+            var IsFound = CheckIfCustomerExists();
+            if (IsFound == false) {
+                window.document.location = './CustomerNotFound.html';
+            } else if (IsFound == true) {
+                window.document.location = './OrderDetails.html';
+            }
+        } else {
+            window.document.location = './CustomerNotFound.html';
+        }
+    } else if (Status == 'false') {
         window.document.location = './CustomerNotFound.html';
-    } else if (IsFound == true) {
-        window.document.location = './OrderDetails.html';
     }
+
 }
 
 function checkchoice() {
@@ -129,14 +142,17 @@ function previewFile() {
     const preview = document.getElementById('img');
     const file = document.querySelector('input[type=file]').files[0];
     const reader = new FileReader();
-
+    localStorage.removeItem('invitationByName');
     reader.addEventListener("load", function() {
         // convert image file to base64 string
-        preview.src = reader.result;
+        //preview.src = reader.result;
+        localStorage.setItem("orginalImage", reader.result);
         var imageStr = reader.result;
         imageStr = imageStr.substr(23, imageStr.length)
         console.log(imageStr);
         localStorage.setItem("image", imageStr);
+        getData();
+        checkchoice();
 
 
 
@@ -146,8 +162,8 @@ function previewFile() {
     if (file) {
         reader.readAsDataURL(file);
     }
-    getData();
-    checkchoice();
+    //getData();
+    //checkchoice();
 
 
 }
@@ -240,7 +256,7 @@ function changeLanguageForIdentifyingInformation() {
 function getDataFromMiniHotel() {
     var d = $.Deferred();
     var array = [];
-    var Query = "<DateRange from='2020-02-22' to='2020-02-23' /> ";
+    var Query = "<DateRange from='2020-03-05' to='2020-03-06' /> ";
 
     var xmlRequest =
         "<?xml version='1.0' encoding='UTF-8' ?>" +
@@ -319,6 +335,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
                 IsFound = true;
                 console.log(IsFound);
                 localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
+                window.document.location = './NewInfo.html';
             } else {
                 i++;
                 if (i == length - 1) {
@@ -332,6 +349,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
                 IsFound = true;
                 console.log(IsFound);
                 localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
+                window.document.location = './NewInfo.html';
             } else {
                 i++;
                 if (i == length - 1) {
@@ -343,7 +361,7 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
 
     }
 
-    window.document.location = './NewInfo.html';
+    // window.document.location = './NewInfo.html';
 
 }
 
@@ -900,11 +918,15 @@ function getData2(transactionID, xtoken) {
             console.log('Succes: ' + response.responseText + ',' + result);
             var parser = new DOMParser();
             var xmlDoc = parser.parseFromString(response.responseText, "text/xml");
+            //var xmlDoc = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><!--Regula Reader result file--><DOC_OCR_LEXICAL_ANALYSIS_DATA>    <PageIndex>0</PageIndex>    <Info>                <DateTime>2020-03-04T08:02:45.609Z</DateTime>        <TransactionID>2b5639db-d398-4914-afde-47a5cdbc568d</TransactionID>        <ComputerName>WIN-0CUASKLUHPE</ComputerName>        <UserName>SYSTEM</UserName>        <SDKVersion>4.15.1.4291</SDKVersion>        <Version>14.15.2.19305</Version>        <DeviceType>Virtual Reader</DeviceType>        <DeviceNumber>0x3BD28364</DeviceNumber>        <DeviceLabelSerialNumber>3BD28364-871B-4B51-98061A2A793CFEA5</DeviceLabelSerialNumber>    </Info>    <DateFormat>M/d/yyyy</DateFormat>    <Document_Field_Analysis_Info>                <FieldType>0</FieldType>        <Type>0</Type>        <LCID>0</LCID>        <Field_MRZ>P</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>1</FieldType>        <Type>1</Type>        <LCID>0</LCID>        <Field_MRZ>ISR</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>2</FieldType>        <Type>2</Type>        <LCID>0</LCID>        <Field_MRZ>A22411393</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>3</FieldType>        <Type>3</Type>        <LCID>0</LCID>        <Field_MRZ>M25082</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>5</FieldType>        <Type>5</Type>        <LCID>0</LCID>        <Field_MRZ>R94062</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>7</FieldType>        <Type>7</Type>        <LCID>0</LCID>        <Field_MRZ>6205567829</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>8</FieldType>        <Type>8</Type>        <LCID>0</LCID>        <Field_MRZ>ABU HAMED</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>9</FieldType>        <Type>9</Type>        <LCID>0</LCID>        <Field_MRZ>RAFAT</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>11</FieldType>        <Type>11</Type>        <LCID>0</LCID>        <Field_MRZ>9IS</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>12</FieldType>        <Type>12</Type>        <LCID>0</LCID>        <Field_MRZ>0</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>25</FieldType>        <Type>25</Type>        <LCID>0</LCID>        <Field_MRZ>ABU HAMED RAFAT</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>26</FieldType>        <Type>26</Type>        <LCID>0</LCID>        <Field_MRZ>9IS</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>36</FieldType>        <Type>36</Type>        <LCID>0</LCID>        <Field_MRZ>6205567829</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>38</FieldType>        <Type>38</Type>        <LCID>0</LCID>        <Field_MRZ>Israel</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>51</FieldType>        <Type>51</Type>        <LCID>0</LCID>        <Field_MRZ>P<ISRABU<HAMED<<RAFAT<<<<<<<<<<<<<<<<<<<<<<< A22411393<9ISR9406270M25082562<0556782<9<<<2</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>81</FieldType>        <Type>81</Type>        <LCID>0</LCID>        <Field_MRZ>7</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>';
             console.log(xmlDoc);
+            localStorage.setItem('imageScanStatus', true)
+
             extractFullName(xmlDoc);
 
         },
         error: function(jqXHR, status) {
+            localStorage.setItem('imageScanStatus', false)
             console.log("Error: ", jqXHR.responseText + " " + status);
         }
 
@@ -914,11 +936,11 @@ function getData2(transactionID, xtoken) {
 
 function extractFullName(xmlDoc) {
     var FullName = "";
-    parser = new DOMParser();
-    // xmlDoc = parser.parseFromString(xmlDoc,"text/xml");
+    // parser = new DOMParser();
+    //xmlDoc = parser.parseFromString(xmlDoc, "text/xml");
     x = xmlDoc.documentElement.children;
     for (i = 0; i < x.length; i++) {
-
+        console.log(x[i].children[0] && x[i].children[0].innerHTML);
         if (x[i].children[0] && x[i].children[0].innerHTML == 25) {
             console.log(x[i].children[3].innerHTML);
             FullName = x[i].children[3].innerHTML;
@@ -933,6 +955,6 @@ function extractFullName(xmlDoc) {
 
 function orderDetailsData() {
     document.getElementById("customer").innerHTML = localStorage.getItem("invitationByName");
-    document.getElementById("imageid").src = localStorage.getItem("image");
+    document.getElementById("imageid").src = localStorage.getItem("orginalImage");
 
 }

@@ -1,5 +1,9 @@
 /* ---------------------------- */
+
+
 /*          HTML page           */
+
+
 /* ---------------------------- */
 
 @font-face {
@@ -45,6 +49,7 @@ section {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .page-content {
     font-family: 'Assistant', Fallback, sans-serif;
     text-align: center;
@@ -53,14 +58,12 @@ section {
     text-align: center;
 }
 
-
 .main-menu {
     font-family: 'Assistant-bold', Fallback, sans-serif;
     text-align: center;
     color: #5A4199;
     font-size: 1.5em;
 }
-
 
 .logo-page {
     width: 60%;
@@ -91,9 +94,15 @@ section {
     width: 100%;
 }
 
+
 /* ---------------------------- */
+
+
 /*      ChooseLanguage page     */
+
+
 /* ---------------------------- */
+
 .page1 {
     background-image: linear-gradient(to bottom, rgba(3, 177, 254, 0.52) 0%, rgba(26, 100, 180, 0.52) 45%, rgba(50, 15, 112, 0.73) 100%), url('../img/Image\ 1.png');
     margin-left: auto;
@@ -124,15 +133,21 @@ section {
 }
 
 
-
 /* ---------------------------- */
+
+
 /*      chooseEntries page      */
+
+
 /* ---------------------------- */
 
 
-
 /* ---------------------------- */
+
+
 /*        IDScanner page        */
+
+
 /* ---------------------------- */
 
 .subtitle3 {
@@ -153,9 +168,15 @@ section {
     left: -43%;
 }
 
+
 /* ---------------------------- */
+
+
 /*     CustomerNotFound page    */
+
+
 /* ---------------------------- */
+
 .img {
     margin-bottom: 4%;
 }
@@ -178,8 +199,13 @@ section {
     left: -9.5%;
 }
 
+
 /* ---------------------------- */
+
+
 /* IdentifyingInformation page  */
+
+
 /* ---------------------------- */
 
 .accordion-tabs {
@@ -260,7 +286,6 @@ section {
     word-wrap: break-word;
 }
 
-
 .accordion-item__label:focus {
     padding-bottom: 6px;
     top: 100%;
@@ -279,7 +304,11 @@ section {
 
 
 /* ---------------------------- */
+
+
 /*      Order Details page      */
+
+
 /* ---------------------------- */
 
 .imgid {
@@ -294,7 +323,11 @@ section {
 
 
 /* ---------------------------- */
+
+
 /*         New Info page        */
+
+
 /* ---------------------------- */
 
 .card {
@@ -306,14 +339,12 @@ section {
     width: -webkit-fill-available;
 }
 
-
 .image2 {
     position: absolute;
     right: 36px;
     margin-right: 0px;
     margin-top: 18px;
 }
-
 
 .title1 {
     position: fixed;
@@ -401,11 +432,13 @@ section {
 }
 
 
-
 /* ---------------------------- */
+
+
 /*     Receipt Code page        */
-/* ---------------------------- */
 
+
+/* ---------------------------- */
 
 .page-content.titleReceiptCode {
     position: absolute;
@@ -445,9 +478,12 @@ section {
 
 
 /* ---------------------------- */
-/*     Citizen Ship page        */
-/* ---------------------------- */
 
+
+/*     Citizen Ship page        */
+
+
+/* ---------------------------- */
 
 .VtybeInfo img {
     width: 17vw;
@@ -458,7 +494,7 @@ section {
     font-size: 3vw;
 }
 
-.CTSEction{
+.CTSEction {
     color: white;
     padding: 1em;
     position: absolute;
@@ -469,8 +505,13 @@ section {
     text-align: center;
 }
 
+
 /* ---------------------------- */
+
+
 /*  NumberOfPeopleInRoom1 page  */
+
+
 /* ---------------------------- */
 
 .pageNumberPeople .VtybeInfo img {
@@ -488,7 +529,11 @@ section {
 
 
 /* ---------------------------- */
+
+
 /*  NumberOfPeopleInRoom2 page  */
+
+
 /* ---------------------------- */
 
 .NumberOfPeopleRoom2 .page-content {
@@ -527,7 +572,11 @@ section {
 
 
 /* ---------------------------- */
+
+
 /*      TypingFullName page     */
+
+
 /* ---------------------------- */
 
 div.container {
@@ -554,7 +603,11 @@ h1#info {
 
 
 /* ---------------------------- */
+
+
 /*        Choose Date page      */
+
+
 /* ---------------------------- */
 
 div#chosedate {
@@ -564,7 +617,6 @@ div#chosedate {
     letter-spacing: 0px;
     margin-bottom: 5%;
 }
-
 
 div#datemain {
     border: 6px #254DDE66;
@@ -627,7 +679,6 @@ input#exit {
     width: 9em;
 }
 
-
 .page-button.ButtonForChooseDate {
     transform: translate(5px, 118%);
 }
@@ -638,9 +689,12 @@ input#exit {
 
 
 /* ---------------------------- */
-/*       choose-room page       */
-/* ---------------------------- */
 
+
+/*       choose-room page       */
+
+
+/* ---------------------------- */
 
 .cardInfo {
     width: fit-content;
@@ -681,7 +735,6 @@ input#exit {
     left: 0%;
 }
 
-
 .card .rightSection img {
     position: relative;
     top: 15%;
@@ -706,47 +759,8 @@ input#exit {
     left: 21%;
 }
 
+
 /* __________________________________________________________________ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #tab1 {
     border-radius: 30px;
@@ -763,8 +777,6 @@ input#exit {
 .img {
     margin-bottom: 4%;
 }
-
-
 
 .page-button.scoundButton {
     background: rgba(108, 35, 169, 1);
@@ -794,10 +806,6 @@ input#exit {
     background-color: rgba(224, 209, 237, 0.4);
 }
 
-
-
-
-
 .page-button.ButtonForChooseRoom {
     background-color: #8B4DB8;
     box-sizing: border-box;
@@ -807,14 +815,9 @@ input#exit {
     top: 100%;
 }
 
-
-
 .page-button:active {
     background-color: #C29CDE;
 }
-
-
-
 
 
 /* eman for Buttons */
@@ -831,14 +834,6 @@ input#exit {
     height: 403px;
 }
 
-
-
-
-
-
-
-
-
 .form__label {
     box-sizing: content-box;
     position: fixed;
@@ -854,7 +849,6 @@ input#exit {
     outline: 0;
     font-size: 24px;
 }
-
 
 .page-ok {
     width: 50%;
@@ -888,7 +882,6 @@ label {
     margin-top: 188px;
 }
 
-
 .update {
     position: absolute;
     font-size: 20px;
@@ -902,10 +895,14 @@ label {
     font-weight: bold;
 }
 
-/* -------------------------- */
-/*     Responsive Elements    */
+
 /* -------------------------- */
 
+
+/*     Responsive Elements    */
+
+
+/* -------------------------- */
 
 @media only screen and (max-width: 1024px) and (min-width: 760px) {
     .container {
@@ -935,13 +932,13 @@ label {
         left: 12%;
     }
 }
+
 @media only screen and (min-width: 1000px) and (max-width: 1340px) {
     .page-button.scoundButton,
     .page-button.firstButton {
         position: relative;
         left: 12.5%;
     }
-
     .textPageReceiptCode {
         width: 443%;
         height: 109px;
@@ -956,7 +953,6 @@ label {
         font-size: 2.5rem;
         transform: translate(43%, -26%);
     }
-
     .page-button.buttonReceiptCode {
         left: 24%;
         position: absolute;
@@ -966,8 +962,8 @@ label {
         font-weight: bold;
         width: 78%;
     }
-    
 }
+
 @media only screen and (max-width: 767px) {}
 
 @media only screen and (max-width: 479px) {
@@ -1018,8 +1014,6 @@ label {
     ;
 }
 
-
-
 .text {
     position: absolute;
     color: white;
@@ -1045,15 +1039,18 @@ label {
         position: absolute;
         bottom: 3%;
     }
-};
+}
 
+;
 @media screen and (min-width: 823px) {
     #ok {
         left: 0%;
         position: absolute;
         bottom: 3%;
-      }};
+    }
+}
 
+;
 .orderbackground {
     transform: translate(-31%, 85%);
 }
