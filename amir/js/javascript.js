@@ -510,7 +510,7 @@ function changeLanguageForNewInfo() {
     document.getElementById("opt4").innerHTML = page.opt4;
     document.getElementById("opt5").innerHTML = page.opt5;
     document.getElementById("ok").innerHTML = page.ok;
-    document.getElementById("opt3").innerHTML = page.opt3;
+    //document.getElementById("opt3").innerHTML = page.opt3;
     ChangeTextToLeft();
 
 
@@ -784,7 +784,7 @@ function changeLanguageForChooseRoom() {
     document.getElementById("opt43").innerHTML = page.opt4;
     document.getElementById("opt53").innerHTML = page.opt5;
 
-    document.getElementById("opt3").innerHTML = page.opt3;
+    //document.getElementById("opt3").innerHTML = page.opt3;
 
     document.getElementById("ok").innerHTML = page.ok;
     ChangeimageToLeftForChooseRoom();
