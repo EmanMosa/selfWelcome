@@ -728,7 +728,7 @@ function changeLanguageForTypingFullName() {
 }
 
 
-function OnClickForButton2() {
+function ButtonForTypingFullName() {
 
     var value = document.getElementById('TypingName').value;
     window.document.location = './payment.html';
