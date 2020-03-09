@@ -251,12 +251,29 @@ function changeLanguageForIdentifyingInformation() {
 }
 
 
+function getDateNow() {
+    DateNow = new Date();
+    day = String(DateNow.getDate());
+    month = String(DateNow.getMonth());
+    year = String(DateNow.getFullYear());
+    if (month < 10)
+        day = '0' + String(DateNow.getMonth());
 
+    if (day < 10)
+        month = '0' + String(DateNow.getDate());
+    date = year + '-' + month + '-' + day;
+
+    localStorage.setItem('Date', date);
+}
 
 function getDataFromMiniHotel() {
     var d = $.Deferred();
     var array = [];
-    var Query = "<DateRange from='2020-03-05' to='2020-03-06' /> ";
+    getDateNow();
+    from = localStorage.getItem('Date');
+    to = from;
+    var Query = "<DateRange from=" + "'" + from + "'" + " to=" + "'" + to + "'" + " /> ";
+    //var Query = "<DateRange from='2020-03-05' to='2020-03-06' /> ";
 
     var xmlRequest =
         "<?xml version='1.0' encoding='UTF-8' ?>" +
@@ -621,7 +638,67 @@ function changeLanguageForNumberOfPeopleInRoom2() {
 
 }
 
-function nextPageForrNumberOfPeopleInRoom2(room, people) {
+function ButtonForNumberOfPeopleInRoom2page() {
+    var countEl = document.getElementById("Numcount");
+    console.log("people = ", document.getElementById("Numcount").innerText);
+    console.log("room = ", document.getElementById("Numcount2").innerText);
+    nextPageForNumberOfPeopleInRoom2(document.getElementById("Numcount2").innerText, document.getElementById("Numcount").innerText);
+
+}
+
+
+function initFunction() {
+    localStorage.setItem('max', 10);
+    localStorage.setItem('min', 1);
+    localStorage.setItem('count', 1);
+
+    localStorage.setItem('count2', 1);
+
+}
+
+function PlusForNumberOfPeople() {
+    if (parseInt(localStorage['count']) <= parseInt(localStorage['max'])) {
+        localStorage['count']++;
+        document.getElementById("Numcount").innerText = localStorage['count'];
+    } else {
+        document.getElementById("Numcount").innerText = localStorage['count'];
+    }
+
+
+}
+
+function MinusForNumberOfPeople() {
+    if (parseInt(localStorage['count']) > parseInt(localStorage['min'])) {
+        localStorage['count']--;
+        document.getElementById("Numcount").innerText = localStorage['count'];
+    } else {
+        document.getElementById("Numcount").innerText = localStorage['count'];
+    }
+}
+
+
+
+function PlusForNumberOfRoom() {
+    if (parseInt(localStorage['count2']) <= parseInt(localStorage['max'])) {
+        localStorage['count2']++;
+        document.getElementById("Numcount2").innerText = localStorage['count2'];
+    } else {
+        document.getElementById("Numcount2").innerText = localStorage['count2'];
+    }
+
+
+}
+
+function MinusForNumberOfRoom() {
+    if (parseInt(localStorage['count2']) > parseInt(localStorage['min'])) {
+        localStorage['count2']--;
+        document.getElementById("Numcount2").innerText = localStorage['count2'];
+    } else {
+        document.getElementById("Numcount2").innerText = localStorage['count2'];
+    }
+}
+
+function nextPageForNumberOfPeopleInRoom2(room, people) {
     localStorage.removeItem('ListForRooms');
     localStorage.removeItem('myFavoriteSandwich');
 

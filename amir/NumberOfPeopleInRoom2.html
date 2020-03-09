@@ -8,7 +8,7 @@
     <script src="js/javascript.js"></script>
 </head>
 
-<body class="page" onload="changeLanguageForNumberOfPeopleInRoom2()">
+<body class="page" onload="changeLanguageForNumberOfPeopleInRoom2(),initFunction()">
     <img class="center-hor top-page" src="img/top-page.png" />
     <img class="center-hor logo-page" src="img/logo.png" />
     <section class="NumberOfPeopleRoom2">
@@ -18,81 +18,23 @@
             <h3 id="subtitle" style="margin-top: 12%;font-size: 4vw; color: #576169;">מלאו הפרטים</h3>
             <div class="PlusMinusCounter">
                 <h3 id="opt1" class="title">מספר אנשים</h3>
-                <input id="Pluscount" class="rounded_btn" onclick="Plus()" type="button" value="+">
-                <span id="Numcount" class="Numcount">0</span>
-                <input id="Minuscount" class="rounded_btn" onclick="Minus()" type="button" value="-">
+                <input id="Pluscount" class="rounded_btn" onclick="PlusForNumberOfPeople()" type="button" value="+">
+                <span id="Numcount" class="Numcount">1</span>
+                <input id="Minuscount" class="rounded_btn" onclick="MinusForNumberOfPeople()" type="button" value="-">
             </div>
 
             <div class="PlusMinusCounter">
                 <h3 id="opt2" class="title">מספר חדרים</h3>
-                <input id="Pluscount" class="rounded_btn" onclick="Plus2()" type="button" value="+">
-                <span id="Numcount2" class="Numcount">0</span>
-                <input id="Minuscount" class="rounded_btn" onclick="Minus2()" type="button" value="-">
+                <input id="Pluscount" class="rounded_btn" onclick="PlusForNumberOfRoom()" type="button" value="+">
+                <span id="Numcount2" class="Numcount">1</span>
+                <input id="Minuscount" class="rounded_btn" onclick="MinusForNumberOfRoom()" type="button" value="-">
             </div>
             </br>
-            <div id="ok" class="page-button" onclick="log()">אישור</div>
+            <div id="ok" class="page-button" onclick="ButtonForNumberOfPeopleInRoom2page()">אישור</div>
         </div>
 
     </section>
-    <script>
-        function log() {
-            var countEl = document.getElementById("Numcount");
-            console.log("room = ", document.getElementById("Numcount").innerText);
-            console.log("people = ", document.getElementById("Numcount2").innerText);
-            nextPageForrNumberOfPeopleInRoom2(document.getElementById("Numcount2").innerText, document.getElementById("Numcount").innerText);
 
-        }
-        /////////////////////////////
-        var max = 3,
-            min = 0;
-        var count = 0;
-        var countEl = document.getElementById("Numcount");
-
-        function Plus() {
-            if (count < max) {
-                count++;
-                countEl.innerText = count;
-            } else {
-                countEl.innerText = count;
-            }
-
-
-        }
-
-        function Minus() {
-            if (count > min) {
-                count--
-                countEl.innerText = count;
-            } else {
-                countEl.innerText = count;
-            }
-        }
-
-        /////////////////////////////
-
-        var count2 = 0;
-        var countEl2 = document.getElementById("Numcount2");
-
-        function Plus2() {
-            if (count2 < max) {
-                count2++;
-                countEl2.innerText = count2;
-            } else {
-                countEl2.innerText = count2;
-            }
-
-
-        }
-
-        function Minus2() {
-            if (count2 > min) {
-                count2--
-                countEl2.innerText = count2;
-            } else {
-                countEl2.innerText = count2;
-            }
-        }
-    </script>
 </body>
 
 </html>
