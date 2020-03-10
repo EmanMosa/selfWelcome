@@ -85,10 +85,9 @@ function CheckIfCustomerExists() {
     IsFound = false;
     i = 0;
     while (IsFound != true && i < length) {
-
-        var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value);
-
-        if ((fullname.toUpperCase()) == Invitation) {
+        var fullname1 = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value);
+        var fullname2 = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
+        if (fullname1.toUpperCase() == Invitation || fullname2.toUpperCase() == Invitation) {
             IsFound = true;
             console.log(IsFound);
             localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
@@ -361,8 +360,9 @@ function getReservationFromMiniHotelByInvitationType(invitationType) {
                 }
             }
         } else if (invitationType == 'invitationByName') {
-            var fullname = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value);
-            if (fullname.toUpperCase() == Invitation) {
+            var fullname1 = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value);
+            var fullname2 = (xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namep'].value + " " + xmlDoc.getElementsByTagName("Reservations")[0].children[i].attributes['Namef'].value);
+            if (fullname1.toUpperCase() == Invitation || fullname2.toUpperCase() == Invitation) {
                 IsFound = true;
                 console.log(IsFound);
                 localStorage.setItem('Reservation', (new XMLSerializer()).serializeToString(xmlDoc.getElementsByTagName("Reservations")[0].children[i]));
