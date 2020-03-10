@@ -126,13 +126,41 @@ function checkInChoice() {
 
 }
 
+function DayUseOrwalkInChoice() {
+
+    var Status = localStorage.getItem('imageScanStatus');
+    var fullname = localStorage.getItem('invitationByName');
+
+    if (Status == 'true') {
+        if (fullname != null) {
+            window.document.location = './OrderDetails.html';
+
+        } else {
+            window.document.location = './IDScanner.html';
+        }
+    } else if (Status == 'false') {
+        window.document.location = './IDScanner.html';
+    }
+
+}
+nextPageForOrderDetailsPageByChoice() {
+    var choice = localStorage.getItem("choice");
+    if (choice == "checkIn") {
+        window.document.location = 'NewInfo.html'
+    } else if ((choice == "walkIn" || choice == "dayUse")) {
+        //if the User choice walkin or DayUse
+        window.document.location = './CitizenShip.html';
+
+    }
+}
+
 function checkchoice() {
     var choice = localStorage.getItem("choice");
     if (choice == "checkIn") {
         checkInChoice();
     } else if ((choice == "walkIn" || choice == "dayUse")) {
         //if the User choice walkin or DayUse
-        window.document.location = './CitizenShip.html';
+        DayUseOrwalkInChoice();
 
     }
 }
@@ -609,13 +637,13 @@ function changeLanguageForNumberOfPeopleInRoom1() {
 
 function choiceForNumberOfPeopleInRoom1(id) {
     if (id == "onePerson") {
-        window.document.location = 'ChooseDate.html';
+        window.document.location = 'choose-room.html';
 
     } else if (id == "couple") {
-        window.document.location = 'ChooseDate.html';
+        window.document.location = 'choose-room.html';
 
     } else if (id == "group") {
-        window.document.location = 'ChooseDate.html';
+        window.document.location = 'choose-room.html';
 
     }
 }
@@ -878,35 +906,35 @@ function RoomChoice(id) {
 }
 //not compleate
 function ButtonForChooseRoom() {
-    for (i = 0; i < localStorage.getItem("helpValue"); i++) {
+    // for (i = 0; i < localStorage.getItem("helpValue"); i++) {
 
-        localStorage.setItem('helpValue', (localStorage.getItem("helpValue")) - 1);
-        var existing = localStorage.getItem('ListForRooms');
+    //     localStorage.setItem('helpValue', (localStorage.getItem("helpValue")) - 1);
+    //     var existing = localStorage.getItem('ListForRooms');
 
-        // If no existing data, create an array
-        // Otherwise, convert the localStorage string to an array
-        existing = existing ? existing.split(',') : [];
+    //     // If no existing data, create an array
+    //     // Otherwise, convert the localStorage string to an array
+    //     existing = existing ? existing.split(',') : [];
 
-        // Add new data to localStorage Array
-        existing.push(localStorage.getItem('RoomChoice'));
+    //     // Add new data to localStorage Array
+    //     existing.push(localStorage.getItem('RoomChoice'));
 
-        // Save back to localStorage
-        localStorage.setItem('ListForRooms', existing.toString());
-        if (localStorage.getItem("helpValue") != 0) {
-            window.document.location = "./choose-room.html";
-        } else {
-            break;
-        }
-
-
+    //     // Save back to localStorage
+    //     localStorage.setItem('ListForRooms', existing.toString());
+    //     if (localStorage.getItem("helpValue") != 0) {
+    //         window.document.location = "./choose-room.html";
+    //     } else {
+    //         break;
+    //     }
 
 
 
 
 
-    }
-    if (localStorage.getItem("helpValue") == 0)
-        window.document.location = "./ChooseDate.html";
+
+
+    // }
+    //if (localStorage.getItem("helpValue") == 0)
+    window.document.location = "./ChooseDate.html";
 }
 
 var Authentication = ({
