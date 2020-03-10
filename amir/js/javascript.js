@@ -282,13 +282,13 @@ function changeLanguageForIdentifyingInformation() {
 function getDateNow() {
     DateNow = new Date();
     day = String(DateNow.getDate());
-    month = String(DateNow.getMonth() + 1);
+    month = String((DateNow.getMonth()) + 1);
     year = String(DateNow.getFullYear());
     if (month < 10)
-        month = '0' + String(DateNow.getMonth());
+        month = '0' + String(month);
 
     if (day < 10)
-        day = '0' + String(DateNow.getDate());
+        day = '0' + String(day);
     date = year + '-' + month + '-' + day;
 
     localStorage.setItem('Date', date);
