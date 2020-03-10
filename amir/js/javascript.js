@@ -143,7 +143,8 @@ function DayUseOrwalkInChoice() {
     }
 
 }
-nextPageForOrderDetailsPageByChoice() {
+
+function nextPageForOrderDetailsPageByChoice() {
     var choice = localStorage.getItem("choice");
     if (choice == "checkIn") {
         window.document.location = 'NewInfo.html'
