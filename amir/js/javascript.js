@@ -285,10 +285,10 @@ function getDateNow() {
     month = String(DateNow.getMonth());
     year = String(DateNow.getFullYear());
     if (month < 10)
-        day = '0' + String(DateNow.getMonth());
+        month = '0' + String(DateNow.getMonth());
 
     if (day < 10)
-        month = '0' + String(DateNow.getDate());
+        day = '0' + String(DateNow.getDate());
     date = year + '-' + month + '-' + day;
 
     localStorage.setItem('Date', date);
