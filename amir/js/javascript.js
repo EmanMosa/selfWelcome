@@ -282,7 +282,7 @@ function changeLanguageForIdentifyingInformation() {
 function getDateNow() {
     DateNow = new Date();
     day = String(DateNow.getDate());
-    month = String(DateNow.getMonth());
+    month = String(DateNow.getMonth() + 1);
     year = String(DateNow.getFullYear());
     if (month < 10)
         month = '0' + String(DateNow.getMonth());
