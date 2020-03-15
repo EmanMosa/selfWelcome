@@ -121,6 +121,7 @@ function checkInChoice() {
             window.document.location = './CustomerNotFound.html';
         }
     } else if (Status == 'false') {
+
         window.document.location = './CustomerNotFound.html';
     }
 
@@ -136,10 +137,16 @@ function DayUseOrwalkInChoice() {
             window.document.location = './OrderDetails.html';
 
         } else {
-            window.document.location = './IDScanner.html';
+            // window.document.location = './IDScanner.html';
+            //for the flow
+            window.document.location = './CitizenShip.html';
+
         }
     } else if (Status == 'false') {
-        window.document.location = './IDScanner.html';
+        // window.document.location = './IDScanner.html';
+        //for the flow 
+        window.document.location = './CitizenShip.html';
+
     }
 
 }
@@ -148,11 +155,12 @@ function nextPageForOrderDetailsPageByChoice() {
     var choice = localStorage.getItem("choice");
     if (choice == "checkIn") {
         window.document.location = 'NewInfo.html'
-    } else if ((choice == "walkIn" || choice == "dayUse")) {
-        //if the User choice walkin or DayUse
-        window.document.location = './CitizenShip.html';
-
     }
+    //  else if ((choice == "walkIn" || choice == "dayUse")) {
+    //     //if the User choice walkin or DayUse
+    //     window.document.location = './CitizenShip.html';
+
+    // }
 }
 
 function checkchoice() {
@@ -339,19 +347,13 @@ function getDataFromMiniHotel() {
     });
 }
 
-function ReceiptCodeForUser() {
-    var code = Math.floor(Math.random() * 99999) + 10000;
-    console.log(code);
-    localStorage.setItem('Code', code);
-    console.log(localStorage['Code']);
-    //document.getElementById('code').placeholder = localStorage['Code'];
 
-}
 
 function setDataToNewInfoPage() {
     parser = new DOMParser();
     Reservation = parser.parseFromString(localStorage.getItem('Reservation'), "text/xml");
-
+    //localStorage.setItem('RoomTypeForUser', Reservation.documentElement.attributes['RoomType'].value);
+    //localStorage.setItem('RoomNumberForUser', Reservation.documentElement.attributes['RoomNumber'].value);
     document.getElementById('roomType').innerHTML = Reservation.documentElement.attributes['RoomType'].value;
     document.getElementById('roomNumber').innerHTML = Reservation.documentElement.attributes['RoomNumber'].value;
 
@@ -637,13 +639,19 @@ function changeLanguageForNumberOfPeopleInRoom1() {
 }
 
 function choiceForNumberOfPeopleInRoom1(id) {
+    localStorage.setItem('room', 1);
     if (id == "onePerson") {
+        localStorage.setItem('people', 1);
         window.document.location = 'choose-room.html';
 
     } else if (id == "couple") {
+        localStorage.setItem('people', 2);
+
         window.document.location = 'choose-room.html';
 
     } else if (id == "group") {
+        localStorage.setItem('people', 3);
+
         window.document.location = 'choose-room.html';
 
     }
@@ -728,12 +736,11 @@ function MinusForNumberOfRoom() {
 }
 
 function nextPageForNumberOfPeopleInRoom2(room, people) {
-    localStorage.removeItem('ListForRooms');
-    localStorage.removeItem('myFavoriteSandwich');
+
 
     localStorage.setItem('room', room);
     localStorage.setItem('people', people);
-    localStorage.setItem("helpValue", localStorage.getItem("room"));
+    //localStorage.setItem("helpValue", localStorage.getItem("room"));
     window.document.location = "./choose-room.html";
 
 }
@@ -760,6 +767,7 @@ function changeLanguageForTypingFullName() {
 function ButtonForTypingFullName() {
 
     var value = document.getElementById('TypingName').value;
+    localStorage.setItem('FullNameForWalkInOrDayUse', value);
     window.document.location = './payment.html';
 
 }
@@ -801,9 +809,10 @@ function changeLanguageForChooseDate() {
 }
 
 function getDateFromChooseDate() {
-    var start = document.getElementById("start");
-    var exit = document.getElementById("exit");
-
+    var start = document.getElementById("start").value;
+    var exit = document.getElementById("exit").value;
+    localStorage.setItem('StartTime', start);
+    localStorage.setItem('ExitTime', exit);
     window.document.location = './TypingFullName.html'
 }
 
@@ -907,52 +916,47 @@ function RoomChoice(id) {
 }
 //not compleate
 function ButtonForChooseRoom() {
-    // for (i = 0; i < localStorage.getItem("helpValue"); i++) {
+    type = localStorage.getItem('RoomChoice');
+    if (type == 'singleCard') {
+        localStorage.setItem('roomTypeName', 'Single');
+        localStorage.setItem('roomTypeID', 'SNG');
+    } else if (type == 'coupleCard') {
+        localStorage.setItem('roomTypeName', 'Couple');
+        localStorage.setItem('roomTypeID', 'CUB');
 
-    //     localStorage.setItem('helpValue', (localStorage.getItem("helpValue")) - 1);
-    //     var existing = localStorage.getItem('ListForRooms');
+    } else if (type == 'groupCard') {
+        localStorage.setItem('roomTypeName', 'Group');
+        localStorage.setItem('roomTypeID', 'GRB');
 
-    //     // If no existing data, create an array
-    //     // Otherwise, convert the localStorage string to an array
-    //     existing = existing ? existing.split(',') : [];
+    } else if (type == 'apartmentCard') {
+        localStorage.setItem('roomTypeName', 'Apartment');
+        localStorage.setItem('roomTypeID', 'APRT');
 
-    //     // Add new data to localStorage Array
-    //     existing.push(localStorage.getItem('RoomChoice'));
-
-    //     // Save back to localStorage
-    //     localStorage.setItem('ListForRooms', existing.toString());
-    //     if (localStorage.getItem("helpValue") != 0) {
-    //         window.document.location = "./choose-room.html";
-    //     } else {
-    //         break;
-    //     }
+    }
 
 
-
-
-
-
-
-    // }
-    //if (localStorage.getItem("helpValue") == 0)
     window.document.location = "./ChooseDate.html";
 }
 
-var Authentication = ({
-    "UserId": "testuser",
-    "Password": "Regul@SdkTest"
-});
-var Transaction2 = (
-    [{
-        "Base64ImageString": localStorage.getItem("image"),
-        "Format": ".jpg",
-        "LightIndex": 6,
-        "PageIndex": 0
-    }]
-);
+// var Authentication = ({
+//     "UserId": "testuser",
+//     "Password": "Regul@SdkTest"
+// });
+// var Transaction2 = (
+//     [{
+//         "Base64ImageString": localStorage.getItem("image"),
+//         "Format": ".jpg",
+//         "LightIndex": 6,
+//         "PageIndex": 0
+//     }]
+// );
 
 
 function getData() {
+    var Authentication = ({
+        "UserId": "testuser",
+        "Password": "Regul@SdkTest"
+    });
     var Url = 'https://api.regulaforensics.com/webapi/Authentication/Authenticate';
     $.ajax({
         url: Url,
@@ -977,6 +981,15 @@ function getData() {
 }
 
 function getData1(xtoken) {
+    var Transaction2 = (
+        [{
+            "Base64ImageString": localStorage.getItem("image"),
+            "Format": ".jpg",
+            "LightIndex": 6,
+            "PageIndex": 0
+        }]
+    );
+
     var Url = 'https://api.regulaforensics.com/webapi/Transaction2/SubmitTransaction?capabilities=252&authenticity=0';
     $.ajax({
         url: Url,
@@ -1024,7 +1037,7 @@ function getData2(transactionID, xtoken) {
             console.log('Succes: ' + response.responseText + ',' + result);
             var parser = new DOMParser();
             var xmlDoc = parser.parseFromString(response.responseText, "text/xml");
-            //var xmlDoc = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><!--Regula Reader result file--><DOC_OCR_LEXICAL_ANALYSIS_DATA>    <PageIndex>0</PageIndex>    <Info>                <DateTime>2020-03-04T08:02:45.609Z</DateTime>        <TransactionID>2b5639db-d398-4914-afde-47a5cdbc568d</TransactionID>        <ComputerName>WIN-0CUASKLUHPE</ComputerName>        <UserName>SYSTEM</UserName>        <SDKVersion>4.15.1.4291</SDKVersion>        <Version>14.15.2.19305</Version>        <DeviceType>Virtual Reader</DeviceType>        <DeviceNumber>0x3BD28364</DeviceNumber>        <DeviceLabelSerialNumber>3BD28364-871B-4B51-98061A2A793CFEA5</DeviceLabelSerialNumber>    </Info>    <DateFormat>M/d/yyyy</DateFormat>    <Document_Field_Analysis_Info>                <FieldType>0</FieldType>        <Type>0</Type>        <LCID>0</LCID>        <Field_MRZ>P</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>1</FieldType>        <Type>1</Type>        <LCID>0</LCID>        <Field_MRZ>ISR</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>2</FieldType>        <Type>2</Type>        <LCID>0</LCID>        <Field_MRZ>A22411393</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>3</FieldType>        <Type>3</Type>        <LCID>0</LCID>        <Field_MRZ>M25082</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>5</FieldType>        <Type>5</Type>        <LCID>0</LCID>        <Field_MRZ>R94062</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>7</FieldType>        <Type>7</Type>        <LCID>0</LCID>        <Field_MRZ>6205567829</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>8</FieldType>        <Type>8</Type>        <LCID>0</LCID>        <Field_MRZ>ABU HAMED</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>9</FieldType>        <Type>9</Type>        <LCID>0</LCID>        <Field_MRZ>RAFAT</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>11</FieldType>        <Type>11</Type>        <LCID>0</LCID>        <Field_MRZ>9IS</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>12</FieldType>        <Type>12</Type>        <LCID>0</LCID>        <Field_MRZ>0</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>25</FieldType>        <Type>25</Type>        <LCID>0</LCID>        <Field_MRZ>ABU HAMED RAFAT</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>26</FieldType>        <Type>26</Type>        <LCID>0</LCID>        <Field_MRZ>9IS</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>36</FieldType>        <Type>36</Type>        <LCID>0</LCID>        <Field_MRZ>6205567829</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>38</FieldType>        <Type>38</Type>        <LCID>0</LCID>        <Field_MRZ>Israel</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>51</FieldType>        <Type>51</Type>        <LCID>0</LCID>        <Field_MRZ>P<ISRABU<HAMED<<RAFAT<<<<<<<<<<<<<<<<<<<<<<< A22411393<9ISR9406270M25082562<0556782<9<<<2</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>81</FieldType>        <Type>81</Type>        <LCID>0</LCID>        <Field_MRZ>7</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>';
+            // var xmlDoc = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><!--Regula Reader result file--><DOC_OCR_LEXICAL_ANALYSIS_DATA>    <PageIndex>0</PageIndex>    <Info>                <DateTime>2020-03-04T08:02:45.609Z</DateTime>        <TransactionID>2b5639db-d398-4914-afde-47a5cdbc568d</TransactionID>        <ComputerName>WIN-0CUASKLUHPE</ComputerName>        <UserName>SYSTEM</UserName>        <SDKVersion>4.15.1.4291</SDKVersion>        <Version>14.15.2.19305</Version>        <DeviceType>Virtual Reader</DeviceType>        <DeviceNumber>0x3BD28364</DeviceNumber>        <DeviceLabelSerialNumber>3BD28364-871B-4B51-98061A2A793CFEA5</DeviceLabelSerialNumber>    </Info>    <DateFormat>M/d/yyyy</DateFormat>    <Document_Field_Analysis_Info>                <FieldType>0</FieldType>        <Type>0</Type>        <LCID>0</LCID>        <Field_MRZ>P</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>1</FieldType>        <Type>1</Type>        <LCID>0</LCID>        <Field_MRZ>ISR</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>2</FieldType>        <Type>2</Type>        <LCID>0</LCID>        <Field_MRZ>A22411393</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>3</FieldType>        <Type>3</Type>        <LCID>0</LCID>        <Field_MRZ>M25082</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>5</FieldType>        <Type>5</Type>        <LCID>0</LCID>        <Field_MRZ>R94062</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>7</FieldType>        <Type>7</Type>        <LCID>0</LCID>        <Field_MRZ>6205567829</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>8</FieldType>        <Type>8</Type>        <LCID>0</LCID>        <Field_MRZ>ABU HAMED</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>9</FieldType>        <Type>9</Type>        <LCID>0</LCID>        <Field_MRZ>RAFAT</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>11</FieldType>        <Type>11</Type>        <LCID>0</LCID>        <Field_MRZ>9IS</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>12</FieldType>        <Type>12</Type>        <LCID>0</LCID>        <Field_MRZ>0</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>25</FieldType>        <Type>25</Type>        <LCID>0</LCID>        <Field_MRZ>ABU HAMED RAFAT</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>26</FieldType>        <Type>26</Type>        <LCID>0</LCID>        <Field_MRZ>9IS</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>36</FieldType>        <Type>36</Type>        <LCID>0</LCID>        <Field_MRZ>6205567829</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>38</FieldType>        <Type>38</Type>        <LCID>0</LCID>        <Field_MRZ>Israel</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>1</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>51</FieldType>        <Type>51</Type>        <LCID>0</LCID>        <Field_MRZ>P<ISRABU<HAMED<<RAFAT<<<<<<<<<<<<<<<<<<<<<<< A22411393<9ISR9406270M25082562<0556782<9<<<2</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>0</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>    <Document_Field_Analysis_Info>                <FieldType>81</FieldType>        <Type>81</Type>        <LCID>0</LCID>        <Field_MRZ>7</Field_MRZ>        <Field_RFID />        <Field_Barcode />        <Field_Visual />        <Matrix1>2</Matrix1>        <Matrix2>0</Matrix2>        <Matrix3>0</Matrix3>        <Matrix4>0</Matrix4>        <Matrix5>0</Matrix5>        <Matrix6>0</Matrix6>        <Matrix7>0</Matrix7>        <Matrix8>0</Matrix8>        <Matrix9>0</Matrix9>        <Matrix10>0</Matrix10>    </Document_Field_Analysis_Info>';
             console.log(xmlDoc);
             localStorage.setItem('imageScanStatus', true)
 
@@ -1042,8 +1055,8 @@ function getData2(transactionID, xtoken) {
 
 function extractFullName(xmlDoc) {
     var FullName = "";
-    // parser = new DOMParser();
-    //xmlDoc = parser.parseFromString(xmlDoc, "text/xml");
+    //parser = new DOMParser();
+    // xmlDoc = parser.parseFromString(xmlDoc, "text/xml");
     x = xmlDoc.documentElement.children;
     for (i = 0; i < x.length; i++) {
         console.log(x[i].children[0] && x[i].children[0].innerHTML);
@@ -1063,4 +1076,131 @@ function orderDetailsData() {
     document.getElementById("customer").innerHTML = localStorage.getItem("invitationByName");
     document.getElementById("imageid").src = localStorage.getItem("orginalImage");
 
+}
+
+
+
+function SendHotelData(hotel, room, fromDate, toDate, theNumber) {
+    hotelsData = {};
+    hotelsData.hotel = hotel;
+    hotelsData.room = room;
+    hotelsData.fromDate = fromDate;
+    hotelsData.toDate = toDate;
+    hotelsData.theNumber = theNumber;
+    jsonStr = JSON.stringify(hotelsData);
+    $.ajax({
+        type: 'GET',
+        url: 'http://hotelsapi.nez.co.il/enter.asp?hotel=' + hotel + '&room=' + room + '&fromDate=' + fromDate + '&toDate=' + toDate + '&theNumber=' + theNumber + '',
+        crossDomain: true,
+        data: jsonStr,
+        dataType: 'text',
+        async: true,
+        success: function(responseData, textStatus, jqXHR) {
+            var value = responseData
+            console.log(value);
+        },
+        error: function(responseData, textStatus, errorThrown) {
+            //alert('POST failed.');
+            console.log("fail: " + responseData.responseText);
+        }
+    });
+}
+
+function ReceiptCodeForUser() {
+    var code = Math.floor(Math.random() * 99999) + 10000;
+    //console.log(code);
+    localStorage.setItem('Code', code);
+    //console.log(localStorage['Code']);
+    //document.getElementById('code').placeholder = localStorage['Code'];
+
+}
+
+function getCode() {
+    document.getElementById('code').placeholder = localStorage['Code'];
+
+}
+
+function SendHotelDataAndReceiptCode() {
+    parser = new DOMParser();
+    Reservation = parser.parseFromString(localStorage.getItem('Reservation'), "text/xml");
+    RoomNumber = Reservation.documentElement.attributes['RoomNumber'].value;
+    FromYmd = Reservation.documentElement.attributes['FromYmd'].value;
+    ToYmd = Reservation.documentElement.attributes['ToYmd'].value;
+    ReceiptCodeForUser();
+    code = localStorage.getItem('Code')
+    SendHotelData("hotel test", RoomNumber, FromYmd, ToYmd, code);
+
+    window.document.location = './ReceiptCode.html'
+}
+
+
+
+function CreatNewReservationToMiniHotel(FirstName, LastName, FromDate, ToDate, GuestCount, roomTypeID, roomTypeName) {
+
+    getDateNow();
+    URL: 'api.minihotelpms.com/gds'
+
+
+    // var d = $.Deferred();
+
+    var xml = "<Bookings><Authentication username='test' password='2222' /><Hotel id='testhotel' rateCode='*All' /> <Booking id='KioskPos' type='Book' createDateTime=" + "'" + localStorage['Date'] + "'" + " source='KIOSK' NumofKeys='2' Status='' rateCode='ILS' ><RoomStays><RoomStay roomTypeID=" + "'" + roomTypeID + "'" + " roomTypeName=" + "'" + roomTypeName + "'" + " board='BB'><StayDate arrival=" + "'" + FromDate + "'" + " departure=" + "'" + ToDate + "'" + "/><RoomCount NumberOfUnits='1'/><GuestCount adult=" + "'" + GuestCount + "'" + " child='0' babies='0'/><Total AmountAfterTaxes='487.50'/></RoomStay></RoomStays><PrimaryGuest><Name givenName=" + "'" + FirstName + "'" + " surname=" + "'" + LastName + "'" + "/><Address Street='' Zip='' City=''/><Country CountryName='undefined' iso2='' iso3=''/><Email>khaled.sbayah@gmail.com</Email><Phone>null</Phone><Fax></Fax><PassportNumber>311539587</PassportNumber></PrimaryGuest><Remarks>Name Agent: Agent Test</Remarks><ResGlobalInfo><Timespan arrival=" + "'" + FromDate + "'" + " departure=" + "'" + ToDate + "'" + " /><Total AmountAfterTaxes='487.5' CurrencyCode='ILS' /></ResGlobalInfo></Booking></Bookings>"
+        //var xml = "<Bookings><Authentication username='test' password='2222' /><Hotel id='testhotel' rateCode='*All' /> <Booking id='KioskPos' type='Book' createDateTime='2020-03-12' source='KIOSK' NumofKeys='2' Status='' rateCode='ILS' ><RoomStays><RoomStay roomTypeID='SNG' roomTypeName='Single' board='BB'><StayDate arrival='2020-03-12' departure='2020-03-13'/><RoomCount NumberOfUnits='1'/><GuestCount adult='2' child='0' babies='0'/><Total AmountAfterTaxes='487.50'/></RoomStay></RoomStays><PrimaryGuest><Name givenName='Khaled' surname='Abu Sbayeh'/><Address Street='' Zip='' City=''/><Country CountryName='undefined' iso2='' iso3=''/><Email>khaled.sbayah@gmail.com</Email><Phone>null</Phone><Fax></Fax><PassportNumber>311539587</PassportNumber></PrimaryGuest><Remarks>Name Agent: Agent Test</Remarks><ResGlobalInfo><Timespan arrival='2020-03-12' departure='2020-03-13' /><Total AmountAfterTaxes='487.5' CurrencyCode='ILS' /></ResGlobalInfo></Booking></Bookings>"
+
+
+
+    //request ajax
+    // console.log(xml);
+    url = "http://api.minihotelpms.com/gds";
+    console.log(xml);
+    $.support.cors = true;
+    $.ajax({
+        url: url,
+        type: "POST",
+        crossDomain: true,
+        async: false,
+        data: xml,
+        success: function(result) {
+
+            console.log(result);
+
+        },
+        error: function(jqXHR, tranStatus, errorThrown) {
+            logWrite("Error", jqXHR);
+            $("#msg").html(
+                "Status: " +
+                jqXHR.status +
+                " " +
+                jqXHR.statusText +
+                ". " +
+                "Response: " +
+                jqXHR.responseText
+            );
+        }
+    });
+}
+
+function CutfullName() {
+    fullname = localStorage.getItem('FullNameForWalkInOrDayUse');
+    fname = fullname.substr(0, fullname.indexOf(' '));
+    lname = fullname.substr(fullname.indexOf(' ') + 1);
+    localStorage.setItem('fname', fname);
+    localStorage.setItem('lname', lname);
+}
+
+function getDataFromUserForCreatNewReservation() {
+    CutfullName();
+    fname = localStorage.getItem('fname');
+    lname = localStorage.getItem('lname');
+    start = localStorage.getItem('StartTime');
+    exit = localStorage.getItem('ExitTime');
+    people = localStorage.getItem('people');
+    roomTypeName = localStorage.getItem('roomTypeName');
+    roomTypeID = localStorage.getItem('roomTypeID');
+    ReceiptCodeForUser();
+    code = localStorage.getItem('Code');
+    CreatNewReservationToMiniHotel(fname, lname, start, exit, people, roomTypeID, roomTypeName);
+    //CreatNewReservationToMiniHotel('hoda', 'ben nasser', '2020-03-12', '2020-03-13', '2', 'SNG', 'Single');
+    //write to database for ilan
+    CheckIfCustomerExists();
+    SendHotelDataAndReceiptCode();
 }
