@@ -921,16 +921,16 @@ function ButtonForChooseRoom() {
         localStorage.setItem('roomTypeName', 'Single');
         localStorage.setItem('roomTypeID', 'SNG');
     } else if (type == 'coupleCard') {
-        localStorage.setItem('roomTypeName', 'Couple');
+        localStorage.setItem('roomTypeName', 'Double');
         localStorage.setItem('roomTypeID', 'DBL');
 
     } else if (type == 'groupCard') {
         localStorage.setItem('roomTypeName', 'Group');
-        localStorage.setItem('roomTypeID', 'GRB');
+        localStorage.setItem('roomTypeID', 'BGR');
 
     } else if (type == 'apartmentCard') {
         localStorage.setItem('roomTypeName', 'Apartment');
-        localStorage.setItem('roomTypeID', 'APRT');
+        localStorage.setItem('roomTypeID', 'APR');
 
     }
 
