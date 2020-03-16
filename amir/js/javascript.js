@@ -1116,7 +1116,8 @@ function ReceiptCodeForUser() {
 }
 
 function getCode() {
-    document.getElementById('code').placeholder = localStorage['Code'];
+    val = localStorage.getItem('Code');
+    document.getElementById('code').placeholder = val;
 
 }
 
