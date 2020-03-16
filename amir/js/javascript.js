@@ -922,7 +922,7 @@ function ButtonForChooseRoom() {
         localStorage.setItem('roomTypeID', 'SNG');
     } else if (type == 'coupleCard') {
         localStorage.setItem('roomTypeName', 'Couple');
-        localStorage.setItem('roomTypeID', 'CUB');
+        localStorage.setItem('roomTypeID', 'DBL');
 
     } else if (type == 'groupCard') {
         localStorage.setItem('roomTypeName', 'Group');
@@ -1197,8 +1197,8 @@ function getDataFromUserForCreatNewReservation() {
     people = localStorage.getItem('people');
     roomTypeName = localStorage.getItem('roomTypeName');
     roomTypeID = localStorage.getItem('roomTypeID');
-    ReceiptCodeForUser();
-    code = localStorage.getItem('Code');
+    //ReceiptCodeForUser();
+    //code = localStorage.getItem('Code');
     CreatNewReservationToMiniHotel(fname, lname, start, exit, people, roomTypeID, roomTypeName);
     //CreatNewReservationToMiniHotel('hoda', 'ben nasser', '2020-03-12', '2020-03-13', '2', 'SNG', 'Single');
     //write to database for ilan
