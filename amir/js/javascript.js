@@ -1162,7 +1162,7 @@ function CreatNewReservationToMiniHotel(FirstName, LastName, FromDate, ToDate, G
         data: xml,
         success: function(result) {
 
-            console.log(result);
+            console.log('success ' + result);
 
         },
         error: function(jqXHR, tranStatus, errorThrown) {
