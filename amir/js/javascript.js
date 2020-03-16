@@ -1117,7 +1117,7 @@ function ReceiptCodeForUser() {
 
 function getCode() {
     val = localStorage.getItem('Code');
-    document.getElementById('code').placeholder = val;
+    document.getElementById('code').innerHTML = val;
 
 }
 
@@ -1202,6 +1202,7 @@ function getDataFromUserForCreatNewReservation() {
     CreatNewReservationToMiniHotel(fname, lname, start, exit, people, roomTypeID, roomTypeName);
     //CreatNewReservationToMiniHotel('hoda', 'ben nasser', '2020-03-12', '2020-03-13', '2', 'SNG', 'Single');
     //write to database for ilan
+    localStorage.setItem('invitationByName', localStorage.getItem('FullNameForWalkInOrDayUse'));
     CheckIfCustomerExists();
     SendHotelDataAndReceiptCode();
 }
