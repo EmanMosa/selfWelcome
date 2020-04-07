@@ -127,6 +127,13 @@ function checkInChoice() {
 
 }
 
+function ButtonForTypingIDNumber() {
+    //get TZ;
+    var value = document.getElementById('TypingName').value;
+
+    LegalTz(value);
+}
+
 function DayUseOrwalkInChoice() {
 
     var Status = localStorage.getItem('imageScanStatus');
@@ -139,13 +146,14 @@ function DayUseOrwalkInChoice() {
         } else {
             // window.document.location = './IDScanner.html';
             //for the flow
-            window.document.location = './CitizenShip.html';
+
+            window.document.location = './TypingIDNumber.html';
 
         }
     } else if (Status == 'false') {
         // window.document.location = './IDScanner.html';
         //for the flow 
-        window.document.location = './CitizenShip.html';
+        window.document.location = './TypingIDNumber.html';
 
     }
 
@@ -171,6 +179,35 @@ function checkchoice() {
         //if the User choice walkin or DayUse
         DayUseOrwalkInChoice();
 
+    }
+}
+
+function LegalTz(TZ) {
+    var tot = 0;
+    var tz = new String(TZ);
+    for (i = 0; i < 8; i++) {
+        x = (((i % 2) + 1) * tz.charAt(i));
+        if (x > 9) {
+            x = x.toString();
+            x = parseInt(x.charAt(0)) + parseInt(x.charAt(1))
+        }
+        tot += x;
+    }
+
+    if ((tot + parseInt(tz.charAt(8))) % 10 == 0) {
+        alert("תקין");
+        localStorage.setItem('IDNumberForWalkInOrDayUse', TZ);
+
+        window.document.location = './CitizenShip.html';
+        return true;
+    } else {
+
+        alert("לא תקין")
+            //GO TO ERRPR PAGE
+        window.document.location = './chooseEntries.html';
+
+
+        return false;
     }
 }
 
