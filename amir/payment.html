@@ -1,78 +1,113 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8">
-    <script src="js/javascript.js"></script>
-    <title>Self Welcome</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <style>
-        .cardInfo {
-            transform: translate(-76%, 134%);
-            text-align: start;
-        }
-        
-        .inputInfo {
-            position: fixed;
-            left: 54%;
-            top: 18%;
-            float: right;
-            width: 30%;
-        }
-        
-        .expiration {
-            border: 1px solid #bbbbbb;
-        }
-        
-        .expiration input {
-            border: 0;
-        }
-        
-        .paybutton {
-            transform: translate(-96%, 87%);
-            height: 33%;
-            width: 87%;
-        }
-    </style>
 
+    <title>Credit Card Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/javascript.js"></script>
+
+    <!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
+    <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> -->
 
 </head>
 
-<body class="page">
-    <img class="center-hor top-page " src="img/top-page.png " />
-    <img class="center-hor logo-page " src="img/logo.png " />
-    <div>
-        <h2 style=" position: absolute; top: 10%; ">עמוד תשלום</h2>
-    </div>
-    <div class="cardInfo ">
-        <div>Card Type</div>
-        <div>Card Number</div>
-        <div>Name On Card</div>
-        <div>Security Code</div>
-        <div>Expiry Date</div>
+<body style="font-family: 'Assistant', Fallback, sans-serif;
+text-align: center;
+    background-color: #f2f4f7;
+    margin-left: auto;
+    margin-right: auto;
+   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;">
+    <!-- <img class="center-hor top-page" src="img/top-page.png" /> -->
+    <!-- <img class="center-hor logo-page" src="img/logo.png" /> -->
+    <div class="container">
+
+        <div class="page-header">
+            <img style="  width: 100%;
+            margin-top: -20%; position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)" src="img/top-page.png" />
+
+        </div>
+
+        <!-- Credit Card Payment Form - START -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-md-offset-4" style="margin-top:90px;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <h3 class="text-center">Payment Details</h3>
+                                <img class="img-responsive cc-img" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>CARD NUMBER</label>
+                                            <div class="input-group">
+                                                <input type="tel" class="form-control" placeholder="Valid Card Number">
+                                                <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 col-md-7">
+                                        <div class="form-group">
+                                            <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                            <input type="tel" class="form-control" placeholder="MM / YY">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label>CV CODE</label>
+                                            <input type="tel" class="form-control" placeholder="CVC">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>CARD OWNER</label>
+                                            <input type="text" class="form-control" placeholder="Card Owner Names">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button class="btn btn-warning btn-lg btn-block" style="  border-color: #584099;  background: #584099 0% 0% no-repeat padding-box;
+                                    " onclick="getDataFromUserForCreatNewReservation() "> Process payment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .cc-img {
+                margin: 0 auto;
+            }
+        </style>
+        <!-- Credit Card Payment Form - END -->
 
     </div>
-    <div class="inputInfo ">
-        <select id="cards " name="cards ">
-          <option value="Visa ">Visa</option>
-          <option value="American ">American Express</option>
-          <option value="Mastercard ">Mastercard</option>
-          <option value="Isracard ">Isracard</option>
-      </select>
-        <input></input>
-        <input></input>
-        <input></input>
-        <span class="expiration ">
-         <input type="text " name="month " placeholder="MM " maxlength="2 " size="2 " />
-         <span>/</span>
-        <input type="text " name="year " placeholder="YY " maxlength="2 " size="2 " />
-        </span>
-        <div class="page-button " onclick="getDataFromUserForCreatNewReservation() ">ok</div>
-    </div>
-
-
 
 
 </body>
