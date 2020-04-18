@@ -1126,8 +1126,8 @@ function getData2(transactionID, xtoken) {
 
 function extractFullName(xmlDoc) {
     var FullName = "";
-    //parser = new DOMParser();
-    // xmlDoc = parser.parseFromString(xmlDoc, "text/xml");
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(xmlDoc, "text/xml");
     x = xmlDoc.documentElement.children;
     for (i = 0; i < x.length; i++) {
         console.log(x[i].children[0] && x[i].children[0].innerHTML);
